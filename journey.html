@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Umrah journey map · Umrah Guide</title>
+<meta name="description" content="A free, simple, step-by-step Umrah guide that works offline.">
+<meta name="theme-color" content="#0F4C4A">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Umrah Guide">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icons/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="icons/icon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="stylesheet" href="assets/fonts.css">
+<link rel="stylesheet" href="assets/umrah.css">
+<link rel="stylesheet" href="assets/app.css">
+<script>try{var s=JSON.parse(localStorage.getItem('ug:textsize'));if(s)document.documentElement.style.zoom=[1,1.15,1.3][s];}catch(e){}</script>
+<style>
+.path{position:relative;display:flex;flex-direction:column;gap:0;padding-left:0}
+.path::before{content:"";position:absolute;left:31px;top:24px;bottom:24px;width:3px;background:repeating-linear-gradient(to bottom,var(--gold-line) 0 8px,transparent 8px 14px)}
+.stop{position:relative;display:grid;grid-template-columns:64px minmax(0,1fr);gap:12px;align-items:start;padding:10px 0;text-decoration:none;color:var(--ink)}
+.stop .dot{display:flex;flex-direction:column;align-items:center;justify-content:center;width:64px;height:64px;border-radius:50%;background:var(--surface);border:2px solid var(--teal);color:var(--teal);z-index:1}
+.stop .dot small{font:700 12px var(--body);letter-spacing:.06em}
+.stop .dot .ic{width:24px;height:24px}
+.stop .body{display:flex;flex-direction:column;gap:6px;padding:12px 14px;border-radius:16px;background:var(--surface);border:1px solid var(--line)}
+.stop .body b{font:600 22px/1.15 var(--display)}
+.stop .body p{font-size:16px;line-height:1.45;color:var(--muted)}
+.stop.done .dot{background:var(--teal);color:#fff}
+.stop.now .dot{background:var(--gold-tint);border:3px solid var(--ink);color:var(--ink)}
+.stop.now .body{border:2px solid var(--ink)}
+.stop.essential .body{border-left-width:1px}
+.here{display:inline-flex;align-items:center;gap:6px;align-self:flex-start;padding:4px 10px;border-radius:999px;background:var(--ink);color:#fff;font:700 13px var(--body);letter-spacing:.06em}
+</style>
+</head>
+<body data-page="journey">
+<div class="phone root">
+
+<div class="topbar">
+<a class="iconbtn" href="menu.html" aria-label="Open menu"><svg class="ic" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></a>
+<div class="where"><small>OVERVIEW</small><strong>Umrah journey</strong></div>
+<a class="iconbtn" href="index.html" aria-label="Home"><svg class="ic" viewBox="0 0 24 24"><path d="M4 11l8-7 8 7v9h-5v-6H9v6H4z"></path></svg></a>
+</div>
+
+<div class="hero" style="display: flex; flex-direction: column; gap: 10px">
+<div class="eyebrow">B · Journey map</div>
+<h1 class="h1" id="here-line">8 steps. Start with step 1.</h1>
+<p class="small muted">Tap any step to open it. Steps with the <b style="color: #0F4C4A">Essential</b> label are the 4 acts every Umrah must include.</p>
+</div>
+
+<div style="padding: 16px 16px 8px">
+<div class="path">
+<a class="stop" data-step="1" href="step1.html"><span class="dot"><small>01</small><svg class="ic" viewBox="0 0 24 24"><path d="M9 6h11M9 12h11M9 18h11M4 6l1 1 2-2M4 12l1 1 2-2M4 18l1 1 2-2"></path></svg></span><span class="body"><b>Before Umrah</b><p>Papers, packing, learning the steps.</p></span></a>
+<a class="stop essential" data-step="2" href="step2.html"><span class="dot"><small>02</small><svg class="ic" viewBox="0 0 24 24"><path d="M5 3.5h14v17H5zM5 3.5l14 11"></path></svg></span><span class="body"><b>Ihram</b><p>Enter the sacred state at the Meeqat. Say the Talbiyah.</p><span class="tag must"><svg class="ic" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M8 12.5l2.7 2.7L16.5 9"></path></svg>Essential</span></span></a>
+<a class="stop" data-step="3" href="step3.html"><span class="dot"><small>03</small><svg class="ic" viewBox="0 0 24 24"><path d="M12 2v3M10 5h4v4h-4zM9 9h6v12H9zM4 21v-8h5M20 21v-8h-5M3 21h18"></path></svg></span><span class="body"><b>Entering Makkah</b><p>Check in, rest, make wudu.</p></span></a>
+<a class="stop" data-step="4" href="step4.html"><span class="dot"><small>04</small><svg class="ic" viewBox="0 0 24 24"><path d="M5 21V10a7 7 0 0114 0v11M3 21h18M9 21v-6a3 3 0 016 0v6"></path></svg></span><span class="body"><b>Entering Masjid al-Haram</b><p>Right foot first. Go to the Tawaf area.</p></span></a>
+<a class="stop essential" data-step="5" href="step5.html"><span class="dot"><small>05</small><svg class="ic" viewBox="0 0 24 24"><path d="M20 12a8 8 0 11-2.3-5.6"></path><path d="M20 4v4h-4"></path></svg></span><span class="body"><b>Tawaf</b><p>7 rounds around the Ka‘bah, Ka‘bah on your left.</p><span class="tag must"><svg class="ic" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M8 12.5l2.7 2.7L16.5 9"></path></svg>Essential</span></span></a>
+<a class="stop" data-step="6" href="step6.html"><span class="dot"><small>06</small><svg class="ic" viewBox="0 0 24 24"><path d="M6 3h12v18H6zM9 3v3a3 3 0 006 0V3"></path></svg></span><span class="body"><b>After Tawaf</b><p>Pray 2 rak‘ahs. Drink Zamzam.</p></span></a>
+<a class="stop essential" data-step="7" href="step7.html"><span class="dot"><small>07</small><svg class="ic" viewBox="0 0 24 24"><path d="M3 12h18M7 8l-4 4 4 4M17 8l4 4-4 4"></path></svg></span><span class="body"><b>Sa‘i</b><p>7 laps between Safa and Marwah. Start at Safa.</p><span class="tag must"><svg class="ic" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M8 12.5l2.7 2.7L16.5 9"></path></svg>Essential</span></span></a>
+<a class="stop essential" data-step="8" href="step8.html"><span class="dot"><small>08</small><svg class="ic" viewBox="0 0 24 24"><circle cx="6" cy="7" r="2.5"></circle><circle cx="6" cy="17" r="2.5"></circle><path d="M8.2 8.3L20 17M8.2 15.7L20 7"></path></svg></span><span class="body"><b>Halq / Taqsir</b><p>Shave or shorten the hair. This ends ihram.</p><span class="tag must"><svg class="ic" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M8 12.5l2.7 2.7L16.5 9"></path></svg>Essential</span></span></a>
+<a class="stop" data-step="9" href="complete.html"><span class="dot" style="border-color: #7F5516; color: #7F5516"><svg class="ic" viewBox="0 0 48 48" style="width: 28px; height: 28px"><g stroke-width="3"><rect x="12" y="12" width="24" height="24"></rect><rect x="12" y="12" width="24" height="24" transform="rotate(45 24 24)"></rect></g></svg></span><span class="body"><b>Umrah complete</b><p>Ihram restrictions are lifted. Alhamdulillah.</p></span></a>
+</div>
+</div>
+
+<div class="sec" style="border-bottom: none; padding-top: 8px">
+<div class="card differ"><svg class="ic" viewBox="0 0 24 24"><path d="M12 4v16M8 20h8M5 7h14M5 7l-3 6h6zM19 7l-3 6h6z"></path></svg><div class="t"><b>A note on “Essential”</b>Schools classify these acts differently (pillar or obligation), but every pilgrim performs all four. <a href="sources.html">Read the notes</a></div></div>
+</div>
+
+<div class="nextbar">
+<a class="back" href="index.html"><svg class="ic" viewBox="0 0 24 24"><path d="M19 12H5M11 6l-6 6 6 6"></path></svg>Home</a>
+<a class="next" id="journey-next" href="step1.html"><span><small>Start · Step 1</small><strong>Before Umrah</strong></span><svg class="ic" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+</div>
+</div>
+<script src="assets/app.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Quick reference · Pocket mode · Umrah Guide</title>
+<meta name="description" content="A free, simple, step-by-step Umrah guide that works offline.">
+<meta name="theme-color" content="#0F4C4A">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Umrah Guide">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icons/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="icons/icon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="stylesheet" href="assets/fonts.css">
+<link rel="stylesheet" href="assets/umrah.css">
+<link rel="stylesheet" href="assets/app.css">
+<script>try{var s=JSON.parse(localStorage.getItem('ug:textsize'));if(s)document.documentElement.style.zoom=[1,1.15,1.3][s];}catch(e){}</script>
+<style>
+.qr{display:grid;grid-template-columns:56px minmax(0,1fr);gap:14px;align-items:start;padding:16px;border-radius:18px;background:var(--surface);border:1.5px solid var(--line);text-decoration:none;color:var(--ink)}
+.qr .n{display:flex;align-items:center;justify-content:center;width:56px;height:56px;border-radius:16px;background:var(--teal);color:#fff;font:600 28px var(--display)}
+.qr b{display:block;font:700 22px/1.2 var(--body);letter-spacing:.02em}
+.qr p{font-size:18px;line-height:1.45;margin-top:4px}
+.qr .say{display:block;margin-top:6px;font-style:italic;color:var(--gold);font-weight:700}
+.field{display:flex;flex-direction:column;gap:6px}
+.field label{font:700 15px var(--body);color:var(--muted)}
+.field input{min-height:52px;padding:0 14px;border-radius:12px;border:1.5px solid var(--ink);background:var(--surface);font:400 18px var(--body);color:var(--ink)}
+</style>
+</head>
+<body data-page="quick">
+<div class="phone root">
+
+<div class="topbar">
+<a class="iconbtn" href="menu.html" aria-label="Open menu"><svg class="ic" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></a>
+<div class="where"><small>G · POCKET MODE</small><strong>Quick reference</strong></div>
+<a class="iconbtn" href="index.html" aria-label="Home"><svg class="ic" viewBox="0 0 24 24"><path d="M4 11l8-7 8 7v9h-5v-6H9v6H4z"></path></svg></a>
+</div>
+
+<div class="hero" style="display: flex; flex-direction: column; gap: 8px">
+<h1 class="h1">Umrah on one screen</h1>
+<p class="small muted">Large text. Works offline. Tap a step for full detail.</p>
+</div>
+
+<section class="sec" style="gap: 10px">
+<a class="qr" href="step2.html"><span class="n">1</span><span><b>IHRAM</b><p>At the Meeqat: intend Umrah. Men in 2 white sheets.</p><span class="say">“Labbayka ‘umratan” · then the Talbiyah</span></span></a>
+<a class="qr" href="step5.html"><span class="n">2</span><span><b>TAWAF · 7 rounds</b><p>Start and end at the Black Stone. Ka‘bah on your <u>left</u>. Outside Hijr Isma‘il. Need wudu.</p><span class="say">“Allāhu akbar” at the Black Stone · “Rabbanā ātinā…” before it</span></span></a>
+<a class="qr" href="step6.html"><span class="n">3</span><span><b>PRAY 2 · ZAMZAM</b><p>2 rak‘ahs behind Maqam Ibrahim or anywhere. Drink Zamzam, make dua.</p></span></a>
+<a class="qr" href="step7.html"><span class="n">4</span><span><b>SA‘I · 7 laps</b><p><u>Start Safa</u>, end Marwah. Safa → Marwah = 1 lap. Men jog between green lights.</p><span class="say">On each hill: face the Ka‘bah, “Allāhu akbar” ×3, dhikr, dua</span></span></a>
+<a class="qr" href="step8.html"><span class="n">5</span><span><b>HAIR</b><p>Men: shave, or shorten all over. Women: fingertip length.</p></span></a>
+<div class="qr" style="background: #0F4C4A; color: #fff; border-color: #0F4C4A"><span class="n" style="background: #FFFDF8; color: #0F4C4A"><svg class="ic lg" viewBox="0 0 24 24" style="stroke-width: 2.4"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span><span><b>DONE</b><p style="color: #D9E7E4">Ihram is over. Alhamdulillah.</p></span></div>
+</section>
+
+<section class="sec">
+<div class="q"><span class="num"><svg class="ic" viewBox="0 0 24 24"><path d="M20 12a8 8 0 11-2.3-5.6"></path><path d="M20 4v4h-4"></path></svg></span>Counters</div>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px">
+<a class="btn primary" href="step5.html" style="flex-direction: column; gap: 2px; min-height: 80px">Tawaf<span style="font-size: 15px; font-weight: 400" data-counter-status="tawaf">Not started</span></a>
+<a class="btn secondary" href="step7.html" style="flex-direction: column; gap: 2px; min-height: 80px">Sa‘i<span style="font-size: 15px; font-weight: 400" data-counter-status="sai">Not started</span></a>
+</div>
+</section>
+
+<section class="sec" style="border-bottom: none">
+<div class="q"><span class="num"><svg class="ic" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><circle cx="12" cy="12" r="3.5"></circle><path d="M5.6 5.6l4 4M14.4 14.4l4 4M18.4 5.6l-4 4M9.6 14.4l-4 4"></path></svg></span>My info · show to a helper</div>
+<p class="small muted">Saved only on this phone. Nothing is sent anywhere.</p>
+<div class="field"><label for="f1">My name</label><input id="f1" type="text" data-save="name" placeholder="Type your name" autocomplete="off"></div>
+<div class="field"><label for="f2">Hotel name &amp; area</label><input id="f2" type="text" data-save="hotel" placeholder="Hotel name and area" autocomplete="off"></div>
+<div class="field"><label for="f3">Group leader’s phone</label><input id="f3" type="tel" data-save="phone" placeholder="Phone number" autocomplete="off"></div>
+<div class="field"><label for="f4">Our meeting gate</label><input id="f4" type="text" data-save="gate" placeholder="Gate number and name" autocomplete="off"></div>
+<div class="card help"><svg class="ic" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><circle cx="12" cy="12" r="3.5"></circle></svg><div class="t"><b>Emergency in Makkah: call 911</b>Saudi Arabia’s unified emergency number (police, ambulance, fire) for the Makkah region. <span class="small muted">Source: Saudi Press Agency, June 2026</span></div></div>
+<a class="btn primary" href="#show" data-action="showinfo">Show my info full-screen</a>
+<a class="btn secondary" href="print.html">Printable A4 quick card</a>
+</section>
+
+</div>
+<script src="assets/app.js" defer></script>
+</body>
+</html>
