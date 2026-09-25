@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="ur">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"/>
+<title>میری دعاؤں کی فہرست · شاہد</title>
+<meta content="Shahid: Witness the Journey. A free, simple, step-by-step Umrah guide that works offline." name="description"/>
+<meta content="#0B3B34" name="theme-color"/>
+<meta content="yes" name="apple-mobile-web-app-capable"/>
+<meta content="yes" name="mobile-web-app-capable"/>
+<meta content="default" name="apple-mobile-web-app-status-bar-style"/>
+<meta content="Shahid" name="apple-mobile-web-app-title"/>
+<link href="manifest.json" rel="manifest"/>
+<link href="icons/favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="icons/icon-32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="icons/apple-touch-icon.png" rel="apple-touch-icon"/>
+<link href="assets/fonts.css" rel="stylesheet"/>
+<link href="assets/umrah.css" rel="stylesheet"/>
+<link href="assets/app.css" rel="stylesheet"/>
+<script>try{var s=JSON.parse(localStorage.getItem('ug:textsize'));if(s)document.documentElement.style.zoom=[1,1.15,1.3][s];var g=JSON.parse(localStorage.getItem('ug:lang')),d=document.documentElement,f=location.pathname.split('/').pop()||'index.html',m=f.match(/^([a-z0-9]+?)(-ur)?\.html$/);if(m&&g&&(g==='ur')!==(d.lang==='ur')&&m[1]!=='404')location.replace(m[1]+(g==='ur'?'-ur':'')+'.html'+location.search+location.hash);}catch(e){}</script>
+<style>
+.field{display:flex;flex-direction:column;gap:6px}
+.field label{font:700 15px var(--body);color:var(--muted)}
+.field input{min-height:52px;padding:0 14px;border-radius:12px;border:1.5px solid var(--ink);background:var(--surface);font:400 18px var(--body);color:var(--ink)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips button{min-height:44px;padding:0 14px;border-radius:999px;border:1.5px solid var(--line);background:var(--surface);color:var(--ink);font:700 15px var(--body);cursor:pointer}
+.dl{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
+.dl li{display:grid;grid-template-columns:28px minmax(0,1fr) 44px;gap:12px;align-items:center;padding:12px 10px 12px 14px;background:var(--surface);border:1px solid var(--line);border-radius:14px}
+.dl li input{width:24px;height:24px;margin:0;accent-color:var(--teal)}
+.dl li .who{font:700 17px var(--body)}
+.dl li .what{font-size:15px;color:var(--muted)}
+.dl li.done .who,.dl li.done .what{text-decoration:line-through;color:var(--muted)}
+.dl li .del{display:flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:10px;border:none;background:transparent;color:var(--muted);cursor:pointer}
+.empty{padding:18px;border-radius:14px;border:1.5px dashed var(--line);text-align:center;color:var(--muted);font-size:16px}
+.count{display:flex;align-items:center;justify-content:space-between;gap:10px;font:700 16px var(--body)}
+</style>
+<link href="assets/urdu.css" rel="stylesheet"/></head>
+<body data-lang="ur" data-page="mydua">
+<div class="phone root">
+<div class="topbar">
+<a aria-label="مینو کھولیں" class="iconbtn" href="menu-ur.html"><svg class="ic" viewbox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></a>
+<div class="where"><small>دعائیں</small><strong>میری دعاؤں کی فہرست</strong></div>
+<a aria-label="ہوم" class="iconbtn" href="index-ur.html"><svg class="ic" viewbox="0 0 24 24"><path d="M4 11l8-7 8 7v9h-5v-6H9v6H4z"></path></svg></a>
+</div>
+<div class="hero" style="display: flex; flex-direction: column; gap: 10px">
+<div class="eyebrow">نجی · اسی فون پر محفوظ</div>
+<h1 class="h1">میری دعاؤں کی فہرست</h1>
+<p class="lead">لوگ آپ سے کہیں گے “مجھے اپنی دعاؤں میں یاد رکھنا”۔ ان کے نام یہاں لکھ لیں، پھر طواف یا سعی میں ان کے لیے دعا کرنے کے بعد ہر نام پر نشان لگا دیں۔</p>
+</div>
+<section class="sec">
+<div class="q"><span class="num"><svg class="ic" viewbox="0 0 24 24"><path d="M12 5v14M5 12h14"></path></svg></span>کسی کا نام شامل کریں</div>
+<div class="field"><label for="d-who">کون</label><input id="d-who" placeholder="مثلاً میری والدہ" type="text"/></div>
+<div class="field"><label for="d-what">کیا مانگنا ہے (اختیاری)</label><input id="d-what" placeholder="مثلاً اچھی صحت اور مغفرت" type="text"/></div>
+<button class="btn primary" data-action="dua-add" type="button">فہرست میں شامل کریں</button>
+<p class="small muted">فوری اضافہ:</p>
+<div class="chips">
+<button data-quick="میرے والدین" type="button">میرے والدین</button>
+<button data-quick="میری شریکِ حیات اور بچے" type="button">میری شریکِ حیات اور بچے</button>
+<button data-quick="جو وفات پا چکے ہیں" type="button">جو وفات پا چکے ہیں</button>
+<button data-quick="ہر وہ شخص جس نے کہا" type="button">ہر وہ شخص جس نے کہا</button>
+<button data-quick="پوری امت" type="button">پوری امت</button>
+<button data-quick="میں خود" type="button">میں خود</button>
+</div>
+</section>
+<section class="sec">
+<div class="count"><span class="q" style="margin: 0"><span class="num"><svg class="ic" viewbox="0 0 24 24"><path d="M9 6h11M9 12h11M9 18h11M4 6l1 1 2-2M4 12l1 1 2-2M4 18l1 1 2-2"></path></svg></span>میری فہرست</span><span class="muted small" id="dua-count">0 میں سے 0 کے لیے دعا ہو گئی</span></div>
+<ul aria-live="polite" class="dl" id="dua-list"></ul>
+<div class="empty" id="dua-empty">آپ کی فہرست خالی ہے۔ اوپر پہلا نام شامل کریں۔</div>
+<button class="btn secondary" data-action="dua-reset" type="button">سب نشان ہٹائیں (اگلے طواف کے لیے)</button>
+</section>
+<section class="sec" style="border-bottom: none">
+<div class="card help"><svg class="ic" viewbox="0 0 24 24"><circle cx="8" cy="8" r="3"></circle><circle cx="17" cy="10" r="2.3"></circle><path d="M2.5 20c0-3.3 2.4-6 5.5-6s5.5 2.7 5.5 6M13.5 20c.2-2.6 1.7-4.5 3.5-4.5s3.3 1.9 3.5 4.5"></path></svg><div class="t"><b>ایسا تحفہ جو آپ کو لوٹ آتا ہے</b>جب آپ کسی کی غیر موجودگی میں اس کے لیے دعا کرتے ہیں تو ایک فرشتہ کہتا ہے: “اور تمہارے لیے بھی یہی ہو۔” <span class="small muted">صحیح مسلم 2732</span></div></div>
+<div class="card remember"><svg class="ic" viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 11v5.5M12 7.8v.2"></path></svg><div class="t"><b>نجی</b>آپ کی فہرست صرف اسی فون پر رہتی ہے۔ کہیں کچھ نہیں بھیجا جاتا۔</div></div>
+<a class="btn secondary" href="duas-ur.html" style="justify-content: space-between">ان کے لیے پڑھنے کی دعائیں <svg class="ic flip" viewbox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+</section>
+</div>
+<script defer="" src="assets/app.js"></script>
+<script defer="" src="assets/narrator.js"></script>
+</body>
+</html>

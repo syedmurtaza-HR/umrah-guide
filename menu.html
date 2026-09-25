@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Menu · Quick jump · Umrah Guide</title>
-<meta name="description" content="A free, simple, step-by-step Umrah guide that works offline.">
-<meta name="theme-color" content="#0F4C4A">
+<title>Menu · Quick jump · Shahid</title>
+<meta name="description" content="Shahid: Witness the Journey. A free, simple, step-by-step Umrah guide that works offline.">
+<meta name="theme-color" content="#0B3B34">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
-<meta name="apple-mobile-web-app-title" content="Umrah Guide">
+<meta name="apple-mobile-web-app-title" content="Shahid">
 <link rel="manifest" href="manifest.json">
 <link rel="icon" href="icons/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="icons/icon-32.png" sizes="32x32" type="image/png">
@@ -17,7 +17,7 @@
 <link rel="stylesheet" href="assets/fonts.css">
 <link rel="stylesheet" href="assets/umrah.css">
 <link rel="stylesheet" href="assets/app.css">
-<script>try{var s=JSON.parse(localStorage.getItem('ug:textsize'));if(s)document.documentElement.style.zoom=[1,1.15,1.3][s];}catch(e){}</script>
+<script>try{var s=JSON.parse(localStorage.getItem('ug:textsize'));if(s)document.documentElement.style.zoom=[1,1.15,1.3][s];var g=JSON.parse(localStorage.getItem('ug:lang')),d=document.documentElement,f=location.pathname.split('/').pop()||'index.html',m=f.match(/^([a-z0-9]+?)(-ur)?\.html$/);if(m&&g&&(g==='ur')!==(d.lang==='ur')&&m[1]!=='404')location.replace(m[1]+(g==='ur'?'-ur':'')+'.html'+location.search+location.hash);}catch(e){}</script>
 <style>
 .grp{display:flex;flex-direction:column;gap:2px}
 .grp h2{font:700 14px var(--body);letter-spacing:.1em;text-transform:uppercase;color:var(--gold);padding:0 4px 8px}
@@ -33,9 +33,9 @@
 </style>
 </head>
 <body data-page="menu">
-<div class="phone root" style="background: #FFFDF8">
+<div class="phone root" style="background: #FFFDFA">
 
-<div class="topbar" style="border-bottom: 1px solid #DED3BD">
+<div class="topbar" style="border-bottom: 1px solid #E2D8C5">
 <strong style="font: 600 24px var(--display); padding-left: 8px">Menu</strong>
 <a class="iconbtn" href="index.html" data-back aria-label="Close menu" style="gap: 6px"><svg class="ic" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"></path></svg>Close</a>
 </div>
@@ -75,7 +75,7 @@
 
 <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px">
 <button class="iconbtn" type="button" style="height: 56px" data-action="textsize">A · A+ · A++</button>
-<button class="iconbtn" type="button" style="height: 56px" data-soon="More languages are coming soon."><svg class="ic sm" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3c2.5 2.5 3.7 5.5 3.7 9s-1.2 6.5-3.7 9c-2.5-2.5-3.7-5.5-3.7-9S9.5 5.5 12 3z"></path></svg>English</button>
+<button class="iconbtn" type="button" style="height: 56px" data-action="lang" aria-label="Read in Urdu"><svg class="ic sm" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3c2.5 2.5 3.7 5.5 3.7 9s-1.2 6.5-3.7 9c-2.5-2.5-3.7-5.5-3.7-9S9.5 5.5 12 3z"></path></svg><span lang="ur">اردو</span></button>
 <button class="iconbtn" type="button" style="height: 56px" data-soon="Night mode is coming soon."><svg class="ic sm" viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 019.5 4a8 8 0 1010.5 10.5z"></path></svg>Night</button>
 </div>
 <button class="btn secondary" type="button" data-action="reset">Start a new Umrah (clear progress)</button>

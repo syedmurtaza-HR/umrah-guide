@@ -1,0 +1,35 @@
+/* Urdu (RTL) layer, loaded only on *-ur.html pages */
+
+html[lang="ur"]{
+  --body:'Noto Nastaliq Urdu','Atkinson Hyperlegible','Segoe UI',Tahoma,sans-serif;
+  --display:'Noto Nastaliq Urdu','Newsreader',Georgia,serif;
+  --luxe:'Noto Nastaliq Urdu','Cormorant Garamond',Georgia,serif;
+}
+html[lang="ur"] body{font-family:var(--body)}
+
+/* Nastaliq is tall: give every line room so dots and descenders are not clipped */
+html[lang="ur"] .root *:not(.ar):not([lang="ar"]):not(svg):not(svg *){line-height:2 !important;letter-spacing:0 !important;text-transform:none !important}
+html[lang="ur"] .topbar .where small,
+html[lang="ur"] .tag,html[lang="ur"] .prog a,html[lang="ur"] .btn,html[lang="ur"] .iconbtn{line-height:1.8 !important}
+html[lang="ur"] .phone{line-height:2}
+html[lang="ur"] i,html[lang="ur"] em{font-style:normal}
+
+/* transliteration is for English readers; Urdu readers read the Arabic directly */
+html[lang="ur"] .tr,html[lang="ur"] .dhikr .t,html[lang="ur"] .card .t:empty{display:none !important}
+
+/* mirror arrows and chevrons */
+html[dir="rtl"] svg.flip{transform:scaleX(-1)}
+
+/* diagrams and counters keep their drawn orientation */
+html[dir="rtl"] .diagram,html[dir="rtl"] .diagram *{direction:ltr}
+html[dir="rtl"] .diagram text{font-family:var(--body)}
+html[dir="rtl"] .ar,html[dir="rtl"] [lang="ar"]{direction:rtl}
+
+/* logical fixes for the few physical properties */
+html[dir="rtl"] ul.plain{padding-left:0;padding-right:20px}
+html[dir="rtl"] .player-cap{text-align:right}
+html[lang="ur"] .player-cap.ur,html[lang="ur"] .listen-go.ur .listen-label{font-family:'Noto Nastaliq Urdu',var(--arabic);line-height:2}
+html[dir="rtl"] input,html[dir="rtl"] textarea{text-align:right}
+html[dir="rtl"] input[type="tel"]{direction:ltr;text-align:right}
+
+html[dir="rtl"] .q::after{background:linear-gradient(270deg,var(--gold-line),rgba(191,158,94,0))}

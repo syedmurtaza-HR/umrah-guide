@@ -1,4 +1,4 @@
-# Umrah Guide: offline web app (PWA)
+# Shahid: Witness the Journey (free Umrah guide, offline web app)
 
 A free, step-by-step Umrah companion. Static files only; no server code, no accounts, no tracking.
 
@@ -24,15 +24,20 @@ Only in the browser's local storage on that phone, never sent anywhere:
 checklist ticks, the dua list, the Tawaf and Sa‘i counters, the last step opened, "My info" fields and the text size.
 "Start a new Umrah" in the Menu clears progress but keeps "My info" and the dua list.
 
-## Listen: narration in English and Urdu
+## English and Urdu
 
-Every step and guidance page has a **Listen to this page** button with an **English / اردو** switch.
-It uses the phone's own text-to-speech voice, so it is free and works offline once the voice is on the phone.
+Every page exists twice: `step5.html` (English) and `step5-ur.html` (Urdu, right-to-left, Nastaliq font).
+On the first visit the reader picks a language; the choice is saved on the phone and every page opens in that language.
+Switch any time with the English / اردو buttons (Home, Menu, and the bar under each page title). The spoken key points follow the page language.
+The Urdu text was drafted with AI help and should be checked by an Urdu-speaking scholar before wide sharing.
 
-- The narration scripts are in `assets/narration.json` (English and Urdu for each page section). Edit them there.
-- Arabic duas and Qur'an verses are not read by the synthetic voice; the narration says "the Arabic is shown on screen" and reads the meaning.
-- **Urdu voice:** most Android phones have it (Settings › Text-to-speech › Google › Install voice data › Urdu). Many iPhones have no Urdu voice; the app tells the user and English still works.
-- The Urdu scripts were drafted by AI and should be checked by an Urdu-speaking scholar before wide release.
+## Key points (listen) in Urdu and English
+
+Each page has a **اہم باتیں سنیں / Key points (listen)** button. It speaks a short summary of what matters on that page and what to do, not the whole page. Urdu is the default; English is one tap away.
+
+- The summaries (Urdu and English) are stored in `assets/narration.json`; edit them there.
+- **Recorded voice (recommended):** put MP3 files in `assets/audio/`, named `<page>-ur.mp3` or `<page>-en.mp3` (for example `step5-ur.mp3`). The app plays a recording when one exists and falls back to the phone's own voice otherwise. See the separate recording script for the exact text and file names.
+- **Phone voice:** the app picks the softest-sounding voice on the phone and speaks slightly slowly. Many Android phones have an Urdu voice (Settings › Text-to-speech › Google › Install voice data › Urdu). Many iPhones do not; the app then shows the key points on screen.
 
 ## Updating content
 

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="ur">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"/>
+<title>مینو · فوری رسائی · شاہد</title>
+<meta content="Shahid: Witness the Journey. A free, simple, step-by-step Umrah guide that works offline." name="description"/>
+<meta content="#0B3B34" name="theme-color"/>
+<meta content="yes" name="apple-mobile-web-app-capable"/>
+<meta content="yes" name="mobile-web-app-capable"/>
+<meta content="default" name="apple-mobile-web-app-status-bar-style"/>
+<meta content="Shahid" name="apple-mobile-web-app-title"/>
+<link href="manifest.json" rel="manifest"/>
+<link href="icons/favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="icons/icon-32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="icons/apple-touch-icon.png" rel="apple-touch-icon"/>
+<link href="assets/fonts.css" rel="stylesheet"/>
+<link href="assets/umrah.css" rel="stylesheet"/>
+<link href="assets/app.css" rel="stylesheet"/>
+<script>try{var s=JSON.parse(localStorage.getItem('ug:textsize'));if(s)document.documentElement.style.zoom=[1,1.15,1.3][s];var g=JSON.parse(localStorage.getItem('ug:lang')),d=document.documentElement,f=location.pathname.split('/').pop()||'index.html',m=f.match(/^([a-z0-9]+?)(-ur)?\.html$/);if(m&&g&&(g==='ur')!==(d.lang==='ur')&&m[1]!=='404')location.replace(m[1]+(g==='ur'?'-ur':'')+'.html'+location.search+location.hash);}catch(e){}</script>
+<style>
+.grp{display:flex;flex-direction:column;gap:2px}
+.grp h2{font:700 14px var(--body);letter-spacing:.1em;text-transform:uppercase;color:var(--gold);padding:0 4px 8px}
+.mi{display:grid;grid-template-columns:40px minmax(0,1fr) 24px;gap:12px;align-items:center;min-height:56px;padding:6px 10px;border-radius:12px;text-decoration:none;color:var(--ink);font:700 18px var(--body)}
+.mi .n{display:flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;border:1.5px solid var(--line);font-size:15px;color:var(--muted)}
+.mi.done .n{background:var(--teal);border-color:var(--teal);color:#fff}
+.mi.now{background:var(--gold-tint);outline:2px solid var(--ink)}
+.mi.now .n{border:2px solid var(--ink);color:var(--ink);background:#fff}
+.mi .ic{color:var(--muted)}
+.mi small{display:block;font:700 12px var(--body);letter-spacing:.08em;color:var(--ink)}
+.search{display:flex;align-items:center;gap:10px;min-height:56px;padding:0 14px;border-radius:14px;border:1.5px solid var(--ink);background:var(--surface)}
+.search input{flex:1;border:none;background:transparent;font:400 18px var(--body);color:var(--ink);outline:none;min-width:0}
+</style>
+<link href="assets/urdu.css" rel="stylesheet"/></head>
+<body data-lang="ur" data-page="menu">
+<div class="phone root" style="background: #FFFDFA">
+<div class="topbar" style="border-bottom: 1px solid #E2D8C5"><strong style="font: 600 24px var(--display); padding-left: 8px">مینو</strong> <a aria-label="مینو بند کریں" class="iconbtn" data-back="" href="index-ur.html" style="gap: 6px"><svg class="ic" viewbox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"></path></svg>بند کریں</a></div>
+<div style="display: flex; flex-direction: column; gap: 22px; padding: 16px">
+<label class="search"><svg class="ic" viewbox="0 0 24 24"><circle cx="11" cy="11" r="6.5"></circle><path d="M20 20l-4.3-4.3"></path></svg><span style="position: absolute; width: 1px; height: 1px; overflow: hidden">گائیڈ میں تلاش کریں</span><input autocomplete="off" id="search" placeholder="تلاش: “گنتی بھول گیا”، “وضو”" type="search"/></label>
+<div aria-live="polite" class="results" hidden="" id="results"></div>
+<div class="grp">
+<h2>عمرہ کے مراحل</h2>
+<a class="mi" href="index-ur.html"><span class="n"><svg class="ic sm" viewbox="0 0 24 24"><path d="M4 11l8-7 8 7v9h-5v-6H9v6H4z"></path></svg></span>ہوم · یہاں سے شروع کریں<svg class="ic sm flip" viewbox="0 0 24 24"><path d="M9 6l6 6-6 6"></path></svg></a>
+<a class="mi" data-step="1" href="step1-ur.html"><span class="n">1</span><span class="lbl">عمرہ سے پہلے</span><svg class="ic sm flip" viewbox="0 0 24 24"><path d="M9 6l6 6-6 6"></path></svg></a>
+<a class="mi" href="before-ur.html"><span class="n"><svg class="ic sm" viewbox="0 0 24 24"><rect height="15" rx="2" width="17" x="3.5" y="5"></rect><path d="M3.5 10h17M8 3v4M16 3v4"></path></svg></span>روانگی سے پہلے · منصوبہ<svg class="ic sm flip" viewbox="0 0 24 24"><path d="M9 6l6 6-6 6"></path></svg></a>
+<a class="mi" data-step="2" href="step2-ur.html"><span class="n">2</span><span class="lbl">احرام</span><svg class="ic sm flip" viewbox="0 0 24 24"><path d="M9 6l6 6-6 6"></path></svg></a>
+<a class="mi" data-step="3" href="step3-ur.html"><span class="n">3</span><span class="lbl">مکہ میں داخلہ</span><svg class="ic sm flip" viewbox="0 0 24 24"><path d="M9 6l6 6-6 6"></path></svg></a>
+<a class="mi" data-step="4" href="step4-ur.html"><span class="n">4</span><span class="lbl">مسجد الحرام میں داخلہ</span><svg class="ic sm flip" viewbox="0 0 24 24"><path d="M9 6l6 6-6 6"></path></svg></a>
+<a class="mi" data-step="5" href="step5-ur.html"><span class="n">5</span><span class="lbl">طواف</span><svg class="ic sm flip" viewbox="0 0 24 24"><path d="M9 6l6 6-6 6"></path></svg></a>
+<a class="mi" data-step="6" href="step6-ur.html"><span class="n">6</span><span class="lbl">طواف کے بعد</span><svg class="ic sm flip" viewbox="0 0 24 24"><path d="M9 6l6 6-6 6"></path></svg></a>
+<a class="mi" data-step="7" href="step7-ur.html"><span class="n">7</span><span class="lbl">سعی</span><svg class="ic sm flip" viewbox="0 0 24 24"><path d="M9 6l6 6-6 6"></path></svg></a>
+<a class="mi" data-step="8" href="step8-ur.html"><span class="n">8</span><span class="lbl">حلق / تقصیر</span><svg class="ic sm flip" viewbox="0 0 24 24"><path d="M9 6l6 6-6 6"></path></svg></a>
+<a class="mi" data-step="9" href="complete-ur.html"><span class="n"><svg class="ic sm" viewbox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span><span class="lbl">عمرہ مکمل</span><svg class="ic sm flip" viewbox="0 0 24 24"><path d="M9 6l6 6-6 6"></path></svg></a>
+</div>
+<div class="grp">
+<h2>مدد اور رہنمائی</h2>
+<a class="mi" href="mistakes-ur.html"><span class="n"><svg class="ic sm" viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M9.5 9.5a2.5 2.5 0 114 2c-1 .7-1.5 1.2-1.5 2.5M12 17v.2"></path></svg></span>عام غلطیاں اور سوالات<svg class="ic sm flip" viewbox="0 0 24 24"><path d="M9 6l6 6-6 6"></path></svg></a>
+<a class="mi" href="duas-ur.html"><span class="n"><svg class="ic sm" viewbox="0 0 24 24"><path d="M4 5.5A2 2 0 016 4h13v14H6a2 2 0 00-2 2zM4 5.5V20M19 18v2H6"></path></svg></span>دعائیں اور اذکار<svg class="ic sm flip" viewbox="0 0 24 24"><path d="M9 6l6 6-6 6"></path></svg></a>
+<a class="mi" href="mydua-ur.html"><span class="n"><svg class="ic sm" viewbox="0 0 24 24"><path d="M9 6h11M9 12h11M9 18h11M4 6l1 1 2-2M4 12l1 1 2-2M4 18l1 1 2-2"></path></svg></span>میری دعاؤں کی فہرست<svg class="ic sm flip" viewbox="0 0 24 24"><path d="M9 6l6 6-6 6"></path></svg></a>
+<a class="mi" href="women-ur.html"><span class="n"><svg class="ic sm" viewbox="0 0 24 24"><circle cx="12" cy="7" r="3.5"></circle><path d="M5 21c0-4 3-7 7-7s7 3 7 7"></path></svg></span>خواتین کے لیے رہنمائی<svg class="ic sm flip" viewbox="0 0 24 24"><path d="M9 6l6 6-6 6"></path></svg></a>
+<a class="mi" href="care-ur.html"><span class="n"><svg class="ic sm" viewbox="0 0 24 24"><circle cx="10" cy="4.5" r="1.8"></circle><path d="M10 7.5v6h6l2.5 5.5M10 10.5h5"></path><path d="M7.5 11.5a5 5 0 106.5 6.3"></path></svg></span>بزرگ، معذور اور خصوصی ضروریات<svg class="ic sm flip" viewbox="0 0 24 24"><path d="M9 6l6 6-6 6"></path></svg></a>
+<a class="mi" href="quick-ur.html"><span class="n"><svg class="ic sm" viewbox="0 0 24 24"><path d="M13 2L4 14h7l-1 8 9-12h-7z"></path></svg></span>فوری حوالہ<svg class="ic sm flip" viewbox="0 0 24 24"><path d="M9 6l6 6-6 6"></path></svg></a>
+<a class="mi" href="madinah-ur.html"><span class="n"><svg class="ic sm" viewbox="0 0 24 24"><path d="M5 21V10a7 7 0 0114 0v11M3 21h18M9 21v-6a3 3 0 016 0v6"></path></svg></span>مدینہ منورہ کی زیارت (اختیاری)<svg class="ic sm flip" viewbox="0 0 24 24"><path d="M9 6l6 6-6 6"></path></svg></a>
+<a class="mi" href="glossary-ur.html"><span class="n"><svg class="ic sm" viewbox="0 0 24 24"><path d="M4 5.5A2 2 0 016 4h13v14H6a2 2 0 00-2 2zM4 5.5V20M19 18v2H6"></path></svg></span>فرہنگ<svg class="ic sm flip" viewbox="0 0 24 24"><path d="M9 6l6 6-6 6"></path></svg></a>
+<a class="mi" href="sources-ur.html"><span class="n"><svg class="ic sm" viewbox="0 0 24 24"><path d="M12 4v16M8 20h8M5 7h14M5 7l-3 6h6zM19 7l-3 6h6z"></path></svg></span>حوالہ جات اور علمی نوٹس<svg class="ic sm flip" viewbox="0 0 24 24"><path d="M9 6l6 6-6 6"></path></svg></a>
+</div>
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px">
+<button class="iconbtn" data-action="textsize" style="height: 56px" type="button">A · A+ · A++</button>
+<button aria-label="Read in English" class="iconbtn" data-action="lang" lang="en" style="height: 56px" type="button"><svg class="ic sm" viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3c2.5 2.5 3.7 5.5 3.7 9s-1.2 6.5-3.7 9c-2.5-2.5-3.7-5.5-3.7-9S9.5 5.5 12 3z"></path></svg>English</button>
+<button class="iconbtn" data-soon="نائٹ موڈ جلد آ رہا ہے۔" style="height: 56px" type="button"><svg class="ic sm" viewbox="0 0 24 24"><path d="M20 14.5A8 8 0 019.5 4a8 8 0 1010.5 10.5z"></path></svg>رات</button>
+</div>
+<button class="btn secondary" data-action="reset" type="button">نیا عمرہ شروع کریں (پیش رفت صاف کریں)</button>
+</div>
+</div>
+<script defer="" src="assets/app.js"></script>
+<script defer="" src="assets/narrator.js"></script>
+</body>
+</html>

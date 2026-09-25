@@ -16,7 +16,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible,l
 .toast{position:fixed;left:50%;bottom:calc(96px + env(safe-area-inset-bottom));transform:translateX(-50%);max-width:92vw;padding:12px 18px;border-radius:12px;background:var(--ink);color:#fff;font:700 16px var(--body);z-index:100;box-shadow:0 6px 24px rgba(0,0,0,.2)}
 
 /* my-info full screen */
-.infosheet{position:fixed;inset:0;z-index:90;background:#FFFDF8;display:flex;flex-direction:column;gap:18px;padding:calc(24px + env(safe-area-inset-top)) 24px 24px;overflow:auto}
+.infosheet{position:fixed;inset:0;z-index:90;background:#FFFDFA;display:flex;flex-direction:column;gap:18px;padding:calc(24px + env(safe-area-inset-top)) 24px 24px;overflow:auto}
 .infosheet dt{font:700 16px var(--body);color:var(--muted);letter-spacing:.06em;text-transform:uppercase}
 .infosheet dd{margin:0 0 10px;font:700 30px/1.25 var(--body);color:var(--ink);word-break:break-word}
 
@@ -31,7 +31,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible,l
 .install button{min-height:44px;padding:0 14px;border-radius:10px;border:none;background:var(--teal);color:#fff;font:700 15px var(--body);cursor:pointer}
 
 /* print page */
-.printwrap{display:flex;flex-direction:column;align-items:center;gap:24px;padding:24px 12px;background:#e9e4d8;min-height:100vh}
+.printwrap{display:flex;flex-direction:column;align-items:center;gap:24px;padding:24px 12px;background:#EAE5D9;min-height:100vh}
 .printwrap .sheet{box-shadow:0 4px 20px rgba(0,0,0,.15);max-width:100%;overflow:auto}
 .printbar{display:flex;gap:10px}
 @media print{
@@ -49,7 +49,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible,l
 .listen-lang button[lang="ur"]{font:700 20px var(--arabic)}
 .listen-lang button.on{background:var(--ink);color:#fff}
 .player{position:fixed;left:50%;transform:translateX(-50%);width:calc(100% - 16px);max-width:544px;z-index:30;display:flex;flex-direction:column;gap:10px;padding:12px;border-radius:18px;background:var(--ink);color:#fff;box-shadow:0 8px 28px rgba(0,0,0,.28)}
-.player-cap{font-size:16px;line-height:1.45;max-height:4.4em;overflow:hidden;color:#F1EADB}
+.player-cap{font-size:16px;line-height:1.45;max-height:4.4em;overflow:hidden;color:#F1EBDF}
 .player-cap.ur{font:400 20px/1.8 var(--arabic);text-align:right}
 .player-row{display:flex;align-items:center;gap:8px}
 .player-row button{display:flex;align-items:center;justify-content:center;min-width:48px;height:48px;padding:0 10px;border-radius:12px;border:1.5px solid rgba(255,255,255,.35);background:transparent;color:#fff;font:700 15px var(--body);cursor:pointer}
@@ -58,5 +58,28 @@ a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible,l
 .player-row .player-slow.on{background:var(--gold-line);border-color:var(--gold-line);color:var(--ink)}
 .player .ic{width:22px;height:22px}
 .reading{outline:3px solid var(--gold-line);outline-offset:-3px}
-.reading:not(.hero){background-color:#FFF8E8}
+.reading:not(.hero){background-color:#FBF7EC}
 @media print{.listen,.player{display:none!important}}
+.listen-go.ur .listen-label{font:700 20px/1.3 var(--arabic)}
+.player-cap{white-space:pre-line}
+.player-row .player-slow.ur{font:700 18px var(--arabic)}
+.player-row .player-slow{margin-left:auto}
+
+/* first-visit language chooser */
+.langpick{position:fixed;inset:0;z-index:60;background:rgba(6,31,27,.62);display:flex;align-items:center;justify-content:center;padding:16px}
+.langpick-box{background:var(--surface);border-radius:20px;padding:24px 20px;width:100%;max-width:380px;display:flex;flex-direction:column;gap:12px;text-align:center;box-shadow:0 10px 40px rgba(0,0,0,.25)}
+.langpick-t{font:700 26px/2 'Noto Nastaliq Urdu',var(--arabic)}
+.langpick-t span{display:block;font:600 20px/1.3 var(--display)}
+.langpick .btn{min-height:60px;font-size:22px;justify-content:center}
+.langpick .btn[lang="ur"]{font:700 24px/2 'Noto Nastaliq Urdu',var(--arabic)}
+.langpick p{margin:4px 0 0;font-size:15px;line-height:1.7;color:var(--muted)}
+[lang="ur"]:not(html){font-family:'Noto Nastaliq Urdu',var(--arabic)}
+
+/* refined listen bar */
+.listen{flex-wrap:nowrap}
+.listen-go{flex:1 1 0;min-width:0;border:1px solid var(--gold-line);background:linear-gradient(180deg,#FFFDFA,var(--gold-tint));color:var(--teal);border-radius:12px;box-shadow:0 8px 18px -14px rgba(23,33,31,.35)}
+.listen-go .ic{color:var(--gold)}
+.listen-lang{flex:0 0 auto;border:1px solid var(--line);border-radius:12px}
+.listen-lang button{min-width:64px}
+.listen-lang button.on{background:var(--teal);color:#FFFDFA}
+.listen-lang button[lang="ur"]{font:700 18px/1.9 'Noto Nastaliq Urdu',var(--arabic)}

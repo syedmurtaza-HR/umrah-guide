@@ -1,4 +1,4 @@
-/* Umrah Guide – app behaviour. Everything is stored only on this device (localStorage). */
+/* Shahid (Umrah Guide) – app behaviour. Everything is stored only on this device (localStorage). */
 (function () {
   'use strict';
 
@@ -10,12 +10,28 @@
     clearAll: function () { try { Object.keys(localStorage).filter(function (k) { return k.indexOf('ug:') === 0; }).forEach(function (k) { localStorage.removeItem(k); }); } catch (e) {} }
   };
 
+  // ---------- language (English pages: x.html, Urdu pages: x-ur.html) ----------
+  var UR = document.documentElement.lang === 'ur';
+  var L = function (en, ur) { return UR ? ur : en; };
+  var u = function (url) { return UR ? url.replace(/^([a-z0-9]+)\.html/, '$1-ur.html') : url; };
+  function otherLangUrl() {
+    var p = location.pathname, file = p.slice(p.lastIndexOf('/') + 1) || 'index.html';
+    var m = file.match(/^([a-z0-9]+?)(-ur)?\.html$/);
+    var base = m ? m[1] : 'index';
+    if (base === '404') base = 'index';
+    return base + (UR ? '' : '-ur') + '.html' + location.hash;
+  }
+  function switchLang(to) {
+    store.set('lang', to);
+    if ((to === 'ur') !== UR) location.href = otherLangUrl();
+  }
+
   var STEPS = {
-    1: { name: 'Before Umrah', url: 'step1.html' }, 2: { name: 'Ihram', url: 'step2.html' },
-    3: { name: 'Entering Makkah', url: 'step3.html' }, 4: { name: 'Entering the Masjid', url: 'step4.html' },
-    5: { name: 'Tawaf', url: 'step5.html' }, 6: { name: 'After Tawaf', url: 'step6.html' },
-    7: { name: 'Sa‘i', url: 'step7.html' }, 8: { name: 'Halq / Taqsir', url: 'step8.html' },
-    9: { name: 'Umrah complete', url: 'complete.html' }
+    1: { name: L('Before Umrah', 'عمرہ سے پہلے'), url: 'step1.html' }, 2: { name: L('Ihram', 'احرام'), url: 'step2.html' },
+    3: { name: L('Entering Makkah', 'مکہ میں داخلہ'), url: 'step3.html' }, 4: { name: L('Entering the Masjid', 'مسجد میں داخلہ'), url: 'step4.html' },
+    5: { name: L('Tawaf', 'طواف'), url: 'step5.html' }, 6: { name: L('After Tawaf', 'طواف کے بعد'), url: 'step6.html' },
+    7: { name: L('Sa‘i', 'سعی'), url: 'step7.html' }, 8: { name: L('Halq / Taqsir', 'حلق / تقصیر'), url: 'step8.html' },
+    9: { name: L('Umrah complete', 'عمرہ مکمل'), url: 'complete.html' }
   };
   var CHECK = '<svg class="ic" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>';
   var PIN = '<svg class="ic sm" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0119 9.5C19 14.8 12 21 12 21z"></path></svg>';
@@ -62,8 +78,8 @@
       el.querySelector('.c-done').hidden = n < 7;
       el.querySelectorAll('[data-c="current"]').forEach(function (s) { s.textContent = cur; });
       var odd = cur % 2 === 1;
-      el.querySelectorAll('[data-c="from"]').forEach(function (s) { s.textContent = odd ? 'Safa' : 'Marwah'; });
-      el.querySelectorAll('[data-c="to"]').forEach(function (s) { s.textContent = odd ? 'Marwah' : 'Safa'; });
+      el.querySelectorAll('[data-c="from"]').forEach(function (s) { s.textContent = odd ? L('Safa', 'صفا') : L('Marwah', 'مروہ'); });
+      el.querySelectorAll('[data-c="to"]').forEach(function (s) { s.textContent = odd ? L('Marwah', 'مروہ') : L('Safa', 'صفا'); });
       el.querySelectorAll('[data-n]').forEach(function (d) { d.classList.toggle('on', parseInt(d.getAttribute('data-n'), 10) <= n); });
     }
     el.querySelector('[data-act="add"]').addEventListener('click', function () {
@@ -89,8 +105,8 @@
   document.querySelectorAll('[data-counter-status]').forEach(function (el) {
     var name = el.getAttribute('data-counter-status');
     var n = counterState(name);
-    var unit = name === 'tawaf' ? 'Round' : 'Lap';
-    el.textContent = n === 0 ? 'Not started' : (n >= 7 ? 'All 7 done' : unit + ' ' + (n + 1) + ' of 7');
+    var unit = name === 'tawaf' ? L('Round', 'چکر') : L('Lap', 'چکر');
+    el.textContent = n === 0 ? L('Not started', 'شروع نہیں ہوا') : (n >= 7 ? L('All 7 done', 'ساتوں مکمل') : unit + ' ' + (n + 1) + L(' of 7', ' از 7'));
   });
 
   // ---------- Home: continue where you left off ----------
@@ -99,10 +115,10 @@
     if (lastStep && STEPS[lastStep]) {
       var s = STEPS[lastStep];
       var extra = '';
-      if (lastStep === 5 && counterState('tawaf') > 0 && counterState('tawaf') < 7) extra = ', round ' + (counterState('tawaf') + 1);
-      if (lastStep === 7 && counterState('sai') > 0 && counterState('sai') < 7) extra = ', lap ' + (counterState('sai') + 1);
-      cont.href = s.url;
-      cont.querySelector('[data-c="label"]').textContent = (lastStep === 9 ? '' : 'Step ' + lastStep + ' · ') + s.name + extra;
+      if (lastStep === 5 && counterState('tawaf') > 0 && counterState('tawaf') < 7) extra = L(', round ', '، چکر ') + (counterState('tawaf') + 1);
+      if (lastStep === 7 && counterState('sai') > 0 && counterState('sai') < 7) extra = L(', lap ', '، چکر ') + (counterState('sai') + 1);
+      cont.href = u(s.url);
+      cont.querySelector('[data-c="label"]').textContent = (lastStep === 9 ? '' : L('Step ', 'مرحلہ ') + lastStep + ' · ') + s.name + extra;
       cont.hidden = false;
     } else { cont.hidden = true; }
   }
@@ -118,17 +134,17 @@
       else if (n === lastStep) {
         stop.classList.add('now');
         var b = stop.querySelector('.body');
-        var pill = document.createElement('span'); pill.className = 'here'; pill.innerHTML = PIN + 'YOU ARE HERE';
+        var pill = document.createElement('span'); pill.className = 'here'; pill.innerHTML = PIN + L('YOU ARE HERE', 'آپ یہاں ہیں');
         b.insertBefore(pill, b.firstChild);
       }
     });
     var hs = document.getElementById('here-line');
-    if (hs) hs.textContent = lastStep && lastStep < 9 ? '8 steps. You are on step ' + lastStep + '.' : (lastStep === 9 ? 'All 8 steps done. Alhamdulillah.' : '8 steps. Start with step 1.');
+    if (hs) hs.textContent = lastStep && lastStep < 9 ? L('8 steps. You are on step ' + lastStep + '.', '8 مراحل۔ آپ مرحلہ ' + lastStep + ' پر ہیں۔') : (lastStep === 9 ? L('All 8 steps done. Alhamdulillah.', 'تمام 8 مراحل مکمل۔ الحمدللہ۔') : L('8 steps. Start with step 1.', '8 مراحل۔ مرحلہ 1 سے شروع کریں۔'));
     var jn = document.getElementById('journey-next');
     if (jn) {
       var target = lastStep ? lastStep : 1;
-      jn.href = STEPS[target].url;
-      jn.querySelector('small').textContent = lastStep ? (target === 9 ? 'Finished' : 'Continue · Step ' + target) : 'Start · Step 1';
+      jn.href = u(STEPS[target].url);
+      jn.querySelector('small').textContent = lastStep ? (target === 9 ? L('Finished', 'مکمل') : L('Continue · Step ', 'جاری رکھیں · مرحلہ ') + target) : L('Start · Step 1', 'شروع · مرحلہ 1');
       jn.querySelector('strong').textContent = STEPS[target].name;
     }
   }
@@ -142,7 +158,7 @@
     else if (n === lastStep) {
       mi.classList.add('now'); mi.setAttribute('aria-current', 'step');
       var label = mi.querySelector('.lbl');
-      if (label) label.insertAdjacentHTML('beforeend', '<small>YOU ARE HERE</small>');
+      if (label) label.insertAdjacentHTML('beforeend', '<small>' + L('YOU ARE HERE', 'آپ یہاں ہیں') + '</small>');
     }
   });
   document.querySelectorAll('[data-back]').forEach(function (a) {
@@ -164,17 +180,17 @@
       dl.innerHTML = l.map(function (d, i) {
         return '<li class="' + (d.done ? 'done' : '') + '"><input type="checkbox" id="dua-' + i + '" data-i="' + i + '"' + (d.done ? ' checked' : '') + '>' +
           '<label for="dua-' + i + '" style="display:flex;flex-direction:column;gap:2px;cursor:pointer"><span class="who">' + esc(d.who) + '</span>' + (d.what ? '<span class="what">' + esc(d.what) + '</span>' : '') + '</label>' +
-          '<button type="button" class="del" data-del="' + i + '" aria-label="Remove ' + esc(d.who) + '"><svg class="ic" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"></path></svg></button></li>';
+          '<button type="button" class="del" data-del="' + i + '" aria-label="' + L('Remove ', 'ہٹائیں: ') + esc(d.who) + '"><svg class="ic" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"></path></svg></button></li>';
       }).join('');
       var done = l.filter(function (d) { return d.done; }).length;
-      var c = document.getElementById('dua-count'); if (c) c.textContent = done + ' of ' + l.length + ' prayed for';
+      var c = document.getElementById('dua-count'); if (c) c.textContent = UR ? (l.length + ' میں سے ' + done + ' کے لیے دعا ہو گئی') : (done + ' of ' + l.length + ' prayed for');
       var e = document.getElementById('dua-empty'); if (e) e.hidden = l.length > 0;
     };
     var add = function (w, t) {
       w = (w || '').trim(); t = (t || '').trim();
-      if (!w) { toast('Type a name first.'); if (who) who.focus(); return; }
+      if (!w) { toast(L('Type a name first.', 'پہلے نام لکھیں۔')); if (who) who.focus(); return; }
       var l = list(); l.push({ who: w.slice(0, 80), what: t.slice(0, 160), done: false }); save(l);
-      toast('Added to your list');
+      toast(L('Added to your list', 'فہرست میں شامل ہو گیا'));
     };
     document.querySelectorAll('[data-action="dua-add"]').forEach(function (b) {
       b.addEventListener('click', function () { add(who && who.value, what && what.value); if (who) who.value = ''; if (what) what.value = ''; });
@@ -188,10 +204,10 @@
     dl.addEventListener('click', function (e) {
       var b = e.target.closest('[data-del]'); if (!b) return;
       var l = list(); var i = +b.getAttribute('data-del');
-      if (l[i] && confirm('Remove “' + l[i].who + '” from your list?')) { l.splice(i, 1); save(l); }
+      if (l[i] && confirm(UR ? ('“' + l[i].who + '” کو فہرست سے ہٹا دیں؟') : ('Remove “' + l[i].who + '” from your list?'))) { l.splice(i, 1); save(l); }
     });
     document.querySelectorAll('[data-action="dua-reset"]').forEach(function (b) {
-      b.addEventListener('click', function () { var l = list(); l.forEach(function (d) { d.done = false; }); save(l); toast('All unticked'); });
+      b.addEventListener('click', function () { var l = list(); l.forEach(function (d) { d.done = false; }); save(l); toast(L('All unticked', 'سب نشان ہٹا دیے گئے')); });
     });
     render();
   }
@@ -199,12 +215,12 @@
   // ---------- reset ----------
   document.querySelectorAll('[data-action="reset"]').forEach(function (b) {
     b.addEventListener('click', function () {
-      if (confirm('Start a new Umrah? This clears your ticks, counters and progress on this phone. Your “My info” card and dua list are kept.')) {
+      if (confirm(L('Start a new Umrah? This clears your ticks, counters and progress on this phone. Your “My info” card and dua list are kept.', 'نیا عمرہ شروع کریں؟ اس فون سے آپ کے نشان، گنتی اور پیش رفت صاف ہو جائیں گے۔ “میری معلومات” کارڈ اور دعاؤں کی فہرست محفوظ رہیں گی۔'))) {
         var keep = {};
-        try { Object.keys(localStorage).forEach(function (k) { if (k.indexOf('ug:info:') === 0 || k === 'ug:textsize' || k === 'ug:duas' || k === 'ug:voiceLang' || k === 'ug:voiceSlow') keep[k] = localStorage.getItem(k); }); } catch (e) {}
+        try { Object.keys(localStorage).forEach(function (k) { if (k.indexOf('ug:info:') === 0 || k === 'ug:textsize' || k === 'ug:duas' || k === 'ug:voiceLang' || k === 'ug:voiceSlow' || k === 'ug:lang') keep[k] = localStorage.getItem(k); }); } catch (e) {}
         store.clearAll();
         try { Object.keys(keep).forEach(function (k) { localStorage.setItem(k, keep[k]); }); } catch (e) {}
-        location.href = 'index.html';
+        location.href = u('index.html');
       }
     });
   });
@@ -216,14 +232,32 @@
     b.addEventListener('click', function () {
       var i = (store.get('textsize', 0) + 1) % SIZES.length;
       store.set('textsize', i); applySize(i);
-      toast(['Normal text', 'Large text', 'Extra large text'][i]);
+      toast(UR ? ['عام تحریر', 'بڑی تحریر', 'بہت بڑی تحریر'][i] : ['Normal text', 'Large text', 'Extra large text'][i]);
     });
   });
 
   // ---------- things not built yet ----------
   document.querySelectorAll('.audio').forEach(function (b) {
-    b.addEventListener('click', function () { toast('Arabic recitation is not added yet. Use “Listen to this page” to hear the meaning.'); });
+    b.addEventListener('click', function () { toast(L('Arabic recitation is not added yet. Use “Key points” at the top of the page to listen.', 'عربی تلاوت ابھی شامل نہیں کی گئی۔ صفحے کے اوپر “اہم باتیں سنیں” استعمال کریں۔')); });
   });
+  document.querySelectorAll('[data-action="lang"]').forEach(function (b) {
+    b.addEventListener('click', function (e) { e.preventDefault(); switchLang(UR ? 'en' : 'ur'); });
+  });
+  // first visit: let the reader choose a language for the whole guide
+  if (store.get('lang', null) === null && page !== 'print') {
+    var ch = document.createElement('div');
+    ch.className = 'langpick'; ch.setAttribute('role', 'dialog'); ch.setAttribute('aria-label', 'Choose language / زبان منتخب کریں');
+    ch.innerHTML = '<div class="langpick-box"><div class="langpick-t">زبان منتخب کریں<br><span>Choose your language</span></div>' +
+      '<button type="button" class="btn primary" data-l="ur" lang="ur">اردو</button>' +
+      '<button type="button" class="btn secondary" data-l="en">English</button>' +
+      '<p>You can change this any time from the menu. · آپ یہ کسی بھی وقت مینو سے بدل سکتے ہیں۔</p></div>';
+    document.body.appendChild(ch);
+    ch.addEventListener('click', function (e) {
+      var b = e.target.closest('[data-l]'); if (!b) return;
+      var to = b.getAttribute('data-l');
+      ch.remove(); switchLang(to);
+    });
+  }
   document.querySelectorAll('[data-soon]').forEach(function (b) {
     b.addEventListener('click', function (e) { e.preventDefault(); toast(b.getAttribute('data-soon')); });
   });
@@ -232,9 +266,9 @@
   document.querySelectorAll('[data-action="share"]').forEach(function (a) {
     a.addEventListener('click', function (e) {
       e.preventDefault();
-      var url = new URL('index.html', location.href).href;
-      if (navigator.share) navigator.share({ title: 'Umrah Guide', text: 'A free, simple step-by-step Umrah guide that works offline.', url: url }).catch(function () {});
-      else if (navigator.clipboard) navigator.clipboard.writeText(url).then(function () { toast('Link copied'); });
+      var url = new URL(u('index.html'), location.href).href;
+      if (navigator.share) navigator.share({ title: L('Shahid: Witness the Journey', 'شاہد: سفر کے گواہ'), text: L('A free, simple step-by-step Umrah guide that works offline.', 'مفت، آسان، مرحلہ وار عمرہ گائیڈ جو آف لائن بھی چلتی ہے۔'), url: url }).catch(function () {});
+      else if (navigator.clipboard) navigator.clipboard.writeText(url).then(function () { toast(L('Link copied', 'لنک کاپی ہو گیا')); });
       else toast(url);
     });
   });
@@ -243,16 +277,16 @@
   document.querySelectorAll('[data-action="showinfo"]').forEach(function (a) {
     a.addEventListener('click', function (e) {
       e.preventDefault();
-      var rows = [['Name', 'name'], ['Hotel', 'hotel'], ['Group leader’s phone', 'phone'], ['Meeting gate', 'gate']];
+      var rows = UR ? [['نام', 'name'], ['ہوٹل', 'hotel'], ['گروپ لیڈر کا فون', 'phone'], ['ملاقات کا دروازہ', 'gate']] : [['Name', 'name'], ['Hotel', 'hotel'], ['Group leader’s phone', 'phone'], ['Meeting gate', 'gate']];
       var html = '<dl style="margin:0">';
       rows.forEach(function (r) {
         var v = store.get('info:' + r[1], '') || '—';
         html += '<dt>' + r[0] + '</dt><dd>' + String(v).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }) + '</dd>';
       });
-      html += '<dt>Emergency (Makkah)</dt><dd>911</dd></dl>';
+      html += '<dt>' + L('Emergency (Makkah)', 'ایمرجنسی (مکہ)') + '</dt><dd dir="ltr">911</dd></dl>';
       var sheet = document.createElement('div');
-      sheet.className = 'infosheet'; sheet.setAttribute('role', 'dialog'); sheet.setAttribute('aria-label', 'My info');
-      sheet.innerHTML = '<div style="font:600 30px var(--display)">Please help me</div>' + html + '<button class="btn primary" type="button">Close</button>';
+      sheet.className = 'infosheet'; sheet.setAttribute('role', 'dialog'); sheet.setAttribute('aria-label', L('My info', 'میری معلومات'));
+      sheet.innerHTML = '<div style="font:600 30px var(--display)">' + L('Please help me', 'براہِ کرم میری مدد کریں') + (UR ? '<div lang="en" style="font:600 20px var(--body);direction:ltr">Please help me</div>' : '') + '</div>' + html + '<button class="btn primary" type="button">' + L('Close', 'بند کریں') + '</button>';
       document.body.appendChild(sheet);
       var close = sheet.querySelector('button'); close.focus();
       close.addEventListener('click', function () { sheet.remove(); a.focus(); });
@@ -264,7 +298,7 @@
   var results = document.getElementById('results');
   if (search && results) {
     var index = null;
-    fetch('search-index.json').then(function (r) { return r.json(); }).then(function (j) { index = j; }).catch(function () {});
+    fetch(UR ? 'search-index-ur.json' : 'search-index.json').then(function (r) { return r.json(); }).then(function (j) { index = j; }).catch(function () {});
     search.addEventListener('input', function () {
       var q = search.value.trim().toLowerCase();
       results.innerHTML = '';
@@ -272,7 +306,7 @@
       var terms = q.split(/\s+/);
       var hits = index.filter(function (p) { return terms.every(function (t) { return p.text.indexOf(t) !== -1; }); }).slice(0, 8);
       results.hidden = false;
-      if (!hits.length) { results.innerHTML = '<p class="small muted">No matches. Try a shorter word, e.g. “wudu”.</p>'; return; }
+      if (!hits.length) { results.innerHTML = '<p class="small muted">' + L('No matches. Try a shorter word, e.g. “wudu”.', 'کوئی نتیجہ نہیں ملا۔ چھوٹا لفظ آزمائیں، مثلاً “وضو”۔') + '</p>'; return; }
       hits.forEach(function (p) {
         var i = p.text.indexOf(terms[0]);
         var snip = p.text.slice(Math.max(0, i - 40), i + 80);
@@ -310,8 +344,8 @@
           var w = reg.installing;
           if (!w) return;
           w.addEventListener('statechange', function () {
-            if (w.state === 'installed' && navigator.serviceWorker.controller) toast('Guide updated. Reopen to see the latest version.');
-            else if (w.state === 'activated' && !navigator.serviceWorker.controller) toast('Saved for offline use.');
+            if (w.state === 'installed' && navigator.serviceWorker.controller) toast(L('Guide updated. Reopen to see the latest version.', 'گائیڈ اپ ڈیٹ ہو گئی۔ نیا ورژن دیکھنے کے لیے دوبارہ کھولیں۔'));
+            else if (w.state === 'activated' && !navigator.serviceWorker.controller) toast(L('Saved for offline use.', 'آف لائن استعمال کے لیے محفوظ ہو گئی۔'));
           });
         });
       }).catch(function () {});
