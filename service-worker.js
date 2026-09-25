@@ -1,5 +1,5 @@
 /* Umrah Guide service worker: caches every page so the guide works fully offline. */
-const VERSION = '08900f2b59';
+const VERSION = 'da0aafefd2';
 const CACHE = 'umrah-guide-' + VERSION;
 const PRECACHE = [
   "./",
@@ -24,10 +24,14 @@ const PRECACHE = [
   "assets/fonts/newsreader-latin-ext-600-normal.woff2",
   "assets/fonts/newsreader-vietnamese-500-normal.woff2",
   "assets/fonts/newsreader-vietnamese-600-normal.woff2",
+  "assets/narration.json",
+  "assets/narrator.js",
   "assets/umrah.css",
+  "before.html",
   "care.html",
   "complete.html",
   "duas.html",
+  "glossary.html",
   "icons/apple-touch-icon.png",
   "icons/favicon.svg",
   "icons/icon-192.png",
@@ -37,9 +41,11 @@ const PRECACHE = [
   "icons/icon-maskable-512.png",
   "index.html",
   "journey.html",
+  "madinah.html",
   "manifest.json",
   "menu.html",
   "mistakes.html",
+  "mydua.html",
   "print.html",
   "quick.html",
   "search-index.json",

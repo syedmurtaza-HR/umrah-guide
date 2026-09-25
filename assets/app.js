@@ -151,12 +151,57 @@
     });
   });
 
+
+  // ---------- My dua list ----------
+  var dl = document.getElementById('dua-list');
+  if (dl) {
+    var who = document.getElementById('d-who'), what = document.getElementById('d-what');
+    var esc = function (t) { return String(t).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); };
+    var list = function () { var l = store.get('duas', []); return Array.isArray(l) ? l : []; };
+    var save = function (l) { store.set('duas', l); render(); };
+    var render = function () {
+      var l = list();
+      dl.innerHTML = l.map(function (d, i) {
+        return '<li class="' + (d.done ? 'done' : '') + '"><input type="checkbox" id="dua-' + i + '" data-i="' + i + '"' + (d.done ? ' checked' : '') + '>' +
+          '<label for="dua-' + i + '" style="display:flex;flex-direction:column;gap:2px;cursor:pointer"><span class="who">' + esc(d.who) + '</span>' + (d.what ? '<span class="what">' + esc(d.what) + '</span>' : '') + '</label>' +
+          '<button type="button" class="del" data-del="' + i + '" aria-label="Remove ' + esc(d.who) + '"><svg class="ic" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"></path></svg></button></li>';
+      }).join('');
+      var done = l.filter(function (d) { return d.done; }).length;
+      var c = document.getElementById('dua-count'); if (c) c.textContent = done + ' of ' + l.length + ' prayed for';
+      var e = document.getElementById('dua-empty'); if (e) e.hidden = l.length > 0;
+    };
+    var add = function (w, t) {
+      w = (w || '').trim(); t = (t || '').trim();
+      if (!w) { toast('Type a name first.'); if (who) who.focus(); return; }
+      var l = list(); l.push({ who: w.slice(0, 80), what: t.slice(0, 160), done: false }); save(l);
+      toast('Added to your list');
+    };
+    document.querySelectorAll('[data-action="dua-add"]').forEach(function (b) {
+      b.addEventListener('click', function () { add(who && who.value, what && what.value); if (who) who.value = ''; if (what) what.value = ''; });
+    });
+    [who, what].forEach(function (inp) { if (inp) inp.addEventListener('keydown', function (e) { if (e.key === 'Enter') { e.preventDefault(); add(who.value, what.value); who.value = ''; what.value = ''; who.focus(); } }); });
+    document.querySelectorAll('[data-quick]').forEach(function (b) { b.addEventListener('click', function () { add(b.getAttribute('data-quick'), ''); }); });
+    dl.addEventListener('change', function (e) {
+      var i = e.target.getAttribute('data-i'); if (i === null) return;
+      var l = list(); if (l[i]) { l[i].done = e.target.checked; save(l); if (navigator.vibrate && e.target.checked) navigator.vibrate(30); }
+    });
+    dl.addEventListener('click', function (e) {
+      var b = e.target.closest('[data-del]'); if (!b) return;
+      var l = list(); var i = +b.getAttribute('data-del');
+      if (l[i] && confirm('Remove “' + l[i].who + '” from your list?')) { l.splice(i, 1); save(l); }
+    });
+    document.querySelectorAll('[data-action="dua-reset"]').forEach(function (b) {
+      b.addEventListener('click', function () { var l = list(); l.forEach(function (d) { d.done = false; }); save(l); toast('All unticked'); });
+    });
+    render();
+  }
+
   // ---------- reset ----------
   document.querySelectorAll('[data-action="reset"]').forEach(function (b) {
     b.addEventListener('click', function () {
-      if (confirm('Start a new Umrah? This clears your ticks, counters and progress on this phone. Your “My info” card is kept.')) {
+      if (confirm('Start a new Umrah? This clears your ticks, counters and progress on this phone. Your “My info” card and dua list are kept.')) {
         var keep = {};
-        try { Object.keys(localStorage).forEach(function (k) { if (k.indexOf('ug:info:') === 0 || k === 'ug:textsize') keep[k] = localStorage.getItem(k); }); } catch (e) {}
+        try { Object.keys(localStorage).forEach(function (k) { if (k.indexOf('ug:info:') === 0 || k === 'ug:textsize' || k === 'ug:duas' || k === 'ug:voiceLang' || k === 'ug:voiceSlow') keep[k] = localStorage.getItem(k); }); } catch (e) {}
         store.clearAll();
         try { Object.keys(keep).forEach(function (k) { localStorage.setItem(k, keep[k]); }); } catch (e) {}
         location.href = 'index.html';
@@ -177,7 +222,7 @@
 
   // ---------- things not built yet ----------
   document.querySelectorAll('.audio').forEach(function (b) {
-    b.addEventListener('click', function () { toast('Audio recitation is not added yet.'); });
+    b.addEventListener('click', function () { toast('Arabic recitation is not added yet. Use “Listen to this page” to hear the meaning.'); });
   });
   document.querySelectorAll('[data-soon]').forEach(function (b) {
     b.addEventListener('click', function (e) { e.preventDefault(); toast(b.getAttribute('data-soon')); });

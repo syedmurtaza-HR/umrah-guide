@@ -21,8 +21,18 @@ Open it once while online; after that every page works with no internet.
 ## What is stored on the phone
 
 Only in the browser's local storage on that phone, never sent anywhere:
-checklist ticks, the Tawaf and Sa‘i counters, the last step opened, "My info" fields and the text size.
-"Start a new Umrah" in the Menu clears everything except "My info".
+checklist ticks, the dua list, the Tawaf and Sa‘i counters, the last step opened, "My info" fields and the text size.
+"Start a new Umrah" in the Menu clears progress but keeps "My info" and the dua list.
+
+## Listen: narration in English and Urdu
+
+Every step and guidance page has a **Listen to this page** button with an **English / اردو** switch.
+It uses the phone's own text-to-speech voice, so it is free and works offline once the voice is on the phone.
+
+- The narration scripts are in `assets/narration.json` (English and Urdu for each page section). Edit them there.
+- Arabic duas and Qur'an verses are not read by the synthetic voice; the narration says "the Arabic is shown on screen" and reads the meaning.
+- **Urdu voice:** most Android phones have it (Settings › Text-to-speech › Google › Install voice data › Urdu). Many iPhones have no Urdu voice; the app tells the user and English still works.
+- The Urdu scripts were drafted by AI and should be checked by an Urdu-speaking scholar before wide release.
 
 ## Updating content
 
@@ -36,15 +46,19 @@ Edit the HTML pages, then change anything in `service-worker.js` (for example th
 | `journey.html`, `menu.html` | Journey map, quick-jump menu with search |
 | `step1.html` … `step8.html`, `complete.html` | The 8 Umrah steps and the completion screen |
 | `duas.html`, `women.html`, `care.html`, `mistakes.html`, `quick.html`, `sources.html` | Guidance and reference screens |
+| `before.html` | Before you go: countdown planner, Nusuk steps, health in the heat |
+| `mydua.html` | My dua list (private, saved on the phone) |
+| `madinah.html`, `glossary.html` | Visiting Madinah (optional), glossary of terms |
 | `print.html` | Printable two-sided A4 quick card |
 | `manifest.json` | App name, colours and icons |
 | `service-worker.js` | Offline caching of every page, style, font and icon |
 | `assets/` | Styles, app script, self-hosted fonts (Amiri, Atkinson Hyperlegible, Newsreader, SIL Open Font License) |
 | `icons/` | App icons (192, 512, maskable, Apple touch, favicon) |
 | `search-index.json` | Text used by the search box in the Menu |
+| `assets/narration.json`, `assets/narrator.js` | Narration scripts (English, Urdu) and the Listen player |
 
 ## Before publishing
 
 - Have the content reviewed by a qualified scholar and fill in the `[REVIEWING SCHOLAR / INSTITUTION]`, `[GUIDE WEB ADDRESS]` and `[QR CODE]` placeholders.
-- Audio buttons, other languages and night mode show "coming soon" messages until they are built.
+- The small speaker buttons on dua cards are for a future Arabic recitation; other languages and night mode show "coming soon" messages.
 - Saudi rules (visas, Nusuk, vaccines) were checked in September 2026; re-check each season.
