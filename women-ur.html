@@ -18,7 +18,8 @@
 <link href="assets/fonts.css" rel="stylesheet"/>
 <link href="assets/umrah.css" rel="stylesheet"/>
 <link href="assets/app.css" rel="stylesheet"/>
-<script>try{var s=JSON.parse(localStorage.getItem('ug:textsize'));if(s)document.documentElement.style.zoom=[1,1.15,1.3][s];var g=JSON.parse(localStorage.getItem('ug:lang')),d=document.documentElement,f=location.pathname.split('/').pop()||'index.html',m=f.match(/^([a-z0-9]+?)(-ur)?\.html$/);if(m&&g&&(g==='ur')!==(d.lang==='ur')&&m[1]!=='404')location.replace(m[1]+(g==='ur'?'-ur':'')+'.html'+location.search+location.hash);}catch(e){}</script>
+<link href="assets/profile.css" rel="stylesheet"/>
+<script>try{var s=JSON.parse(localStorage.getItem('ug:textsize'));if(s)document.documentElement.style.zoom=[1,1.15,1.3][s];var g=JSON.parse(localStorage.getItem('ug:lang')),d=document.documentElement,f=location.pathname.split('/').pop()||'index.html',m=f.match(/^([a-z0-9]+?)(-ur)?\.html$/);if(m&&g&&(g==='ur')!==(d.lang==='ur')&&m[1]!=='404')location.replace(m[1]+(g==='ur'?'-ur':'')+'.html'+location.search+location.hash);var w=JSON.parse(localStorage.getItem('ug:who')||'[]'),sa=JSON.parse(localStorage.getItem('ug:showall')||'false');if(w&&w.length&&!sa){var c=['pf-on'],h=function(x){return w.indexOf(x)>-1},gg=h('man')||h('woman')||h('couple');if(!gg||h('man')||h('couple')||h('elderly'))c.push('pf-men');if(!gg||h('woman')||h('couple')||h('elderly'))c.push('pf-women');['couple','elderly','babies','kids'].forEach(function(t){if(h(t))c.push('pf-'+t)});d.className+=' '+c.join(' ');}var fr=JSON.parse(localStorage.getItem('ug:from')||'null');if(fr)d.className+=' from-set from-'+fr;}catch(e){}</script>
 <style>
 .flow{display:flex;flex-direction:column;gap:0;border:1.5px solid var(--line);border-radius:16px;overflow:hidden;background:var(--surface)}
 .flow div{display:grid;grid-template-columns:34px minmax(0,1fr);gap:10px;padding:14px;border-bottom:1px solid var(--line);font-size:17px;line-height:1.45}
@@ -39,16 +40,16 @@
 <div class="hero" style="display: flex; flex-direction: column; gap: 10px">
 <div class="eyebrow">ہ · خواتین کے لیے رہنمائی</div>
 <h1 class="h1">خواتین کا عمرہ</h1>
-<p class="lead">مراحل مردوں جیسے ہی ہیں، چند فرق کے ساتھ۔ یہ رہے، مرحلہ وار۔</p>
+<p class="lead">مراحل وہی ہیں جو مردوں کے ہیں، بس چند فرق ہیں۔ آئیں، انہیں مل کر مرحلہ وار دیکھتے ہیں۔</p>
 </div>
 <section class="sec">
 <div class="stepref"><div class="h"><span>2</span>احرام</div>
 <ul class="avoidlist">
-<li><svg class="ic" style="color: #0B3B34" viewbox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span>اپنا عام ڈھیلا، باپردہ لباس پہنیں، کسی بھی رنگ میں۔ خواتین کے لیے احرام کا کوئی خاص لباس نہیں۔</span></li>
-<li><svg class="ic" viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M5.6 5.6l12.8 12.8"></path></svg><span>احرام میں نقاب یا دستانے نہ پہنیں۔</span></li>
-<li><svg class="ic" style="color: #0B3B34" viewbox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span>تلبیہ آہستہ آواز میں پڑھیں۔</span></li>
+<li><svg class="ic" style="color: #0B3B34" viewbox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span>اپنا عام ڈھیلا، باپردہ لباس پہنیں، جس رنگ کا چاہیں۔ خواتین کے لیے احرام کا کوئی خاص لباس نہیں۔</span></li>
+<li><svg class="ic" viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M5.6 5.6l12.8 12.8"></path></svg><span>احرام کی حالت میں نقاب یا دستانے نہ پہنیں۔</span></li>
+<li><svg class="ic" style="color: #0B3B34" viewbox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span>تلبیہ دھیمی آواز میں پڑھیں۔</span></li>
 </ul>
-<div class="card differ"><svg class="ic" viewbox="0 0 24 24"><path d="M12 4v16M8 20h8M5 7h14M5 7l-3 6h6zM19 7l-3 6h6z"></path></svg><div class="t"><b>مردوں کے قریب چہرہ ڈھانپنا</b>بہت سے علماء غیر محرم مردوں کے قریب ہونے پر سر سے چہرے پر کپڑا لٹکانے کی اجازت دیتے ہیں۔ اپنے عالم کی رہنمائی پر عمل کریں۔</div></div>
+<div class="card differ"><svg class="ic" viewbox="0 0 24 24"><path d="M12 4v16M8 20h8M5 7h14M5 7l-3 6h6zM19 7l-3 6h6z"></path></svg><div class="t"><b>مردوں کے قریب چہرہ ڈھانپنا</b>بہت سے علماء اجازت دیتے ہیں کہ جب غیر محرم مرد قریب ہوں تو آپ سر سے چہرے پر کپڑا لٹکا لیں۔ اپنے عالم کی رہنمائی پر عمل کریں۔</div></div>
 <p class="src">نقاب یا دستانے نہیں: صحیح بخاری 1838۔ خواتین کے کپڑا لٹکانے کی روایت (سنن ابی داؤد 1833) کو البانی نے ضعیف کہا ہے؛ علماء دوسری روایات پر اعتماد کرتے ہیں۔</p>
 </div>
 </section>
@@ -56,29 +57,30 @@
 <div class="stepref"><div class="h"><span>5</span>طواف اور <span>7</span>سعی</div>
 <ul class="avoidlist">
 <li><svg class="ic" style="color: #0B3B34" viewbox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span>دونوں کندھے ڈھکے رکھیں۔ دایاں کندھا کھولنا صرف مردوں کے لیے ہے۔</span></li>
-<li><svg class="ic" style="color: #0B3B34" viewbox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span>عام رفتار سے چلیں۔ طواف میں تیز قدم نہیں، سبز روشنیوں کے درمیان دوڑنا نہیں۔</span></li>
-<li><svg class="ic" style="color: #0B3B34" viewbox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span>حجرِ اسود تک پہنچنا ضروری نہیں۔ اشارہ کافی ہے۔ رش میں باہر کے کنارے اور اوپر کی منزلیں زیادہ پُرسکون ہیں۔</span></li>
+<li><svg class="ic" style="color: #0B3B34" viewbox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span>اپنی عام رفتار سے چلیں۔ آپ کے لیے طواف میں تیز قدم اور سبز روشنیوں کے درمیان دوڑنا نہیں ہے۔</span></li>
+<li><svg class="ic" style="color: #0B3B34" viewbox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span>حجرِ اسود تک پہنچنا ضروری نہیں، اشارہ ہی کافی ہے۔ رش ہو تو باہر کے کنارے اور اوپر کی منزلیں زیادہ پُرسکون ہیں۔</span></li>
 </ul>
 </div>
+<p class="src">خواتین کے لیے تیز قدم یا کندھا کھولنا نہیں: ابن المنذر کا نقل کردہ اجماع (الاجماع)</p>
 </section>
 <section class="sec">
 <div class="stepref"><div class="h"><span>8</span>بال کاٹنا</div>
-<p>اپنے بال اکٹھے کریں اور پردے میں سروں سے تقریباً انگلی کے پور کے برابر (≈2 سینٹی میٹر) کاٹیں۔ خواتین سر نہیں منڈواتیں۔</p>
+<p>اپنے بال اکٹھے کریں اور پردے میں سروں سے تقریباً انگلی کے پور کے برابر (≈2 سینٹی میٹر) کاٹ لیں۔ بس اتنا ہی۔ خواتین سر نہیں منڈواتیں۔</p>
 <p class="src">سنن ابی داؤد 1984</p>
 </div>
 </section>
 <section class="sec" style="background: #FFFDFA">
 <div class="q"><span class="num"><svg class="ic" viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 11v5.5M12 7.8v.2"></path></svg></span>اگر ماہواری شروع ہو جائے</div>
-<p class="lead">فکر نہ کریں۔ آپ کا عمرہ ضائع نہیں ہوا۔ یہ کریں۔</p>
+<p class="lead">بالکل فکر نہ کریں۔ آپ کا عمرہ ضائع نہیں ہوا۔ یہ بہت سی خواتین کے ساتھ ہوتا ہے، اور آپ کو یہ کرنا ہے۔</p>
 <div class="flow">
-<div><b class="k">ا</b><span><b>احرام سے پہلے؟</b> آپ پھر بھی میقات پر احرام باندھ سکتی ہیں۔ صفائی کے لیے غسل کریں، نیت کریں اور تلبیہ پڑھیں۔</span></div>
-<div><b class="k">ب</b><span><b>طواف سے پہلے؟</b> احرام میں رہیں۔ طواف کے سوا سب کچھ کریں۔ ماہواری ختم ہونے پر مکمل غسل کریں، پھر طواف، سعی اور بال کٹوائیں۔</span></div>
-<div><b class="k">ج</b><span><b>طواف کے بعد، سعی سے پہلے؟</b> جاری رکھیں۔ آپ سعی کر سکتی ہیں اور بال کٹوا سکتی ہیں۔</span></div>
-<div><b class="k">د</b><span><b>ماہواری ختم ہونے سے پہلے آپ کی پرواز ہے؟</b> علماء کے جوابات مختلف ہیں۔ ہو سکے تو سفر سے پہلے کسی عالم سے بات کریں۔</span></div>
+<div><b class="k">ا</b><span><b>احرام سے پہلے؟</b> آپ پھر بھی میقات پر احرام باندھ سکتی ہیں۔ صفائی کے لیے غسل کریں، نیت کریں اور تلبیہ پڑھیں، بالکل باقی سب کی طرح۔</span></div>
+<div><b class="k">ب</b><span><b>طواف سے پہلے؟</b> احرام میں رہیں اور صبر رکھیں۔ طواف کے سوا سب کچھ کریں۔ ماہواری ختم ہونے پر مکمل غسل کریں، پھر طواف، سعی کریں اور بال کٹوائیں۔</span></div>
+<div><b class="k">ج</b><span><b>طواف کے بعد، سعی سے پہلے؟</b> معمول کے مطابق جاری رکھیں۔ آپ سعی کر سکتی ہیں اور بال کٹوا سکتی ہیں۔</span></div>
+<div><b class="k">د</b><span><b>ماہواری ختم ہونے سے پہلے آپ کی پرواز ہے؟</b> اس بارے میں علماء کے جوابات مختلف ہیں۔ ہو سکے تو سفر سے پہلے کسی عالم سے بات کر لیں۔</span></div>
 </div>
 <p class="src">“جب تک پاک نہ ہو جاؤ، بیت اللہ کے طواف کے سوا وہ سب کچھ کرو جو حاجی کرتا ہے۔” صحیح بخاری 305۔ ولادت کے خون کی حالت میں احرام: صحیح مسلم 1209۔</p>
-<div class="card differ"><svg class="ic" viewbox="0 0 24 24"><path d="M12 4v16M8 20h8M5 7h14M5 7l-3 6h6zM19 7l-3 6h6z"></path></svg><div class="t"><b>ماہواری کے دوران مسجد میں ٹھہرنا</b>اکثر علماء کہتے ہیں مسجد میں نہ ٹھہریں؛ بعض اجازت دیتے ہیں۔ اپنے عالم کی رہنمائی پر عمل کریں۔</div></div>
-<div class="card remember"><svg class="ic" viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 11v5.5M12 7.8v.2"></path></svg><div class="t"><b>ماہواری مؤخر کرنے کی دوا</b>بہت سے علماء اجازت دیتے ہیں اگر یہ آپ کے لیے محفوظ ہو۔ پہلے اپنے ڈاکٹر سے پوچھیں۔</div></div>
+<div class="card differ"><svg class="ic" viewbox="0 0 24 24"><path d="M12 4v16M8 20h8M5 7h14M5 7l-3 6h6zM19 7l-3 6h6z"></path></svg><div class="t"><b>ماہواری کے دوران مسجد میں ٹھہرنا</b>اکثر علماء کہتے ہیں کہ مسجد میں نہ ٹھہریں؛ بعض اجازت دیتے ہیں۔ اپنے عالم کی رہنمائی پر عمل کریں۔</div></div>
+<div class="card remember"><svg class="ic" viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 11v5.5M12 7.8v.2"></path></svg><div class="t"><b>ماہواری مؤخر کرنے کی دوا</b>بہت سے علماء اس کی اجازت دیتے ہیں اگر یہ آپ کے لیے محفوظ ہو۔ پہلے اپنے ڈاکٹر سے ضرور پوچھ لیں۔</div></div>
 </section>
 <section class="sec" style="border-bottom: none">
 <div class="q"><span class="num"><svg class="ic" viewbox="0 0 24 24"><path d="M3 13l18-7-5 14-3.5-5.5z"></path></svg></span>سفر</div>

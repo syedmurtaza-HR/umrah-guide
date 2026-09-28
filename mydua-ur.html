@@ -18,7 +18,8 @@
 <link href="assets/fonts.css" rel="stylesheet"/>
 <link href="assets/umrah.css" rel="stylesheet"/>
 <link href="assets/app.css" rel="stylesheet"/>
-<script>try{var s=JSON.parse(localStorage.getItem('ug:textsize'));if(s)document.documentElement.style.zoom=[1,1.15,1.3][s];var g=JSON.parse(localStorage.getItem('ug:lang')),d=document.documentElement,f=location.pathname.split('/').pop()||'index.html',m=f.match(/^([a-z0-9]+?)(-ur)?\.html$/);if(m&&g&&(g==='ur')!==(d.lang==='ur')&&m[1]!=='404')location.replace(m[1]+(g==='ur'?'-ur':'')+'.html'+location.search+location.hash);}catch(e){}</script>
+<link href="assets/profile.css" rel="stylesheet"/>
+<script>try{var s=JSON.parse(localStorage.getItem('ug:textsize'));if(s)document.documentElement.style.zoom=[1,1.15,1.3][s];var g=JSON.parse(localStorage.getItem('ug:lang')),d=document.documentElement,f=location.pathname.split('/').pop()||'index.html',m=f.match(/^([a-z0-9]+?)(-ur)?\.html$/);if(m&&g&&(g==='ur')!==(d.lang==='ur')&&m[1]!=='404')location.replace(m[1]+(g==='ur'?'-ur':'')+'.html'+location.search+location.hash);var w=JSON.parse(localStorage.getItem('ug:who')||'[]'),sa=JSON.parse(localStorage.getItem('ug:showall')||'false');if(w&&w.length&&!sa){var c=['pf-on'],h=function(x){return w.indexOf(x)>-1},gg=h('man')||h('woman')||h('couple');if(!gg||h('man')||h('couple')||h('elderly'))c.push('pf-men');if(!gg||h('woman')||h('couple')||h('elderly'))c.push('pf-women');['couple','elderly','babies','kids'].forEach(function(t){if(h(t))c.push('pf-'+t)});d.className+=' '+c.join(' ');}var fr=JSON.parse(localStorage.getItem('ug:from')||'null');if(fr)d.className+=' from-set from-'+fr;}catch(e){}</script>
 <style>
 .field{display:flex;flex-direction:column;gap:6px}
 .field label{font:700 15px var(--body);color:var(--muted)}
@@ -46,7 +47,7 @@
 <div class="hero" style="display: flex; flex-direction: column; gap: 10px">
 <div class="eyebrow">نجی · اسی فون پر محفوظ</div>
 <h1 class="h1">میری دعاؤں کی فہرست</h1>
-<p class="lead">لوگ آپ سے کہیں گے “مجھے اپنی دعاؤں میں یاد رکھنا”۔ ان کے نام یہاں لکھ لیں، پھر طواف یا سعی میں ان کے لیے دعا کرنے کے بعد ہر نام پر نشان لگا دیں۔</p>
+<p class="lead">لوگ آپ سے کہیں گے “مجھے اپنی دعاؤں میں یاد رکھنا”۔ ان کے نام یہاں لکھ لیں، پھر طواف یا سعی میں دعا کر لینے کے بعد ہر نام پر نشان لگا دیں۔</p>
 </div>
 <section class="sec">
 <div class="q"><span class="num"><svg class="ic" viewbox="0 0 24 24"><path d="M12 5v14M5 12h14"></path></svg></span>کسی کا نام شامل کریں</div>
@@ -66,12 +67,12 @@
 <section class="sec">
 <div class="count"><span class="q" style="margin: 0"><span class="num"><svg class="ic" viewbox="0 0 24 24"><path d="M9 6h11M9 12h11M9 18h11M4 6l1 1 2-2M4 12l1 1 2-2M4 18l1 1 2-2"></path></svg></span>میری فہرست</span><span class="muted small" id="dua-count">0 میں سے 0 کے لیے دعا ہو گئی</span></div>
 <ul aria-live="polite" class="dl" id="dua-list"></ul>
-<div class="empty" id="dua-empty">آپ کی فہرست خالی ہے۔ اوپر پہلا نام شامل کریں۔</div>
+<div class="empty" id="dua-empty">آپ کی فہرست ابھی خالی ہے۔ اوپر پہلا نام لکھیں۔</div>
 <button class="btn secondary" data-action="dua-reset" type="button">سب نشان ہٹائیں (اگلے طواف کے لیے)</button>
 </section>
 <section class="sec" style="border-bottom: none">
-<div class="card help"><svg class="ic" viewbox="0 0 24 24"><circle cx="8" cy="8" r="3"></circle><circle cx="17" cy="10" r="2.3"></circle><path d="M2.5 20c0-3.3 2.4-6 5.5-6s5.5 2.7 5.5 6M13.5 20c.2-2.6 1.7-4.5 3.5-4.5s3.3 1.9 3.5 4.5"></path></svg><div class="t"><b>ایسا تحفہ جو آپ کو لوٹ آتا ہے</b>جب آپ کسی کی غیر موجودگی میں اس کے لیے دعا کرتے ہیں تو ایک فرشتہ کہتا ہے: “اور تمہارے لیے بھی یہی ہو۔” <span class="small muted">صحیح مسلم 2732</span></div></div>
-<div class="card remember"><svg class="ic" viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 11v5.5M12 7.8v.2"></path></svg><div class="t"><b>نجی</b>آپ کی فہرست صرف اسی فون پر رہتی ہے۔ کہیں کچھ نہیں بھیجا جاتا۔</div></div>
+<div class="card help"><svg class="ic" viewbox="0 0 24 24"><circle cx="8" cy="8" r="3"></circle><circle cx="17" cy="10" r="2.3"></circle><path d="M2.5 20c0-3.3 2.4-6 5.5-6s5.5 2.7 5.5 6M13.5 20c.2-2.6 1.7-4.5 3.5-4.5s3.3 1.9 3.5 4.5"></path></svg><div class="t"><b>ایسا تحفہ جو آپ کو لوٹ آتا ہے</b>جب کسی کی غیر موجودگی میں اس کے لیے دعا کی جائے تو ایک فرشتہ کہتا ہے: “اور تمہارے لیے بھی یہی ہو۔” <span class="small muted">صحیح مسلم 2732</span></div></div>
+<div class="card remember"><svg class="ic" viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 11v5.5M12 7.8v.2"></path></svg><div class="t"><b>نجی</b>آپ کی فہرست صرف اسی فون پر رہتی ہے۔ کہیں کچھ نہیں بھیجا جاتا، اس لیے بے فکر ہو کر لکھیں۔</div></div>
 <a class="btn secondary" href="duas-ur.html" style="justify-content: space-between">ان کے لیے پڑھنے کی دعائیں <svg class="ic flip" viewbox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
 </section>
 </div>

@@ -17,7 +17,8 @@
 <link rel="stylesheet" href="assets/fonts.css">
 <link rel="stylesheet" href="assets/umrah.css">
 <link rel="stylesheet" href="assets/app.css">
-<script>try{var s=JSON.parse(localStorage.getItem('ug:textsize'));if(s)document.documentElement.style.zoom=[1,1.15,1.3][s];var g=JSON.parse(localStorage.getItem('ug:lang')),d=document.documentElement,f=location.pathname.split('/').pop()||'index.html',m=f.match(/^([a-z0-9]+?)(-ur)?\.html$/);if(m&&g&&(g==='ur')!==(d.lang==='ur')&&m[1]!=='404')location.replace(m[1]+(g==='ur'?'-ur':'')+'.html'+location.search+location.hash);}catch(e){}</script>
+<link rel="stylesheet" href="assets/profile.css">
+<script>try{var s=JSON.parse(localStorage.getItem('ug:textsize'));if(s)document.documentElement.style.zoom=[1,1.15,1.3][s];var g=JSON.parse(localStorage.getItem('ug:lang')),d=document.documentElement,f=location.pathname.split('/').pop()||'index.html',m=f.match(/^([a-z0-9]+?)(-ur)?\.html$/);if(m&&g&&(g==='ur')!==(d.lang==='ur')&&m[1]!=='404')location.replace(m[1]+(g==='ur'?'-ur':'')+'.html'+location.search+location.hash);var w=JSON.parse(localStorage.getItem('ug:who')||'[]'),sa=JSON.parse(localStorage.getItem('ug:showall')||'false');if(w&&w.length&&!sa){var c=['pf-on'],h=function(x){return w.indexOf(x)>-1},gg=h('man')||h('woman')||h('couple');if(!gg||h('man')||h('couple')||h('elderly'))c.push('pf-men');if(!gg||h('woman')||h('couple')||h('elderly'))c.push('pf-women');['couple','elderly','babies','kids'].forEach(function(t){if(h(t))c.push('pf-'+t)});d.className+=' '+c.join(' ');}var fr=JSON.parse(localStorage.getItem('ug:from')||'null');if(fr)d.className+=' from-set from-'+fr;}catch(e){}</script>
 <style>
 .note{display:flex;flex-direction:column;gap:6px;padding:16px;border-radius:14px;background:var(--surface);border:1px solid var(--line);font-size:16px;line-height:1.5}
 .note b{font-size:17px}
@@ -27,52 +28,46 @@
 </head>
 <body data-page="sources">
 <div class="phone root">
-
 <div class="topbar">
-<a class="iconbtn" href="menu.html" aria-label="Open menu"><svg class="ic" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></a>
+<a aria-label="Open menu" class="iconbtn" href="menu.html"><svg class="ic" viewbox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></a>
 <div class="where"><small>REFERENCE</small><strong>Sources &amp; notes</strong></div>
-<a class="iconbtn" href="index.html" aria-label="Home"><svg class="ic" viewBox="0 0 24 24"><path d="M4 11l8-7 8 7v9h-5v-6H9v6H4z"></path></svg></a>
+<a aria-label="Home" class="iconbtn" href="index.html"><svg class="ic" viewbox="0 0 24 24"><path d="M4 11l8-7 8 7v9h-5v-6H9v6H4z"></path></svg></a>
 </div>
-
 <div class="hero" style="display: flex; flex-direction: column; gap: 10px">
 <div class="eyebrow">For those who want more</div>
 <h1 class="h1">How this guide handles differences</h1>
-<p class="small">The main steps follow widely held positions. Where recognised schools of fiqh differ, we say so with a <span class="tag differ" style="vertical-align: middle"><svg class="ic" viewBox="0 0 24 24"><path d="M12 4v16M8 20h8M5 7h14M5 7l-3 6h6zM19 7l-3 6h6z"></path></svg>Scholars differ</span> label and explain here. If you follow a particular school or scholar, follow them.</p>
-<div class="card remember"><svg class="ic" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 11v5.5M12 7.8v.2"></path></svg><div class="t"><b>Review status</b>Content to be reviewed and signed off by [REVIEWING SCHOLAR / INSTITUTION] before publication. Version [X.X], [DATE].</div></div>
+<p class="small">The main steps follow widely held positions. Where the recognised schools of fiqh differ, we tell you openly with a <span class="tag differ" style="vertical-align: middle"><svg class="ic" viewbox="0 0 24 24"><path d="M12 4v16M8 20h8M5 7h14M5 7l-3 6h6zM19 7l-3 6h6z"></path></svg>Scholars differ</span> label and explain it here. If you follow a particular school or scholar, please follow them.</p>
+<div class="card remember"><svg class="ic" viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 11v5.5M12 7.8v.2"></path></svg><div class="t"><b>Review status</b>Content to be reviewed and signed off by [REVIEWING SCHOLAR / INSTITUTION] before publication. Version [X.X], [DATE].</div></div>
 </div>
-
 <section class="sec">
-<div class="q"><span class="num"><svg class="ic" viewBox="0 0 24 24"><path d="M12 4v16M8 20h8M5 7h14M5 7l-3 6h6zM19 7l-3 6h6z"></path></svg></span>Scholarly notes</div>
+<div class="q"><span class="num"><svg class="ic" viewbox="0 0 24 24"><path d="M12 4v16M8 20h8M5 7h14M5 7l-3 6h6zM19 7l-3 6h6z"></path></svg></span>Scholarly notes</div>
 <div class="note"><b>Is Umrah obligatory?</b>Shafi‘i and Hanbali scholars: obligatory once in a lifetime for those able. Hanafi and Maliki scholars: a strongly emphasised Sunnah.</div>
-<div class="note"><b>“Essential” acts</b>Schools differ on which acts are pillars (rukn) and which are obligations (wajib). The guide calls all four “essential” because every pilgrim performs them.</div>
-<div class="note"><b>Wudu for Tawaf</b>The majority hold it is a condition. Hanafi scholars hold it is obligatory but not a condition. If wudu breaks mid-Tawaf, views differ on continuing or restarting.</div>
-<div class="note"><b>Ihram prayer</b>Many scholars recommend 2 rak‘ahs before ihram. Others hold there is no prayer specific to ihram, and one enters ihram after an obligatory prayer if it is time.</div>
+<div class="note"><b>“Essential” acts</b>Schools differ on which acts are pillars (rukn) and which are obligations (wajib). We call all four “essential” simply because every pilgrim performs them.</div>
+<div class="note"><b>Wudu for Tawaf</b>The majority hold it is a condition. Hanafi scholars hold it is obligatory but not a condition. If your wudu breaks during Tawaf, views differ on whether to continue or start again.</div>
+<div class="note"><b>Ihram prayer</b>Many scholars recommend 2 rak‘ahs before ihram. Others hold there is no prayer specific to ihram; you simply enter ihram after an obligatory prayer if it is time.</div>
 <div class="note"><b>Two rak‘ahs after Tawaf</b>The majority: Sunnah. Hanafi scholars: wajib. Views also differ on praying them at disliked times.</div>
-<div class="note"><b>Minimum hair to cut (men)</b>Views include: the whole head, most of the head, a quarter of the head, or three hairs. Shaving, or shortening from the whole head, satisfies all views.</div>
-<div class="note"><b>Meeqat for air travellers</b>Most scholars: enter ihram before the aircraft crosses the Meeqat. Some consider Jeddah a valid place for certain arrivals.</div>
+<div class="note"><b>Minimum hair to cut (men)</b>Views include: the whole head, most of the head, a quarter of the head, or three hairs. Shaving, or shortening from the whole head, satisfies all views, so it is the safest choice.</div>
+<div class="note"><b>Meeqat for air travellers</b>Most scholars: put on ihram before your plane crosses the Meeqat. Some consider Jeddah a valid place for certain arrivals.</div>
 <div class="note"><b>Farewell Tawaf after Umrah</b>Obligatory after Hajj. For Umrah, some scholars say obligatory, others recommended.</div>
 <div class="note"><b>Women’s face covering in ihram</b>Niqab is not worn. Many allow lowering a cloth near non-mahram men; views differ on whether it may touch the face. (The report in Abu Dawud 1833 is graded weak by al-Albani.)</div>
 <div class="note"><b>Menstruation and the Masjid</b>Most scholars: a menstruating woman does not stay in the Masjid. Some permit it.</div>
 </section>
-
 <section class="sec">
-<div class="q"><span class="num"><svg class="ic" viewBox="0 0 24 24"><path d="M4 5.5A2 2 0 016 4h13v14H6a2 2 0 00-2 2zM4 5.5V20M19 18v2H6"></path></svg></span>What we removed, and why</div>
-<div class="note">Claims found in common booklets that we could not trace to an authentic report are left out: e.g. guaranteed acceptance of every dua at the first sight of the Ka‘bah, and set duas for each round of Tawaf.</div>
+<div class="q"><span class="num"><svg class="ic" viewbox="0 0 24 24"><path d="M4 5.5A2 2 0 016 4h13v14H6a2 2 0 00-2 2zM4 5.5V20M19 18v2H6"></path></svg></span>What we removed, and why</div>
+<div class="note">Some common booklets make claims we could not trace to an authentic report, so we have left them out: e.g. guaranteed acceptance of every dua at the first sight of the Ka‘bah, and set duas for each round of Tawaf.</div>
 </section>
-
 <section class="sec">
-<div class="q"><span class="num"><svg class="ic" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span>Official rules, checked Sept 2026</div>
+<div class="q"><span class="num"><svg class="ic" viewbox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span>Official rules, checked Sept 2026</div>
 <div class="note"><b>Health (Saudi Ministry of Health, Umrah 1447H/2026)</b>Meningitis vaccine required for all Umrah pilgrims: ACYW/ACYWX conjugate within 5 years, or polysaccharide within 3 years, at least 10 days before arrival. Polio and yellow fever only for listed countries. COVID-19 only for 65+, pregnant women and chronic illness.</div>
 <div class="note"><b>Permits (Ministry of Hajj and Umrah)</b>Umrah permits are booked in the Nusuk app. Umrah is possible on an Umrah visa or a visit/tourist visa.</div>
 <div class="note"><b>Bookings (Ministry of Hajj and Umrah / Nusuk)</b>Umrah visas require a confirmed licensed-hotel booking recorded in Nusuk Masar (announced June 2025, for 1447H onward). Travel sources report that ground transport must also be pre-booked for 1448H; confirm with your agent. Rawdah visits need a free Nusuk permit with a fixed time slot.</div>
 <div class="note"><b>Haramain train</b>Operated by Saudi Arabia Railways. Stations: Makkah, Jeddah (Al-Sulimaniyah), King Abdulaziz International Airport, King Abdullah Economic City and Madinah. Makkah to Madinah about 2 hours.</div>
 <div class="note"><b>Women</b>Since October 2022 Saudi rules no longer require a mahram for women performing Umrah.</div>
 <div class="note"><b>Emergency</b>911 is the unified emergency number in the Makkah region (Saudi Press Agency, June 2026).</div>
-<div class="note"><b>Not officially confirmed</b>Passport validity of 6 months is widely stated by airlines and agents; we could not find it on an official Saudi page.</div>
+<div class="note"><b>Not officially confirmed</b>Passport validity of 6 months is widely stated by airlines and agents; we could not find it on an official Saudi page, so please check with your airline.</div>
 </section>
-
 <section class="sec" style="border-bottom: none">
-<div class="q"><span class="num"><svg class="ic" viewBox="0 0 24 24"><path d="M9 6h11M9 12h11M9 18h11"></path></svg></span>References</div>
+<div class="q"><span class="num"><svg class="ic" viewbox="0 0 24 24"><path d="M9 6h11M9 12h11M9 18h11"></path></svg></span>References</div>
 <div style="display: flex; flex-direction: column">
 <div class="ref"><span>Intention wording “Labbayka ‘umratan…”</span><span>Muslim 1251</span></div>
 <div class="ref"><span>Talbiyah</span><span>Bukhari 1549 · Muslim 1184</span></div>
@@ -118,9 +113,8 @@
 <div class="ref"><span>Visiting graveyards</span><span>Muslim 975</span></div>
 </div>
 <p class="small muted">All hadith numbers and gradings checked against sunnah.com in September 2026 (gradings for the Sunan collections as shown there, mostly al-Albani). Final sign-off still rests with the reviewing scholar.</p>
-<p class="small muted" style="font-size: 13px; letter-spacing: .04em">Developed by Syed G. Murtaza, as a free resource for pilgrims.</p>
+<p class="small muted" style="font-size: 13px; letter-spacing: .04em">Made with care by Syed G. Murtaza, as a free gift for every pilgrim.</p>
 </section>
-
 </div>
 <script src="assets/app.js" defer></script>
 <script src="assets/narrator.js" defer></script>

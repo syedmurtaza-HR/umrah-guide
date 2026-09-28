@@ -17,60 +17,55 @@
 <link rel="stylesheet" href="assets/fonts.css">
 <link rel="stylesheet" href="assets/umrah.css">
 <link rel="stylesheet" href="assets/app.css">
-<script>try{var s=JSON.parse(localStorage.getItem('ug:textsize'));if(s)document.documentElement.style.zoom=[1,1.15,1.3][s];var g=JSON.parse(localStorage.getItem('ug:lang')),d=document.documentElement,f=location.pathname.split('/').pop()||'index.html',m=f.match(/^([a-z0-9]+?)(-ur)?\.html$/);if(m&&g&&(g==='ur')!==(d.lang==='ur')&&m[1]!=='404')location.replace(m[1]+(g==='ur'?'-ur':'')+'.html'+location.search+location.hash);}catch(e){}</script>
+<link rel="stylesheet" href="assets/profile.css">
+<script>try{var s=JSON.parse(localStorage.getItem('ug:textsize'));if(s)document.documentElement.style.zoom=[1,1.15,1.3][s];var g=JSON.parse(localStorage.getItem('ug:lang')),d=document.documentElement,f=location.pathname.split('/').pop()||'index.html',m=f.match(/^([a-z0-9]+?)(-ur)?\.html$/);if(m&&g&&(g==='ur')!==(d.lang==='ur')&&m[1]!=='404')location.replace(m[1]+(g==='ur'?'-ur':'')+'.html'+location.search+location.hash);var w=JSON.parse(localStorage.getItem('ug:who')||'[]'),sa=JSON.parse(localStorage.getItem('ug:showall')||'false');if(w&&w.length&&!sa){var c=['pf-on'],h=function(x){return w.indexOf(x)>-1},gg=h('man')||h('woman')||h('couple');if(!gg||h('man')||h('couple')||h('elderly'))c.push('pf-men');if(!gg||h('woman')||h('couple')||h('elderly'))c.push('pf-women');['couple','elderly','babies','kids'].forEach(function(t){if(h(t))c.push('pf-'+t)});d.className+=' '+c.join(' ');}var fr=JSON.parse(localStorage.getItem('ug:from')||'null');if(fr)d.className+=' from-set from-'+fr;}catch(e){}</script>
 <style> .lk{display:flex;align-items:center;justify-content:space-between;gap:10px;min-height:60px;padding:12px 16px;border-radius:14px;background:var(--surface);border:1.5px solid var(--line);text-decoration:none;color:var(--ink);font-weight:700}</style>
 </head>
 <body data-page="complete" data-step="9">
 <div class="phone root">
-
 <div class="topbar">
-<a class="iconbtn" href="menu.html" aria-label="Open menu"><svg class="ic" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></a>
+<a aria-label="Open menu" class="iconbtn" href="menu.html"><svg class="ic" viewbox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></a>
 <div class="where"><small>ALL 8 STEPS DONE</small><strong>Umrah complete</strong></div>
-<a class="iconbtn" href="index.html" aria-label="Home"><svg class="ic" viewBox="0 0 24 24"><path d="M4 11l8-7 8 7v9h-5v-6H9v6H4z"></path></svg></a>
+<a aria-label="Home" class="iconbtn" href="index.html"><svg class="ic" viewbox="0 0 24 24"><path d="M4 11l8-7 8 7v9h-5v-6H9v6H4z"></path></svg></a>
 </div>
-
 <div class="hero" style="background: linear-gradient(168deg, #0E4239 0%, #0A342D 55%, #072620 100%); color: #FFFDFA; border-bottom: 1px solid #BF9E5E; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 14px; padding: 48px 24px 40px">
-<svg class="pattern-bg" aria-hidden="true"><defs><pattern id="pk" width="56" height="56" patternUnits="userSpaceOnUse"><g fill="none" stroke="#BF9E5E" stroke-width="1"><rect x="16" y="16" width="24" height="24"></rect><rect x="16" y="16" width="24" height="24" transform="rotate(45 28 28)"></rect></g></pattern></defs><rect width="100%" height="100%" fill="url(#pk)" opacity=".3"></rect></svg>
-<svg viewBox="0 0 48 48" style="width: 84px; height: 84px; position: relative" aria-hidden="true"><g fill="#0B3B34" stroke="#DCC392" stroke-width="2"><rect x="10" y="10" width="28" height="28"></rect><rect x="10" y="10" width="28" height="28" transform="rotate(45 24 24)"></rect></g><path d="M17 24.5l5 5 9-10" fill="none" stroke="#FFFDFA" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-<div style="font: 400 34px var(--arabic); color: #DCC392; position: relative" lang="ar">الْحَمْدُ لِلَّهِ</div>
-<h1 style="font: 600 40px/1.1 var(--display); position: relative">Your Umrah is complete.</h1>
-<p style="font-size: 19px; color: #E1EBE7; position: relative">May Allah accept it from you.</p>
+<svg aria-hidden="true" class="pattern-bg"><defs><pattern height="56" id="pk" patternunits="userSpaceOnUse" width="56"><g fill="none" stroke="#BF9E5E" stroke-width="1"><rect height="24" width="24" x="16" y="16"></rect><rect height="24" transform="rotate(45 28 28)" width="24" x="16" y="16"></rect></g></pattern></defs><rect fill="url(#pk)" height="100%" opacity=".3" width="100%"></rect></svg>
+<svg aria-hidden="true" style="width: 84px; height: 84px; position: relative" viewbox="0 0 48 48"><g fill="#0B3B34" stroke="#DCC392" stroke-width="2"><rect height="28" width="28" x="10" y="10"></rect><rect height="28" transform="rotate(45 24 24)" width="28" x="10" y="10"></rect></g><path d="M17 24.5l5 5 9-10" fill="none" stroke="#FFFDFA" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path></svg>
+<div lang="ar" style="font: 400 34px var(--arabic); color: #DCC392; position: relative">الْحَمْدُ لِلَّهِ</div>
+<h1 style="font: 600 40px/1.1 var(--display); position: relative">Alhamdulillah, your Umrah is complete.</h1>
+<p style="font-size: 19px; color: #E1EBE7; position: relative">May Allah accept it from you, and from all of us.</p>
 </div>
-
 <section class="sec">
-<div class="q"><span class="num"><svg class="ic" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span>What changes now?</div>
+<div class="q"><span class="num"><svg class="ic" viewbox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span>What changes now?</div>
 <ul class="avoidlist">
-<li><svg class="ic" viewBox="0 0 24 24" style="color: #0B3B34"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span>All ihram restrictions are lifted. You may wear normal clothes and use perfume.</span></li>
-<li><svg class="ic" viewBox="0 0 24 24" style="color: #0B3B34"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span>Keep praying in the Masjid and doing extra (voluntary) Tawaf, which needs no ihram.</span></li>
+<li><svg class="ic" style="color: #0B3B34" viewbox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span>All ihram restrictions are lifted. Now you can wear your normal clothes and use perfume again.</span></li>
+<li><svg class="ic" style="color: #0B3B34" viewbox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span>Keep praying in the Masjid, and do extra (voluntary) Tawaf whenever you can. It needs no ihram.</span></li>
 </ul>
 <div class="dua">
-<div class="top"><span class="when">A greeting pilgrims share</span><button class="audio" aria-label="Play audio"><svg class="ic" viewBox="0 0 24 24"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z"></path><path d="M15.5 9a4 4 0 010 6"></path></svg></button></div>
+<div class="top"><span class="when">A greeting pilgrims share</span><button aria-label="Play audio" class="audio"><svg class="ic" viewbox="0 0 24 24"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z"></path><path d="M15.5 9a4 4 0 010 6"></path></svg></button></div>
 <div class="ar" lang="ar">تَقَبَّلَ اللَّهُ مِنَّا وَمِنْكُمْ</div>
 <div class="tr">Taqabbala-llāhu minnā wa minkum</div>
 <div class="mean"><b>Meaning:</b> May Allah accept from us and from you.</div>
 </div>
-<div class="card differ"><svg class="ic" viewBox="0 0 24 24"><path d="M12 4v16M8 20h8M5 7h14M5 7l-3 6h6zM19 7l-3 6h6z"></path></svg><div class="t"><b>Farewell Tawaf when leaving Makkah?</b>Required after Hajj. For Umrah, scholars differ. Many recommend it. Ask your scholar.</div></div>
+<div class="card differ"><svg class="ic" viewbox="0 0 24 24"><path d="M12 4v16M8 20h8M5 7h14M5 7l-3 6h6zM19 7l-3 6h6z"></path></svg><div class="t"><b>Farewell Tawaf when leaving Makkah?</b>It is required after Hajj. For Umrah, scholars differ, and many recommend it. Please ask your scholar.</div></div>
 </section>
-
 <section class="sec">
-<div class="q"><span class="num"><svg class="ic" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>What comes next?</div>
-<a class="lk" href="madinah.html">Visiting Madinah (optional, not part of Umrah)<svg class="ic" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"></path></svg></a>
-<div class="card help"><svg class="ic" viewBox="0 0 24 24"><path d="M5 21V10a7 7 0 0114 0v11M3 21h18"></path></svg><div class="t"><b>Going to Madinah?</b>Book a free Rawdah (Riyad al-Jannah) permit in the Nusuk app before you go; you can only enter in your time slot. The Haramain train takes about 2 hours from Makkah to Madinah.</div></div>
-<a class="lk" href="duas.html">Duas to keep making<svg class="ic" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"></path></svg></a>
-<a class="lk" href="#share" data-action="share">Share this free guide with family<svg class="ic" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"></path></svg></a>
+<div class="q"><span class="num"><svg class="ic" viewbox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>What comes next?</div>
+<a class="lk" href="madinah.html">Visiting Madinah (optional, not part of Umrah)<svg class="ic" viewbox="0 0 24 24"><path d="M9 6l6 6-6 6"></path></svg></a>
+<div class="card help"><svg class="ic" viewbox="0 0 24 24"><path d="M5 21V10a7 7 0 0114 0v11M3 21h18"></path></svg><div class="t"><b>Going to Madinah?</b>Before you go, book a free Rawdah (Riyad al-Jannah) permit in the Nusuk app. You can only enter in your time slot. The Haramain train takes about 2 hours from Makkah to Madinah.</div></div>
+<a class="lk" href="duas.html">Duas to keep making<svg class="ic" viewbox="0 0 24 24"><path d="M9 6l6 6-6 6"></path></svg></a>
+<a class="lk" data-action="share" href="#share">Share this free guide with your family<svg class="ic" viewbox="0 0 24 24"><path d="M9 6l6 6-6 6"></path></svg></a>
 </section>
-
 <section class="sec" style="border-bottom: none">
-<div class="q"><span class="num"><svg class="ic" viewBox="0 0 24 24"><path d="M4 11l8-7 8 7v9h-5v-6H9v6H4z"></path></svg></span>After you return home</div>
-<div class="dua"><div class="top"><span class="when">Arriving back (added to the travel dua)</span><button class="audio" aria-label="Play audio"><svg class="ic" viewBox="0 0 24 24"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z"></path><path d="M15.5 9a4 4 0 010 6"></path></svg></button></div><div class="ar" lang="ar">آيِبُونَ، تَائِبُونَ، عَابِدُونَ، لِرَبِّنَا حَامِدُونَ</div><div class="tr">Āyibūna, tā’ibūna, ‘ābidūna, li-rabbinā ḥāmidūn.</div><div class="mean"><b>Meaning:</b> We return, repenting, worshipping, and praising our Lord.</div><div class="src">Sahih Muslim 1342</div></div>
+<div class="q"><span class="num"><svg class="ic" viewbox="0 0 24 24"><path d="M4 11l8-7 8 7v9h-5v-6H9v6H4z"></path></svg></span>After you return home</div>
+<div class="dua"><div class="top"><span class="when">Arriving back (added to the travel dua)</span><button aria-label="Play audio" class="audio"><svg class="ic" viewbox="0 0 24 24"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z"></path><path d="M15.5 9a4 4 0 010 6"></path></svg></button></div><div class="ar" lang="ar">آيِبُونَ، تَائِبُونَ، عَابِدُونَ، لِرَبِّنَا حَامِدُونَ</div><div class="tr">Āyibūna, tā’ibūna, ‘ābidūna, li-rabbinā ḥāmidūn.</div><div class="mean"><b>Meaning:</b> We return, repenting, worshipping, and praising our Lord.</div><div class="src">Sahih Muslim 1342</div></div>
 <ul class="avoidlist">
-<li><svg class="ic" viewBox="0 0 24 24" style="color: #0B3B34"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span>Keep one good habit you built on the trip: a prayer on time, daily dhikr, or reading Qur’an.</span></li>
-<li><svg class="ic" viewBox="0 0 24 24" style="color: #0B3B34"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span>Tell the people on your dua list that you prayed for them.</span></li>
-<li><svg class="ic" viewBox="0 0 24 24" style="color: #0B3B34"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span>Help someone else prepare: share this free guide.</span></li>
+<li><svg class="ic" style="color: #0B3B34" viewbox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span>Hold on to one good habit from this trip: praying on time, daily dhikr, or reading Qur’an.</span></li>
+<li><svg class="ic" style="color: #0B3B34" viewbox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span>Let the people on your dua list know you prayed for them. It will mean a lot to them.</span></li>
+<li><svg class="ic" style="color: #0B3B34" viewbox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span>Help someone else get ready, just as you did: share this free guide.</span></li>
 </ul>
 <a class="btn primary" href="index.html" style="margin-top: 8px">Back to Home</a>
 </section>
-
 </div>
 <script src="assets/app.js" defer></script>
 <script src="assets/narrator.js" defer></script>

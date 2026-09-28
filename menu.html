@@ -17,7 +17,8 @@
 <link rel="stylesheet" href="assets/fonts.css">
 <link rel="stylesheet" href="assets/umrah.css">
 <link rel="stylesheet" href="assets/app.css">
-<script>try{var s=JSON.parse(localStorage.getItem('ug:textsize'));if(s)document.documentElement.style.zoom=[1,1.15,1.3][s];var g=JSON.parse(localStorage.getItem('ug:lang')),d=document.documentElement,f=location.pathname.split('/').pop()||'index.html',m=f.match(/^([a-z0-9]+?)(-ur)?\.html$/);if(m&&g&&(g==='ur')!==(d.lang==='ur')&&m[1]!=='404')location.replace(m[1]+(g==='ur'?'-ur':'')+'.html'+location.search+location.hash);}catch(e){}</script>
+<link rel="stylesheet" href="assets/profile.css">
+<script>try{var s=JSON.parse(localStorage.getItem('ug:textsize'));if(s)document.documentElement.style.zoom=[1,1.15,1.3][s];var g=JSON.parse(localStorage.getItem('ug:lang')),d=document.documentElement,f=location.pathname.split('/').pop()||'index.html',m=f.match(/^([a-z0-9]+?)(-ur)?\.html$/);if(m&&g&&(g==='ur')!==(d.lang==='ur')&&m[1]!=='404')location.replace(m[1]+(g==='ur'?'-ur':'')+'.html'+location.search+location.hash);var w=JSON.parse(localStorage.getItem('ug:who')||'[]'),sa=JSON.parse(localStorage.getItem('ug:showall')||'false');if(w&&w.length&&!sa){var c=['pf-on'],h=function(x){return w.indexOf(x)>-1},gg=h('man')||h('woman')||h('couple');if(!gg||h('man')||h('couple')||h('elderly'))c.push('pf-men');if(!gg||h('woman')||h('couple')||h('elderly'))c.push('pf-women');['couple','elderly','babies','kids'].forEach(function(t){if(h(t))c.push('pf-'+t)});d.className+=' '+c.join(' ');}var fr=JSON.parse(localStorage.getItem('ug:from')||'null');if(fr)d.className+=' from-set from-'+fr;}catch(e){}</script>
 <style>
 .grp{display:flex;flex-direction:column;gap:2px}
 .grp h2{font:700 14px var(--body);letter-spacing:.1em;text-transform:uppercase;color:var(--gold);padding:0 4px 8px}
@@ -34,53 +35,49 @@
 </head>
 <body data-page="menu">
 <div class="phone root" style="background: #FFFDFA">
-
 <div class="topbar" style="border-bottom: 1px solid #E2D8C5">
 <strong style="font: 600 24px var(--display); padding-left: 8px">Menu</strong>
-<a class="iconbtn" href="index.html" data-back aria-label="Close menu" style="gap: 6px"><svg class="ic" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"></path></svg>Close</a>
+<a aria-label="Close menu" class="iconbtn" data-back="" href="index.html" style="gap: 6px"><svg class="ic" viewbox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"></path></svg>Close</a>
 </div>
-
 <div style="display: flex; flex-direction: column; gap: 22px; padding: 16px">
-<label class="search"><svg class="ic" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"></circle><path d="M20 20l-4.3-4.3"></path></svg><span style="position: absolute; width: 1px; height: 1px; overflow: hidden">Search the guide</span><input type="search" id="search" autocomplete="off" placeholder="Search: “lost count”, “wudu”"></label>
-
-<div class="results" id="results" hidden aria-live="polite"></div>
-
+<label class="search"><svg class="ic" viewbox="0 0 24 24"><circle cx="11" cy="11" r="6.5"></circle><path d="M20 20l-4.3-4.3"></path></svg><span style="position: absolute; width: 1px; height: 1px; overflow: hidden">Search the guide</span><input autocomplete="off" id="search" placeholder="Search: “lost count”, “wudu”" type="search"/></label>
+<div aria-live="polite" class="results" hidden="" id="results"></div>
 <div class="grp">
 <h2>Umrah steps</h2>
-<a class="mi" href="index.html"><span class="n"><svg class="ic sm" viewBox="0 0 24 24"><path d="M4 11l8-7 8 7v9h-5v-6H9v6H4z"></path></svg></span>Home · Start here<svg class="ic sm" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"></path></svg></a>
-<a class="mi" data-step="1" href="step1.html"><span class="n">1</span><span class="lbl">Before Umrah</span><svg class="ic sm" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"></path></svg></a>
-<a class="mi" href="before.html"><span class="n"><svg class="ic sm" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15" rx="2"></rect><path d="M3.5 10h17M8 3v4M16 3v4"></path></svg></span>Before you go · planner<svg class="ic sm" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"></path></svg></a>
-<a class="mi" data-step="2" href="step2.html"><span class="n">2</span><span class="lbl">Ihram</span><svg class="ic sm" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"></path></svg></a>
-<a class="mi" data-step="3" href="step3.html"><span class="n">3</span><span class="lbl">Entering Makkah</span><svg class="ic sm" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"></path></svg></a>
-<a class="mi" data-step="4" href="step4.html"><span class="n">4</span><span class="lbl">Entering Masjid al-Haram</span><svg class="ic sm" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"></path></svg></a>
-<a class="mi" data-step="5" href="step5.html"><span class="n">5</span><span class="lbl">Tawaf</span><svg class="ic sm" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"></path></svg></a>
-<a class="mi" data-step="6" href="step6.html"><span class="n">6</span><span class="lbl">After Tawaf</span><svg class="ic sm" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"></path></svg></a>
-<a class="mi" data-step="7" href="step7.html"><span class="n">7</span><span class="lbl">Sa‘i</span><svg class="ic sm" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"></path></svg></a>
-<a class="mi" data-step="8" href="step8.html"><span class="n">8</span><span class="lbl">Halq / Taqsir</span><svg class="ic sm" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"></path></svg></a>
-<a class="mi" data-step="9" href="complete.html"><span class="n"><svg class="ic sm" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span><span class="lbl">Umrah complete</span><svg class="ic sm" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"></path></svg></a>
+<a class="mi" href="index.html"><span class="n"><svg class="ic sm" viewbox="0 0 24 24"><path d="M4 11l8-7 8 7v9h-5v-6H9v6H4z"></path></svg></span>Home · Start here<svg class="ic sm" viewbox="0 0 24 24"><path d="M9 6l6 6-6 6"></path></svg></a>
+<a class="mi" data-step="1" href="step1.html"><span class="n">1</span><span class="lbl">Before Umrah</span><svg class="ic sm" viewbox="0 0 24 24"><path d="M9 6l6 6-6 6"></path></svg></a>
+<a class="mi" href="trip.html"><span class="n"><svg class="ic sm" viewbox="0 0 24 24"><rect height="15" rx="2" width="17" x="3.5" y="5"></rect><path d="M3.5 10h17M8 3v4M16 3v4"></path></svg></span>Your trip: when &amp; where from<svg class="ic sm" viewbox="0 0 24 24"><path d="M9 6l6 6-6 6"></path></svg></a>
+<a class="mi" href="before.html"><span class="n"><svg class="ic sm" viewbox="0 0 24 24"><rect height="15" rx="2" width="17" x="3.5" y="5"></rect><path d="M3.5 10h17M8 3v4M16 3v4"></path></svg></span>Before you go · planner<svg class="ic sm" viewbox="0 0 24 24"><path d="M9 6l6 6-6 6"></path></svg></a>
+<a class="mi" data-from="pk" href="pakistan.html"><span class="n"><svg class="ic sm" viewbox="0 0 24 24"><path d="M3 14l7-2 4-8h2l-2 8 6 1 1-2h2l-1 4 1 4h-2l-1-2-6 1 2 8h-2l-4-8-7-2z"></path></svg></span>Travelling from Pakistan<svg class="ic sm" viewbox="0 0 24 24"><path d="M9 6l6 6-6 6"></path></svg></a>
+<a class="mi" data-step="2" href="step2.html"><span class="n">2</span><span class="lbl">Ihram</span><svg class="ic sm" viewbox="0 0 24 24"><path d="M9 6l6 6-6 6"></path></svg></a>
+<a class="mi" data-step="3" href="step3.html"><span class="n">3</span><span class="lbl">Entering Makkah</span><svg class="ic sm" viewbox="0 0 24 24"><path d="M9 6l6 6-6 6"></path></svg></a>
+<a class="mi" data-step="4" href="step4.html"><span class="n">4</span><span class="lbl">Entering Masjid al-Haram</span><svg class="ic sm" viewbox="0 0 24 24"><path d="M9 6l6 6-6 6"></path></svg></a>
+<a class="mi" data-step="5" href="step5.html"><span class="n">5</span><span class="lbl">Tawaf</span><svg class="ic sm" viewbox="0 0 24 24"><path d="M9 6l6 6-6 6"></path></svg></a>
+<a class="mi" data-step="6" href="step6.html"><span class="n">6</span><span class="lbl">After Tawaf</span><svg class="ic sm" viewbox="0 0 24 24"><path d="M9 6l6 6-6 6"></path></svg></a>
+<a class="mi" data-step="7" href="step7.html"><span class="n">7</span><span class="lbl">Sa‘i</span><svg class="ic sm" viewbox="0 0 24 24"><path d="M9 6l6 6-6 6"></path></svg></a>
+<a class="mi" data-step="8" href="step8.html"><span class="n">8</span><span class="lbl">Halq / Taqsir</span><svg class="ic sm" viewbox="0 0 24 24"><path d="M9 6l6 6-6 6"></path></svg></a>
+<a class="mi" data-step="9" href="complete.html"><span class="n"><svg class="ic sm" viewbox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span><span class="lbl">Umrah complete</span><svg class="ic sm" viewbox="0 0 24 24"><path d="M9 6l6 6-6 6"></path></svg></a>
 </div>
-
 <div class="grp">
 <h2>Help &amp; guidance</h2>
-<a class="mi" href="mistakes.html"><span class="n"><svg class="ic sm" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M9.5 9.5a2.5 2.5 0 114 2c-1 .7-1.5 1.2-1.5 2.5M12 17v.2"></path></svg></span>Common mistakes &amp; questions<svg class="ic sm" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"></path></svg></a>
-<a class="mi" href="duas.html"><span class="n"><svg class="ic sm" viewBox="0 0 24 24"><path d="M4 5.5A2 2 0 016 4h13v14H6a2 2 0 00-2 2zM4 5.5V20M19 18v2H6"></path></svg></span>Duas &amp; Dhikr<svg class="ic sm" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"></path></svg></a>
-<a class="mi" href="mydua.html"><span class="n"><svg class="ic sm" viewBox="0 0 24 24"><path d="M9 6h11M9 12h11M9 18h11M4 6l1 1 2-2M4 12l1 1 2-2M4 18l1 1 2-2"></path></svg></span>My dua list<svg class="ic sm" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"></path></svg></a>
-<a class="mi" href="women.html"><span class="n"><svg class="ic sm" viewBox="0 0 24 24"><circle cx="12" cy="7" r="3.5"></circle><path d="M5 21c0-4 3-7 7-7s7 3 7 7"></path></svg></span>Women’s guidance<svg class="ic sm" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"></path></svg></a>
-<a class="mi" href="care.html"><span class="n"><svg class="ic sm" viewBox="0 0 24 24"><circle cx="10" cy="4.5" r="1.8"></circle><path d="M10 7.5v6h6l2.5 5.5M10 10.5h5"></path><path d="M7.5 11.5a5 5 0 106.5 6.3"></path></svg></span>Elderly, disabled &amp; special<svg class="ic sm" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"></path></svg></a>
-<a class="mi" href="quick.html"><span class="n"><svg class="ic sm" viewBox="0 0 24 24"><path d="M13 2L4 14h7l-1 8 9-12h-7z"></path></svg></span>Quick reference<svg class="ic sm" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"></path></svg></a>
-<a class="mi" href="madinah.html"><span class="n"><svg class="ic sm" viewBox="0 0 24 24"><path d="M5 21V10a7 7 0 0114 0v11M3 21h18M9 21v-6a3 3 0 016 0v6"></path></svg></span>Visiting Madinah (optional)<svg class="ic sm" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"></path></svg></a>
-<a class="mi" href="glossary.html"><span class="n"><svg class="ic sm" viewBox="0 0 24 24"><path d="M4 5.5A2 2 0 016 4h13v14H6a2 2 0 00-2 2zM4 5.5V20M19 18v2H6"></path></svg></span>Glossary<svg class="ic sm" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"></path></svg></a>
-<a class="mi" href="sources.html"><span class="n"><svg class="ic sm" viewBox="0 0 24 24"><path d="M12 4v16M8 20h8M5 7h14M5 7l-3 6h6zM19 7l-3 6h6z"></path></svg></span>Sources &amp; scholarly notes<svg class="ic sm" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"></path></svg></a>
+<a class="mi" href="mistakes.html"><span class="n"><svg class="ic sm" viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M9.5 9.5a2.5 2.5 0 114 2c-1 .7-1.5 1.2-1.5 2.5M12 17v.2"></path></svg></span>Common mistakes &amp; questions<svg class="ic sm" viewbox="0 0 24 24"><path d="M9 6l6 6-6 6"></path></svg></a>
+<a class="mi" href="duas.html"><span class="n"><svg class="ic sm" viewbox="0 0 24 24"><path d="M4 5.5A2 2 0 016 4h13v14H6a2 2 0 00-2 2zM4 5.5V20M19 18v2H6"></path></svg></span>Duas &amp; Dhikr<svg class="ic sm" viewbox="0 0 24 24"><path d="M9 6l6 6-6 6"></path></svg></a>
+<a class="mi" href="mydua.html"><span class="n"><svg class="ic sm" viewbox="0 0 24 24"><path d="M9 6h11M9 12h11M9 18h11M4 6l1 1 2-2M4 12l1 1 2-2M4 18l1 1 2-2"></path></svg></span>My dua list<svg class="ic sm" viewbox="0 0 24 24"><path d="M9 6l6 6-6 6"></path></svg></a>
+<a class="mi" data-for="women" href="women.html"><span class="n"><svg class="ic sm" viewbox="0 0 24 24"><circle cx="12" cy="7" r="3.5"></circle><path d="M5 21c0-4 3-7 7-7s7 3 7 7"></path></svg></span>Women’s guidance<svg class="ic sm" viewbox="0 0 24 24"><path d="M9 6l6 6-6 6"></path></svg></a>
+<a class="mi" data-for="babies kids" href="families.html"><span class="n"><svg class="ic sm" viewbox="0 0 24 24"><circle cx="8" cy="8" r="3"></circle><circle cx="17" cy="10" r="2.3"></circle><path d="M2.5 20c0-3.3 2.4-6 5.5-6s5.5 2.7 5.5 6M13.5 20c.2-2.6 1.7-4.5 3.5-4.5s3.3 1.9 3.5 4.5"></path></svg></span>Families, children &amp; babies<svg class="ic sm" viewbox="0 0 24 24"><path d="M9 6l6 6-6 6"></path></svg></a>
+<a class="mi" href="care.html"><span class="n"><svg class="ic sm" viewbox="0 0 24 24"><circle cx="10" cy="4.5" r="1.8"></circle><path d="M10 7.5v6h6l2.5 5.5M10 10.5h5"></path><path d="M7.5 11.5a5 5 0 106.5 6.3"></path></svg></span>Elderly, disabled &amp; special<svg class="ic sm" viewbox="0 0 24 24"><path d="M9 6l6 6-6 6"></path></svg></a>
+<a class="mi" href="quick.html"><span class="n"><svg class="ic sm" viewbox="0 0 24 24"><path d="M13 2L4 14h7l-1 8 9-12h-7z"></path></svg></span>Quick reference<svg class="ic sm" viewbox="0 0 24 24"><path d="M9 6l6 6-6 6"></path></svg></a>
+<a class="mi" href="madinah.html"><span class="n"><svg class="ic sm" viewbox="0 0 24 24"><path d="M5 21V10a7 7 0 0114 0v11M3 21h18M9 21v-6a3 3 0 016 0v6"></path></svg></span>Visiting Madinah (optional)<svg class="ic sm" viewbox="0 0 24 24"><path d="M9 6l6 6-6 6"></path></svg></a>
+<a class="mi" href="glossary.html"><span class="n"><svg class="ic sm" viewbox="0 0 24 24"><path d="M4 5.5A2 2 0 016 4h13v14H6a2 2 0 00-2 2zM4 5.5V20M19 18v2H6"></path></svg></span>Glossary<svg class="ic sm" viewbox="0 0 24 24"><path d="M9 6l6 6-6 6"></path></svg></a>
+<a class="mi" href="sources.html"><span class="n"><svg class="ic sm" viewbox="0 0 24 24"><path d="M12 4v16M8 20h8M5 7h14M5 7l-3 6h6zM19 7l-3 6h6z"></path></svg></span>Sources &amp; scholarly notes<svg class="ic sm" viewbox="0 0 24 24"><path d="M9 6l6 6-6 6"></path></svg></a>
 </div>
-
 <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px">
-<button class="iconbtn" type="button" style="height: 56px" data-action="textsize">A · A+ · A++</button>
-<button class="iconbtn" type="button" style="height: 56px" data-action="lang" aria-label="Read in Urdu"><svg class="ic sm" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3c2.5 2.5 3.7 5.5 3.7 9s-1.2 6.5-3.7 9c-2.5-2.5-3.7-5.5-3.7-9S9.5 5.5 12 3z"></path></svg><span lang="ur">اردو</span></button>
-<button class="iconbtn" type="button" style="height: 56px" data-soon="Night mode is coming soon."><svg class="ic sm" viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 019.5 4a8 8 0 1010.5 10.5z"></path></svg>Night</button>
+<button class="iconbtn" data-action="textsize" style="height: 56px" type="button">A · A+ · A++</button>
+<button aria-label="Read in Urdu" class="iconbtn" data-action="lang" style="height: 56px" type="button"><svg class="ic sm" viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3c2.5 2.5 3.7 5.5 3.7 9s-1.2 6.5-3.7 9c-2.5-2.5-3.7-5.5-3.7-9S9.5 5.5 12 3z"></path></svg><span lang="ur">اردو</span></button>
+<button class="iconbtn" data-soon="Night mode is coming soon." style="height: 56px" type="button"><svg class="ic sm" viewbox="0 0 24 24"><path d="M20 14.5A8 8 0 019.5 4a8 8 0 1010.5 10.5z"></path></svg>Night</button>
 </div>
-<button class="btn secondary" type="button" data-action="reset">Start a new Umrah (clear progress)</button>
+<button class="btn secondary" data-action="reset" type="button">Start a new Umrah (clear progress)</button>
 </div>
-
 </div>
 <script src="assets/app.js" defer></script>
 <script src="assets/narrator.js" defer></script>

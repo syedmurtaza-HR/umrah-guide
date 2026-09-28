@@ -18,7 +18,8 @@
 <link href="assets/fonts.css" rel="stylesheet"/>
 <link href="assets/umrah.css" rel="stylesheet"/>
 <link href="assets/app.css" rel="stylesheet"/>
-<script>try{var s=JSON.parse(localStorage.getItem('ug:textsize'));if(s)document.documentElement.style.zoom=[1,1.15,1.3][s];var g=JSON.parse(localStorage.getItem('ug:lang')),d=document.documentElement,f=location.pathname.split('/').pop()||'index.html',m=f.match(/^([a-z0-9]+?)(-ur)?\.html$/);if(m&&g&&(g==='ur')!==(d.lang==='ur')&&m[1]!=='404')location.replace(m[1]+(g==='ur'?'-ur':'')+'.html'+location.search+location.hash);}catch(e){}</script>
+<link href="assets/profile.css" rel="stylesheet"/>
+<script>try{var s=JSON.parse(localStorage.getItem('ug:textsize'));if(s)document.documentElement.style.zoom=[1,1.15,1.3][s];var g=JSON.parse(localStorage.getItem('ug:lang')),d=document.documentElement,f=location.pathname.split('/').pop()||'index.html',m=f.match(/^([a-z0-9]+?)(-ur)?\.html$/);if(m&&g&&(g==='ur')!==(d.lang==='ur')&&m[1]!=='404')location.replace(m[1]+(g==='ur'?'-ur':'')+'.html'+location.search+location.hash);var w=JSON.parse(localStorage.getItem('ug:who')||'[]'),sa=JSON.parse(localStorage.getItem('ug:showall')||'false');if(w&&w.length&&!sa){var c=['pf-on'],h=function(x){return w.indexOf(x)>-1},gg=h('man')||h('woman')||h('couple');if(!gg||h('man')||h('couple')||h('elderly'))c.push('pf-men');if(!gg||h('woman')||h('couple')||h('elderly'))c.push('pf-women');['couple','elderly','babies','kids'].forEach(function(t){if(h(t))c.push('pf-'+t)});d.className+=' '+c.join(' ');}var fr=JSON.parse(localStorage.getItem('ug:from')||'null');if(fr)d.className+=' from-set from-'+fr;}catch(e){}</script>
 <style>
 .when{display:flex;align-items:center;gap:12px}
 .when .wk{display:flex;flex-direction:column;align-items:center;justify-content:center;width:64px;height:64px;border-radius:16px;background:var(--teal);color:#fff;flex-shrink:0;line-height:1}
@@ -41,86 +42,87 @@
 <div class="hero" style="display: flex; flex-direction: column; gap: 10px">
 <div class="eyebrow">الٹی گنتی کا منصوبہ</div>
 <h1 class="h1">روانگی سے پہلے</h1>
-<p class="lead">ایک آسان الٹی گنتی، تاکہ کوئی کام آخری وقت پر نہ رہ جائے۔ ساتھ ساتھ نشان لگاتے جائیں؛ آپ کے نشانات اسی فون میں محفوظ رہتے ہیں۔</p>
+<p class="lead">ایک آسان الٹی گنتی، تاکہ کوئی کام آخری وقت پر نہ رہ جائے۔ جو کام ہو جائے اس پر نشان لگاتے جائیں؛ آپ کے نشان اسی فون میں محفوظ رہیں گے۔</p>
 </div>
 <section class="sec">
 <div class="when"><span class="wk"><b>8</b><small>ہفتے</small></span><h2>آٹھ ہفتے پہلے</h2></div>
 <ul class="checklist">
-<li><label><input type="checkbox"/><span>تاریخیں طے کریں اور بکنگ کا طریقہ چنیں: کسی منظور شدہ عمرہ ایجنٹ کے ذریعے، یا براہِ راست نسک سے۔</span></label></li>
-<li><label><input type="checkbox"/><span>دیکھ لیں کہ پاسپورٹ سفر کی تاریخ سے کم از کم 6 ماہ تک کارآمد ہو۔</span></label></li>
-<li><label><input type="checkbox"/><span>ویزا طے کریں: عمرہ ویزا، یا سعودی وزٹ یا ٹورسٹ ویزا۔</span></label></li>
-<li><label><input type="checkbox"/><span>گردن توڑ بخار (ACYW) کی ویکسین ابھی بک کریں۔ یہ آمد سے کم از کم 10 دن پہلے لگنی چاہیے۔</span></label></li>
-<li><label><input type="checkbox"/><span>بزرگ ہیں، حاملہ ہیں، یا کوئی دائمی بیماری ہے؟ سفر، گرمی اور پیدل چلنے کے بارے میں اپنے ڈاکٹر سے مشورہ کریں۔</span></label></li>
-<li><label><input type="checkbox"/><span>روزانہ پیدل چلنا شروع کریں۔ عمرے میں کئی کلومیٹر پیدل چلنا ہوتا ہے؛ صرف سعی تقریباً 3 کلومیٹر ہے۔</span></label></li>
+<li><label><input type="checkbox"/><span>سب سے پہلے اپنی تاریخیں طے کریں اور بکنگ کا طریقہ چن لیں: کسی منظور شدہ عمرہ ایجنٹ کے ذریعے، یا براہِ راست نسک پر۔</span></label></li>
+<li><label><input type="checkbox"/><span>ذرا دیکھ لیں کہ آپ کا پاسپورٹ سفر کی تاریخ سے کم از کم 6 ماہ تک کارآمد ہو۔</span></label></li>
+<li><label><input type="checkbox"/><span>اپنا ویزا طے کر لیں: عمرہ ویزا، یا سعودی وزٹ یا ٹورسٹ ویزا۔</span></label></li>
+<li><label><input type="checkbox"/><span>گردن توڑ بخار (ACYW) کی ویکسین ابھی بک کر لیں۔ یہ آمد سے کم از کم 10 دن پہلے لگنی چاہیے، اس لیے دیر نہ کریں۔</span></label></li>
+<li data-from="pk"><label><input type="checkbox"/><span>کیا آپ کا سفر پاکستان سے ہے؟ آپ کو پولیو کی ویکسین (کم از کم 4 ہفتے پہلے) اور نادرا سے منسلک ویکسین کارڈ بھی چاہیے ہوگا۔ دیکھیں <a href="pakistan-ur.html">پاکستان سے سفر</a>۔</span></label></li>
+<li><label><input type="checkbox"/><span>بزرگ ہیں، امید سے ہیں، یا کوئی دائمی بیماری ہے؟ سفر، گرمی اور پیدل چلنے کے بارے میں اپنے ڈاکٹر سے ضرور بات کر لیں۔</span></label></li>
+<li><label><input type="checkbox"/><span>روزانہ پیدل چلنا شروع کریں۔ عمرے میں کئی کلومیٹر پیدل چلنا ہوتا ہے؛ صرف سعی تقریباً 3 کلومیٹر ہے۔ ابھی کی تھوڑی مشق وہاں بہت کام آئے گی۔</span></label></li>
 </ul>
 </section>
 <section class="sec">
 <div class="when"><span class="wk"><b>4</b><small>ہفتے</small></span><h2>چار ہفتے پہلے</h2></div>
 <ul class="checklist">
-<li><label><input type="checkbox"/><span>اپنا <b>نسک</b> اکاؤنٹ بنائیں (نیچے دیے گئے مراحل دیکھیں)۔</span></label></li>
-<li><label><input type="checkbox"/><span>لائسنس یافتہ ہوٹل کی بکنگ، جو <b>نسک مسار</b> میں درج ہو (عمرہ ویزا کے لیے ضروری)۔</span></label></li>
-<li><label><input type="checkbox"/><span>ایئرپورٹ سے آمد و رفت کی بکنگ۔ مدینہ جا رہے ہیں؟ حرمین ٹرین سعودی ریلوے کے سرکاری ذرائع سے بک کریں۔</span></label></li>
-<li><label><input type="checkbox"/><span>عمرے کے 4 بنیادی کام سیکھیں اور تلبیہ کی بلند آواز سے مشق کریں۔</span></label></li>
-<li><label><input type="checkbox"/><span>خواتین: خواتین کی رہنمائی پڑھیں۔ خاندان: دیکھ بھال اور سہولت والا صفحہ پڑھیں۔</span></label></li>
+<li><label><input type="checkbox"/><span>اپنا <b>نسک</b> اکاؤنٹ بنائیں۔ نیچے ہم آپ کو قدم بہ قدم بتاتے ہیں۔</span></label></li>
+<li><label><input type="checkbox"/><span>کسی لائسنس یافتہ ہوٹل میں بکنگ کریں اور یقینی بنائیں کہ وہ <b>نسک مسار</b> میں درج ہو (عمرہ ویزا کے لیے ضروری ہے)۔</span></label></li>
+<li><label><input type="checkbox"/><span>ایئرپورٹ سے آنے جانے کی بکنگ کر لیں۔ مدینہ بھی جانا ہے؟ حرمین ٹرین سعودی ریلوے کے سرکاری ذرائع سے ہی بک کریں۔</span></label></li>
+<li><label><input type="checkbox"/><span>عمرے کے 4 بنیادی کام سیکھیں، اور تلبیہ بلند آواز سے دہرانے کی مشق کریں۔ جلد ہی یہ زبان پر رواں ہو جائے گا۔</span></label></li>
+<li><label><input type="checkbox"/><span>خواتین: “خواتین کے لیے رہنمائی” ضرور پڑھیں۔ خاندان والے: “خاندان اور بچے” پڑھ لیں۔</span></label></li>
 </ul>
 </section>
 <section class="sec">
 <div class="when"><span class="wk"><b>1</b><small>ہفتہ</small></span><h2>ایک ہفتہ پہلے</h2></div>
 <ul class="checklist">
-<li><label><input type="checkbox"/><span>مرحلہ 1 کی فہرست کے مطابق سامان باندھیں۔ مرد: احرام دستی سامان میں رکھیں۔</span></label></li>
-<li><label><input type="checkbox"/><span>دوائیں اصل پیکنگ میں، نسخوں کے ساتھ، دستی سامان میں رکھیں۔</span></label></li>
-<li><label><input type="checkbox"/><span>پیسے: کچھ سعودی ریال نقد، اور ایک ایسا بینک کارڈ جو بیرونِ ملک چلتا ہو۔ اپنے بینک کو سفر کی اطلاع دے دیں۔</span></label></li>
-<li><label><input type="checkbox"/><span>فون: رومنگ فعال کریں، یا پہنچ کر سعودی سم یا ای سم لینے کا ارادہ رکھیں (پاسپورٹ درکار ہوگا)۔</span></label></li>
-<li><label><input type="checkbox"/><span>یہ گائیڈ اپنے فون پر انسٹال کریں اور ہر صفحہ ایک بار کھول لیں، تاکہ انٹرنیٹ کے بغیر بھی چلے۔</span></label></li>
-<li><label><input type="checkbox"/><span><b>میری معلومات</b> بھریں اور فوری کارڈ پرنٹ کر لیں۔</span></label></li>
-<li><label><input type="checkbox"/><span><b>میری دعاؤں کی فہرست</b> شروع کریں: گھر والوں اور دوستوں سے پوچھیں کہ وہ کس چیز کی دعا چاہتے ہیں۔</span></label></li>
+<li><label><input type="checkbox"/><span>مرحلہ 1 کی فہرست دیکھ کر سامان باندھیں۔ مرد حضرات: اپنا احرام دستی سامان میں رکھیں۔</span></label></li>
+<li><label><input type="checkbox"/><span>اپنی دوائیں اصل پیکنگ میں، نسخوں کے ساتھ، دستی سامان میں رکھیں۔</span></label></li>
+<li><label><input type="checkbox"/><span>پیسے: کچھ سعودی ریال نقد ساتھ رکھیں، اور ایک ایسا بینک کارڈ جو بیرونِ ملک چلتا ہو۔ اپنے بینک کو سفر کی اطلاع دے دیں۔</span></label></li>
+<li><label><input type="checkbox"/><span>فون: رومنگ فعال کر لیں، یا پہنچ کر سعودی سم یا ای سم لینے کا سوچ لیں (پاسپورٹ ساتھ رکھنا ہوگا)۔</span></label></li>
+<li><label><input type="checkbox"/><span>یہ گائیڈ اپنے فون پر انسٹال کریں اور ہر صفحہ ایک بار کھول لیں، تاکہ انٹرنیٹ کے بغیر بھی یہ آپ کے ساتھ رہے۔</span></label></li>
+<li><label><input type="checkbox"/><span><b>میری معلومات</b> بھر لیں، پھر اپنا فوری کارڈ پرنٹ کر لیں۔</span></label></li>
+<li><label><input type="checkbox"/><span><b>میری دعاؤں کی فہرست</b> شروع کریں: گھر والوں اور دوستوں سے پوچھ لیں کہ وہ آپ سے کس چیز کی دعا چاہتے ہیں۔</span></label></li>
 </ul>
 </section>
 <section class="sec">
 <div class="when"><span class="wk"><b>1</b><small>دن</small></span><h2>سفر کا دن</h2></div>
 <ul class="checklist">
-<li><label><input type="checkbox"/><span>ناخن تراشیں، غیر ضروری بال صاف کریں، اور غسل کریں۔</span></label></li>
-<li><label><input type="checkbox"/><span>طے کریں کہ احرام کہاں باندھیں گے۔ ہوائی جہاز سے جا رہے ہیں؟ جہاز کے میقات سے گزرنے سے پہلے احرام میں ہونا ضروری ہے، اس لیے بہت سے مرد گھر یا ایئرپورٹ پر ہی احرام باندھ لیتے ہیں۔</span></label></li>
-<li><label><input type="checkbox"/><span>پاسپورٹ، ویزا، نسک پرمٹ اور ٹکٹ ایک ہی تھیلی میں اپنے پاس رکھیں۔</span></label></li>
-<li><label><input type="checkbox"/><span>گھر سے نکلنے کی دعا اور سفر کی دعا پڑھیں (دعائیں اور اذکار میں موجود ہیں)۔</span></label></li>
+<li><label><input type="checkbox"/><span>اپنے ناخن تراش لیں، غیر ضروری بال صاف کر لیں، اور غسل کر لیں۔</span></label></li>
+<li><label><input type="checkbox"/><span>پہلے سے طے کر لیں کہ احرام کہاں باندھنا ہے۔ سفر ہوائی جہاز سے ہے؟ جہاز کے میقات سے گزرنے سے پہلے احرام میں ہونا ضروری ہے، اس لیے بہت سے مرد گھر یا ایئرپورٹ پر ہی احرام باندھ لیتے ہیں۔</span></label></li>
+<li><label><input type="checkbox"/><span>اپنا پاسپورٹ، ویزا، نسک پرمٹ اور ٹکٹ ایک ہی تھیلی میں اکٹھے اپنے پاس رکھیں۔</span></label></li>
+<li><label><input type="checkbox"/><span>روانہ ہوتے وقت گھر سے نکلنے کی دعا اور سفر کی دعا پڑھیں (یہ دعائیں اور اذکار میں موجود ہیں)۔</span></label></li>
 </ul>
 </section>
 <section class="sec">
 <div class="q"><span class="num"><svg class="ic" viewbox="0 0 24 24"><rect height="19" rx="2.5" width="12" x="6" y="2.5"></rect><path d="M10.5 18.5h3"></path></svg></span>نسک، قدم بہ قدم</div>
 <ol class="steps">
-<li><span class="n">1</span><div class="t"><b>نسک صرف سرکاری ایپ اسٹور سے ڈاؤن لوڈ کریں۔</b><p>یہ وزارتِ حج و عمرہ کا سرکاری پلیٹ فارم ہے۔ ملتی جلتی جعلی ایپس اور ویب سائٹس سے بچیں۔</p></div></li>
-<li><span class="n">2</span><div class="t"><b>اپنا اکاؤنٹ بنائیں۔</b><p>پاسپورٹ اور ویزا کی تفصیلات درکار ہوں گی۔</p></div></li>
-<li><span class="n">3</span><div class="t"><b>اپنا عمرہ پرمٹ بک کریں۔</b><p>تاریخ اور وقت چنیں۔ پرمٹ کے وقت سے پہلے عمرے کے لیے داخل نہیں ہو سکتے۔</p></div></li>
-<li><span class="n">4</span><div class="t"><b>مدینہ جا رہے ہیں؟ ریاض الجنہ کا پرمٹ بک کریں۔</b><p>یہ مفت ہے۔ مردوں اور خواتین کے اوقات الگ ہیں۔</p></div></li>
-<li><span class="n">5</span><div class="t"><b>پرمٹ آسانی سے دکھانے کے قابل رکھیں۔</b><p>سگنل نہ ہونے کی صورت کے لیے اسکرین شاٹ لے لیں۔</p></div></li>
+<li><span class="n">1</span><div class="t"><b>نسک صرف سرکاری ایپ اسٹور سے ہی ڈاؤن لوڈ کریں۔</b><p>یہ وزارتِ حج و عمرہ کا سرکاری پلیٹ فارم ہے۔ ملتی جلتی جعلی ایپس اور ویب سائٹس سے بچ کر رہیں۔</p></div></li>
+<li><span class="n">2</span><div class="t"><b>اپنا اکاؤنٹ بنائیں۔</b><p>پاسپورٹ اور ویزا کی تفصیلات پاس رکھیں، ان کی ضرورت ہوگی۔</p></div></li>
+<li><span class="n">3</span><div class="t"><b>اپنا عمرہ پرمٹ بک کریں۔</b><p>اپنی تاریخ اور وقت چنیں۔ پرمٹ کے وقت سے پہلے عمرے کے لیے داخلے کی اجازت نہیں، اس لیے اسی حساب سے منصوبہ بنائیں۔</p></div></li>
+<li><span class="n">4</span><div class="t"><b>مدینہ بھی جانا ہے؟ ریاض الجنہ کا پرمٹ بھی بک کر لیں۔</b><p>یہ مفت ہے۔ مردوں اور خواتین کے اوقات الگ الگ ہیں۔</p></div></li>
+<li><span class="n">5</span><div class="t"><b>اپنے پرمٹ دکھانے کے لیے تیار رکھیں۔</b><p>ایک اسکرین شاٹ لے لیں، کہیں سگنل نہ ہو تو کام آئے گا۔</p></div></li>
 </ol>
 </section>
 <section class="sec">
 <div class="q"><span class="num"><svg class="ic" viewbox="0 0 24 24"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path></svg></span>گرمی میں صحت</div>
 <ul class="tips">
-<li><svg class="ic" viewbox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span><b>بار بار پانی پئیں</b>، پیاس لگنے سے پہلے۔ مسجد میں ہر طرف زمزم موجود ہے۔</span></li>
-<li><svg class="ic" viewbox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span>دھوپ میں <b>چھتری استعمال کریں</b> (احرام میں جائز ہے) اور ٹھنڈے اوقات میں جائیں۔</span></li>
-<li><svg class="ic" viewbox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span><b>پاؤں:</b> وہ چپل پہنیں جن میں پہلے چل چکے ہوں۔ چھالوں کے لیے پلاسٹر ساتھ رکھیں۔</span></li>
-<li><svg class="ic" viewbox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span><b>رگڑ (احرام میں مرد):</b> بغیر خوشبو کی اینٹی چیف کریم یا پیٹرولیم جیلی استعمال کریں۔</span></li>
-<li><svg class="ic" viewbox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span><b>ذیابیطس:</b> ہلکا ناشتہ اور شوگر چیک کرنے کی مشین ساتھ رکھیں؛ زیادہ چلنے سے شوگر کم ہو سکتی ہے۔</span></li>
+<li><svg class="ic" viewbox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span><b>بار بار پانی پیتے رہیں</b>، پیاس لگنے سے پہلے ہی۔ مسجد میں ہر طرف آپ کو زمزم مل جائے گا۔</span></li>
+<li><svg class="ic" viewbox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span>دھوپ میں <b>چھتری استعمال کریں</b> (احرام میں جائز ہے)، اور کوشش کریں کہ ٹھنڈے اوقات میں جائیں۔</span></li>
+<li><svg class="ic" viewbox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span><b>پاؤں:</b> وہ چپل پہنیں جن میں پہلے سے چلنے کی عادت ہو۔ چھالوں کے لیے پلاسٹر ساتھ رکھ لیں۔</span></li>
+<li><svg class="ic" viewbox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span><b>رگڑ (احرام میں مرد):</b> بغیر خوشبو کی اینٹی چیف کریم یا پیٹرولیم جیلی لگائیں۔ اس سے بہت آرام ملتا ہے۔</span></li>
+<li><svg class="ic" viewbox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span><b>ذیابیطس:</b> ہلکا ناشتہ اور شوگر چیک کرنے کی مشین ہمیشہ ساتھ رکھیں؛ زیادہ چلنے سے شوگر کم ہو سکتی ہے۔</span></li>
 </ul>
-<div class="card avoid"><svg class="ic" viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v6M12 16.5v.2"></path></svg><div class="t"><b>گرمی سے نڈھال ہونے کی علامات</b>چکر، سر درد، متلی، بہت زیادہ پسینہ یا ذہنی الجھن۔ رک جائیں، سائے میں جائیں، پانی پئیں، اور مدد مانگیں۔ مکہ میں ایمرجنسی کی صورت میں 911 پر کال کریں۔</div></div>
+<div class="card avoid"><svg class="ic" viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v6M12 16.5v.2"></path></svg><div class="t"><b>گرمی سے نڈھال ہونے کی علامات</b>چکر، سر درد، متلی، بہت زیادہ پسینہ یا ذہنی الجھن۔ رک جائیں، سائے میں آ جائیں، پانی پئیں، اور مدد مانگیں۔ زبردستی آگے نہ بڑھیں۔ مکہ میں ایمرجنسی کی صورت میں 911 پر کال کریں۔</div></div>
 </section>
 <section class="sec">
 <div class="q"><span class="num"><svg class="ic" viewbox="0 0 24 24"><path d="M9 6h11M9 12h11M9 18h11M4 6l1 1 2-2M4 12l1 1 2-2M4 18l1 1 2-2"></path></svg></span>عملی مشورے</div>
 <ul class="tips">
-<li><svg class="ic" viewbox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span><b>جوتے:</b> دروازے پر چھوڑنے کے بجائے چھوٹے تھیلے میں ساتھ رکھیں۔ بعد میں لمبی تلاش سے بچ جائیں گے۔</span></li>
-<li><svg class="ic" viewbox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span><b>ہلکا سامان:</b> فون، پانی، یہ گائیڈ، تھوڑی نقدی، ہوٹل کا کارڈ۔ قیمتی چیزیں ہوٹل میں چھوڑ دیں۔</span></li>
-<li><svg class="ic" viewbox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span><b>رش</b> موسم اور نماز کے اوقات کے ساتھ بدلتا ہے۔ اپنے گروپ لیڈر سے پوچھیں کہ عموماً کب رش کم ہوتا ہے۔</span></li>
-<li><svg class="ic" viewbox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span><b>چارج رکھیں:</b> پاور بینک آپ کی گائیڈ، کاؤنٹر اور نسک پرمٹ کو سارا دن چلتا رکھتا ہے۔</span></li>
+<li><svg class="ic" viewbox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span><b>جوتے:</b> دروازے پر چھوڑنے کے بجائے ایک چھوٹے تھیلے میں ساتھ رکھیں۔ بعد میں لمبی تلاش کی زحمت نہیں ہوگی۔</span></li>
+<li><svg class="ic" viewbox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span><b>ہلکا سامان رکھیں:</b> فون، پانی، یہ گائیڈ، تھوڑی نقدی اور ہوٹل کا کارڈ۔ قیمتی چیزیں ہوٹل میں ہی چھوڑ دیں۔</span></li>
+<li><svg class="ic" viewbox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span><b>رش</b> موسم اور نماز کے اوقات کے ساتھ بدلتا رہتا ہے۔ اپنے گروپ لیڈر سے پوچھ لیں کہ عموماً کب رش کم ہوتا ہے۔</span></li>
+<li><svg class="ic" viewbox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span><b>فون چارج رکھیں:</b> پاور بینک سے یہ گائیڈ، آپ کے کاؤنٹر اور نسک پرمٹ سارا دن چلتے رہیں گے۔</span></li>
 </ul>
 </section>
 <section class="sec" style="border-bottom: none">
 <div class="q" style="color: #8C2B23"><span class="num" style="background: #8C2B23"><svg class="ic" viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M5.6 5.6l12.8 12.8"></path></svg></span>بچیں</div>
 <ul class="avoidlist">
 <li><svg class="ic" viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M5.6 5.6l12.8 12.8"></path></svg><span>غیر سرکاری ویزا، نسک یا ٹرین کی ویب سائٹس جو پیسے مانگیں۔</span></li>
-<li><svg class="ic" viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M5.6 5.6l12.8 12.8"></path></svg><span>ویکسین آخری ہفتے تک چھوڑ دینا۔ یہ آمد سے کم از کم 10 دن پہلے لگنی چاہیے۔</span></li>
-<li><svg class="ic" viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M5.6 5.6l12.8 12.8"></path></svg><span>عمرے کے دن بالکل نئے جوتے۔</span></li>
+<li><svg class="ic" viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M5.6 5.6l12.8 12.8"></path></svg><span>ویکسین کو آخری ہفتے تک ٹال دینا۔ یہ آمد سے کم از کم 10 دن پہلے لگنی چاہیے۔</span></li>
+<li><svg class="ic" viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M5.6 5.6l12.8 12.8"></path></svg><span>عمرے کے دن بالکل نئے جوتے پہن لینا۔</span></li>
 </ul>
 <p class="src">ستمبر 2026 میں جانچا گیا: ویکسین کے قواعد، سعودی وزارتِ صحت (عمرہ 1447ھ)؛ پرمٹ اور نسک مسار، وزارتِ حج و عمرہ۔ قواعد ہر سیزن بدلتے ہیں؛ بکنگ سے پہلے دوبارہ دیکھ لیں۔</p>
 </section>

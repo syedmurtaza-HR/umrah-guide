@@ -18,7 +18,8 @@
 <link href="assets/fonts.css" rel="stylesheet"/>
 <link href="assets/umrah.css" rel="stylesheet"/>
 <link href="assets/app.css" rel="stylesheet"/>
-<script>try{var s=JSON.parse(localStorage.getItem('ug:textsize'));if(s)document.documentElement.style.zoom=[1,1.15,1.3][s];var g=JSON.parse(localStorage.getItem('ug:lang')),d=document.documentElement,f=location.pathname.split('/').pop()||'index.html',m=f.match(/^([a-z0-9]+?)(-ur)?\.html$/);if(m&&g&&(g==='ur')!==(d.lang==='ur')&&m[1]!=='404')location.replace(m[1]+(g==='ur'?'-ur':'')+'.html'+location.search+location.hash);}catch(e){}</script>
+<link href="assets/profile.css" rel="stylesheet"/>
+<script>try{var s=JSON.parse(localStorage.getItem('ug:textsize'));if(s)document.documentElement.style.zoom=[1,1.15,1.3][s];var g=JSON.parse(localStorage.getItem('ug:lang')),d=document.documentElement,f=location.pathname.split('/').pop()||'index.html',m=f.match(/^([a-z0-9]+?)(-ur)?\.html$/);if(m&&g&&(g==='ur')!==(d.lang==='ur')&&m[1]!=='404')location.replace(m[1]+(g==='ur'?'-ur':'')+'.html'+location.search+location.hash);var w=JSON.parse(localStorage.getItem('ug:who')||'[]'),sa=JSON.parse(localStorage.getItem('ug:showall')||'false');if(w&&w.length&&!sa){var c=['pf-on'],h=function(x){return w.indexOf(x)>-1},gg=h('man')||h('woman')||h('couple');if(!gg||h('man')||h('couple')||h('elderly'))c.push('pf-men');if(!gg||h('woman')||h('couple')||h('elderly'))c.push('pf-women');['couple','elderly','babies','kids'].forEach(function(t){if(h(t))c.push('pf-'+t)});d.className+=' '+c.join(' ');}var fr=JSON.parse(localStorage.getItem('ug:from')||'null');if(fr)d.className+=' from-set from-'+fr;}catch(e){}</script>
 <style>
 .opt{display:flex;flex-direction:column;gap:8px;padding:16px;border-radius:16px;background:var(--surface);border:1.5px solid var(--line)}
 .opt .hd{display:flex;align-items:center;justify-content:space-between;gap:8px}
@@ -36,7 +37,7 @@
 <div class="hero" style="display: flex; flex-direction: column; gap: 8px">
 <div class="eyebrow">مرحلہ 08 · لازمی · آخری مرحلہ</div>
 <h1 class="h1">بال منڈوائیں یا چھوٹے کروائیں</h1>
-<p class="lead">یہ عمرہ کا آخری عمل ہے۔ اس سے آپ کا احرام ختم ہوتا ہے۔ <b>حلق</b> = سر منڈوانا۔ <b>تقصیر</b> = بال چھوٹے کروانا۔</p>
+<p class="lead">یہ عمرہ کا آخری عمل ہے، اور اسی سے آپ کا احرام ختم ہوتا ہے۔ <b>حلق</b> = سر منڈوانا۔ <b>تقصیر</b> = بال چھوٹے کروانا۔</p>
 </div>
 <section class="sec">
 <div class="q"><span class="num"><svg class="ic" viewbox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0119 9.5C19 14.8 12 21 12 21z"></path><circle cx="12" cy="9.5" r="2.5"></circle></svg></span>میں کہاں ہوں؟</div>
@@ -44,24 +45,25 @@
 </section>
 <section class="sec">
 <div class="q"><span class="num"><svg class="ic" viewbox="0 0 24 24"><path d="M9 6h11M9 12h11M9 18h11M4 6l1 1 2-2M4 12l1 1 2-2M4 18l1 1 2-2"></path></svg></span>اب میں کیا کروں؟</div>
-<div class="opt">
+<div class="opt" data-for="men">
 <div class="hd"><b>مرد</b><span class="tag must"><svg class="ic" viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M8 12.5l2.7 2.7L16.5 9"></path></svg>ضروری</span></div>
 <ol class="steps">
 <li><span class="n">A</span><div class="t"><b>پورا سر منڈوائیں۔</b><p>یہ افضل ہے: نبی کریم ﷺ نے سر منڈوانے والوں کے لیے تین بار دعا فرمائی۔</p><span class="tag sunnah"><svg class="ic" viewbox="0 0 24 24"><path d="M12 3.5l2.6 5.3 5.8.8-4.2 4.1 1 5.8L12 16.8l-5.2 2.7 1-5.8-4.2-4.1 5.8-.8z"></path></svg>افضل</span></div></li>
 <li><span class="n">B</span><div class="t"><b>یا پورے سر سے بال چھوٹے کروائیں۔</b><p>صرف ایک طرف سے چند بال نہیں۔</p><span class="tag differ"><svg class="ic" viewbox="0 0 24 24"><path d="M12 4v16M8 20h8M5 7h14M5 7l-3 6h6zM19 7l-3 6h6z"></path></svg>کم از کم مقدار میں علماء کا اختلاف</span></div></li>
 </ol>
 </div>
-<div class="opt">
+<div class="opt" data-for="women">
 <div class="hd"><b>خواتین</b><span class="tag must"><svg class="ic" viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M8 12.5l2.7 2.7L16.5 9"></path></svg>ضروری</span></div>
 <ol class="steps">
-<li><span class="n">1</span><div class="t"><b>اپنے بال اکٹھے کریں۔</b><p>پردے میں: اپنے ہوٹل میں، خود، کسی محرم سے، یا کسی دوسری خاتون سے۔</p></div></li>
+<li><span class="n">1</span><div class="t"><b>اپنے بال اکٹھے کریں۔</b><p>یہ پردے میں کریں، جیسے اپنے ہوٹل میں۔ خود کاٹیں، یا کسی محرم یا دوسری خاتون سے کٹوائیں۔</p></div></li>
 <li><span class="n">2</span><div class="t"><b>سروں سے تقریباً انگلی کے پور کے برابر کاٹیں۔</b><p>تقریباً 2 سینٹی میٹر۔ خواتین سر نہیں منڈواتیں۔</p></div></li>
 </ol>
 </div>
+<p class="src">سر منڈوانے والوں کے لیے دعا: صحیح بخاری 1727 · خواتین بال چھوٹے کریں: سنن ابی داؤد 1984</p>
 </section>
 <section class="sec">
 <div class="q"><span class="num"><svg class="ic" viewbox="0 0 24 24"><path d="M4 5.5A2 2 0 016 4h13v14H6a2 2 0 00-2 2zM4 5.5V20M19 18v2H6"></path></svg></span>میں کیا پڑھوں؟</div>
-<p class="lead">کوئی خاص دعا ضروری نہیں۔ اپنے الفاظ میں اللہ کا شکر ادا کریں۔</p>
+<p class="lead">کوئی خاص دعا ضروری نہیں۔ بس اپنے الفاظ میں اللہ کا شکر ادا کریں۔</p>
 <div class="dua">
 <div class="top"><span class="when">شکر کا ایک سادہ کلمہ</span><button aria-label="آواز چلائیں" class="audio"><svg class="ic" viewbox="0 0 24 24"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z"></path><path d="M15.5 9a4 4 0 010 6"></path></svg></button></div>
 <div class="ar" lang="ar">الْحَمْدُ لِلَّهِ</div>
@@ -71,8 +73,8 @@
 </section>
 <section class="sec" style="border-bottom: none">
 <div class="q"><span class="num"><svg class="ic" viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 11v5.5M12 7.8v.2"></path></svg></span>یاد رکھیں</div>
-<div class="card remember"><svg class="ic" viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 11v5.5M12 7.8v.2"></path></svg><div class="t"><b>نیا، صاف بلیڈ استعمال کریں</b>حجام سے کہیں کہ آپ کے سامنے نیا بلیڈ کھولے۔</div></div>
-<div class="card avoid"><svg class="ic" viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M5.6 5.6l12.8 12.8"></path></svg><div class="t"><b>بچیں</b>بال کٹوانے سے پہلے احرام کے کپڑے اتارنا یا خوشبو لگانا۔</div></div>
+<div class="card remember"><svg class="ic" viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 11v5.5M12 7.8v.2"></path></svg><div class="t"><b>نیا، صاف بلیڈ استعمال کریں</b>حجام سے نرمی سے کہیں کہ آپ کے سامنے نیا بلیڈ کھولے۔</div></div>
+<div class="card avoid"><svg class="ic" viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M5.6 5.6l12.8 12.8"></path></svg><div class="t"><b>بچیں</b>بال کٹوانے سے پہلے احرام کے کپڑے اتارنا یا خوشبو لگانا۔ بال کٹنے تک انتظار کریں۔</div></div>
 <p class="src">سر منڈوانے والوں کے لیے دعا: صحیح بخاری 1727، صحیح مسلم 1301 · خواتین بال چھوٹے کریں، منڈوائیں نہیں: سنن ابی داؤد 1984</p>
 </section>
 <div class="nextbar"><a class="back" href="step7-ur.html"><svg class="ic flip" viewbox="0 0 24 24"><path d="M19 12H5M11 6l-6 6 6 6"></path></svg>واپس</a> <a class="next" href="complete-ur.html"><span><small>اختتام</small><strong>عمرہ مکمل</strong></span><svg class="ic flip" viewbox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a></div>

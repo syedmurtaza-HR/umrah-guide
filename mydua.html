@@ -17,7 +17,8 @@
 <link rel="stylesheet" href="assets/fonts.css">
 <link rel="stylesheet" href="assets/umrah.css">
 <link rel="stylesheet" href="assets/app.css">
-<script>try{var s=JSON.parse(localStorage.getItem('ug:textsize'));if(s)document.documentElement.style.zoom=[1,1.15,1.3][s];var g=JSON.parse(localStorage.getItem('ug:lang')),d=document.documentElement,f=location.pathname.split('/').pop()||'index.html',m=f.match(/^([a-z0-9]+?)(-ur)?\.html$/);if(m&&g&&(g==='ur')!==(d.lang==='ur')&&m[1]!=='404')location.replace(m[1]+(g==='ur'?'-ur':'')+'.html'+location.search+location.hash);}catch(e){}</script>
+<link rel="stylesheet" href="assets/profile.css">
+<script>try{var s=JSON.parse(localStorage.getItem('ug:textsize'));if(s)document.documentElement.style.zoom=[1,1.15,1.3][s];var g=JSON.parse(localStorage.getItem('ug:lang')),d=document.documentElement,f=location.pathname.split('/').pop()||'index.html',m=f.match(/^([a-z0-9]+?)(-ur)?\.html$/);if(m&&g&&(g==='ur')!==(d.lang==='ur')&&m[1]!=='404')location.replace(m[1]+(g==='ur'?'-ur':'')+'.html'+location.search+location.hash);var w=JSON.parse(localStorage.getItem('ug:who')||'[]'),sa=JSON.parse(localStorage.getItem('ug:showall')||'false');if(w&&w.length&&!sa){var c=['pf-on'],h=function(x){return w.indexOf(x)>-1},gg=h('man')||h('woman')||h('couple');if(!gg||h('man')||h('couple')||h('elderly'))c.push('pf-men');if(!gg||h('woman')||h('couple')||h('elderly'))c.push('pf-women');['couple','elderly','babies','kids'].forEach(function(t){if(h(t))c.push('pf-'+t)});d.className+=' '+c.join(' ');}var fr=JSON.parse(localStorage.getItem('ug:from')||'null');if(fr)d.className+=' from-set from-'+fr;}catch(e){}</script>
 <style>
 .field{display:flex;flex-direction:column;gap:6px}
 .field label{font:700 15px var(--body);color:var(--muted)}
@@ -37,48 +38,42 @@
 </head>
 <body data-page="mydua">
 <div class="phone root">
-
 <div class="topbar">
-<a class="iconbtn" href="menu.html" aria-label="Open menu"><svg class="ic" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></a>
+<a aria-label="Open menu" class="iconbtn" href="menu.html"><svg class="ic" viewbox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></a>
 <div class="where"><small>DUAS</small><strong>My dua list</strong></div>
-<a class="iconbtn" href="index.html" aria-label="Home"><svg class="ic" viewBox="0 0 24 24"><path d="M4 11l8-7 8 7v9h-5v-6H9v6H4z"></path></svg></a>
+<a aria-label="Home" class="iconbtn" href="index.html"><svg class="ic" viewbox="0 0 24 24"><path d="M4 11l8-7 8 7v9h-5v-6H9v6H4z"></path></svg></a>
 </div>
-
 <div class="hero" style="display: flex; flex-direction: column; gap: 10px">
 <div class="eyebrow">Private · saved on this phone</div>
 <h1 class="h1">My dua list</h1>
-<p class="lead">People will ask you to “remember me in your duas”. Write them here, then tick each one after you have prayed for them in Tawaf or Sa‘i.</p>
+<p class="lead">People will ask you to “remember me in your duas”. Write their names here, then tick each one once you have prayed for them in Tawaf or Sa‘i.</p>
 </div>
-
 <section class="sec">
-<div class="q"><span class="num"><svg class="ic" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"></path></svg></span>Add someone</div>
-<div class="field"><label for="d-who">Who</label><input id="d-who" type="text" placeholder="e.g. My mother"></div>
-<div class="field"><label for="d-what">What to ask for (optional)</label><input id="d-what" type="text" placeholder="e.g. Good health and forgiveness"></div>
-<button class="btn primary" type="button" data-action="dua-add">Add to my list</button>
+<div class="q"><span class="num"><svg class="ic" viewbox="0 0 24 24"><path d="M12 5v14M5 12h14"></path></svg></span>Add someone</div>
+<div class="field"><label for="d-who">Who</label><input id="d-who" placeholder="e.g. My mother" type="text"/></div>
+<div class="field"><label for="d-what">What to ask for (optional)</label><input id="d-what" placeholder="e.g. Good health and forgiveness" type="text"/></div>
+<button class="btn primary" data-action="dua-add" type="button">Add to my list</button>
 <p class="small muted">Quick add:</p>
 <div class="chips">
-<button type="button" data-quick="My parents">My parents</button>
-<button type="button" data-quick="My spouse and children">My spouse and children</button>
-<button type="button" data-quick="Family who have passed away">Those who have passed away</button>
-<button type="button" data-quick="Everyone who asked me to pray">Everyone who asked me</button>
-<button type="button" data-quick="The whole Ummah">The whole Ummah</button>
-<button type="button" data-quick="Myself">Myself</button>
+<button data-quick="My parents" type="button">My parents</button>
+<button data-quick="My spouse and children" type="button">My spouse and children</button>
+<button data-quick="Family who have passed away" type="button">Those who have passed away</button>
+<button data-quick="Everyone who asked me to pray" type="button">Everyone who asked me</button>
+<button data-quick="The whole Ummah" type="button">The whole Ummah</button>
+<button data-quick="Myself" type="button">Myself</button>
 </div>
 </section>
-
 <section class="sec">
-<div class="count"><span class="q" style="margin: 0"><span class="num"><svg class="ic" viewBox="0 0 24 24"><path d="M9 6h11M9 12h11M9 18h11M4 6l1 1 2-2M4 12l1 1 2-2M4 18l1 1 2-2"></path></svg></span>My list</span><span class="muted small" id="dua-count">0 of 0 prayed for</span></div>
-<ul class="dl" id="dua-list" aria-live="polite"></ul>
-<div class="empty" id="dua-empty">Your list is empty. Add the first name above.</div>
-<button class="btn secondary" type="button" data-action="dua-reset">Untick all (for my next Tawaf)</button>
+<div class="count"><span class="q" style="margin: 0"><span class="num"><svg class="ic" viewbox="0 0 24 24"><path d="M9 6h11M9 12h11M9 18h11M4 6l1 1 2-2M4 12l1 1 2-2M4 18l1 1 2-2"></path></svg></span>My list</span><span class="muted small" id="dua-count">0 of 0 prayed for</span></div>
+<ul aria-live="polite" class="dl" id="dua-list"></ul>
+<div class="empty" id="dua-empty">Your list is empty for now. Add the first name above.</div>
+<button class="btn secondary" data-action="dua-reset" type="button">Untick all (for my next Tawaf)</button>
 </section>
-
 <section class="sec" style="border-bottom: none">
-<div class="card help"><svg class="ic" viewBox="0 0 24 24"><circle cx="8" cy="8" r="3"></circle><circle cx="17" cy="10" r="2.3"></circle><path d="M2.5 20c0-3.3 2.4-6 5.5-6s5.5 2.7 5.5 6M13.5 20c.2-2.6 1.7-4.5 3.5-4.5s3.3 1.9 3.5 4.5"></path></svg><div class="t"><b>A gift that returns to you</b>When you pray for someone in their absence, an angel says: “And for you the same.” <span class="small muted">Sahih Muslim 2732</span></div></div>
-<div class="card remember"><svg class="ic" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 11v5.5M12 7.8v.2"></path></svg><div class="t"><b>Private</b>Your list stays only on this phone. Nothing is sent anywhere.</div></div>
-<a class="btn secondary" href="duas.html" style="justify-content: space-between">Duas to use for them <svg class="ic" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+<div class="card help"><svg class="ic" viewbox="0 0 24 24"><circle cx="8" cy="8" r="3"></circle><circle cx="17" cy="10" r="2.3"></circle><path d="M2.5 20c0-3.3 2.4-6 5.5-6s5.5 2.7 5.5 6M13.5 20c.2-2.6 1.7-4.5 3.5-4.5s3.3 1.9 3.5 4.5"></path></svg><div class="t"><b>A gift that returns to you</b>When you pray for someone in their absence, an angel says: “And for you the same.” <span class="small muted">Sahih Muslim 2732</span></div></div>
+<div class="card remember"><svg class="ic" viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 11v5.5M12 7.8v.2"></path></svg><div class="t"><b>Private</b>Your list stays only on this phone. Nothing is sent anywhere, so write freely.</div></div>
+<a class="btn secondary" href="duas.html" style="justify-content: space-between">Duas to use for them <svg class="ic" viewbox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
 </section>
-
 </div>
 <script src="assets/app.js" defer></script>
 <script src="assets/narrator.js" defer></script>

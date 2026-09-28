@@ -17,7 +17,8 @@
 <link rel="stylesheet" href="assets/fonts.css">
 <link rel="stylesheet" href="assets/umrah.css">
 <link rel="stylesheet" href="assets/app.css">
-<script>try{var s=JSON.parse(localStorage.getItem('ug:textsize'));if(s)document.documentElement.style.zoom=[1,1.15,1.3][s];var g=JSON.parse(localStorage.getItem('ug:lang')),d=document.documentElement,f=location.pathname.split('/').pop()||'index.html',m=f.match(/^([a-z0-9]+?)(-ur)?\.html$/);if(m&&g&&(g==='ur')!==(d.lang==='ur')&&m[1]!=='404')location.replace(m[1]+(g==='ur'?'-ur':'')+'.html'+location.search+location.hash);}catch(e){}</script>
+<link rel="stylesheet" href="assets/profile.css">
+<script>try{var s=JSON.parse(localStorage.getItem('ug:textsize'));if(s)document.documentElement.style.zoom=[1,1.15,1.3][s];var g=JSON.parse(localStorage.getItem('ug:lang')),d=document.documentElement,f=location.pathname.split('/').pop()||'index.html',m=f.match(/^([a-z0-9]+?)(-ur)?\.html$/);if(m&&g&&(g==='ur')!==(d.lang==='ur')&&m[1]!=='404')location.replace(m[1]+(g==='ur'?'-ur':'')+'.html'+location.search+location.hash);var w=JSON.parse(localStorage.getItem('ug:who')||'[]'),sa=JSON.parse(localStorage.getItem('ug:showall')||'false');if(w&&w.length&&!sa){var c=['pf-on'],h=function(x){return w.indexOf(x)>-1},gg=h('man')||h('woman')||h('couple');if(!gg||h('man')||h('couple')||h('elderly'))c.push('pf-men');if(!gg||h('woman')||h('couple')||h('elderly'))c.push('pf-women');['couple','elderly','babies','kids'].forEach(function(t){if(h(t))c.push('pf-'+t)});d.className+=' '+c.join(' ');}var fr=JSON.parse(localStorage.getItem('ug:from')||'null');if(fr)d.className+=' from-set from-'+fr;}catch(e){}</script>
 <style>
 .flow{display:flex;flex-direction:column;gap:0;border:1.5px solid var(--line);border-radius:16px;overflow:hidden;background:var(--surface)}
 .flow div{display:grid;grid-template-columns:34px minmax(0,1fr);gap:10px;padding:14px;border-bottom:1px solid var(--line);font-size:17px;line-height:1.45}
@@ -30,68 +31,61 @@
 </head>
 <body data-page="women">
 <div class="phone root">
-
 <div class="topbar">
-<a class="iconbtn" href="menu.html" aria-label="Open menu"><svg class="ic" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></a>
+<a aria-label="Open menu" class="iconbtn" href="menu.html"><svg class="ic" viewbox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></a>
 <div class="where"><small>SPECIAL GUIDANCE</small><strong>Women</strong></div>
-<a class="iconbtn" href="index.html" aria-label="Home"><svg class="ic" viewBox="0 0 24 24"><path d="M4 11l8-7 8 7v9h-5v-6H9v6H4z"></path></svg></a>
+<a aria-label="Home" class="iconbtn" href="index.html"><svg class="ic" viewbox="0 0 24 24"><path d="M4 11l8-7 8 7v9h-5v-6H9v6H4z"></path></svg></a>
 </div>
-
 <div class="hero" style="display: flex; flex-direction: column; gap: 10px">
 <div class="eyebrow">E · Women’s guidance</div>
 <h1 class="h1">Umrah for women</h1>
-<p class="lead">The steps are the same as for men, with a few differences. Here they are, step by step.</p>
+<p class="lead">The steps are the same as for men, with just a few differences. Let’s go through them together, step by step.</p>
 </div>
-
 <section class="sec">
 <div class="stepref"><div class="h"><span>2</span>Ihram</div>
 <ul class="avoidlist">
-<li><svg class="ic" viewBox="0 0 24 24" style="color: #0B3B34"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span>Wear your normal loose, modest clothes, in any colour. There is no special ihram garment for women.</span></li>
-<li><svg class="ic" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M5.6 5.6l12.8 12.8"></path></svg><span>Do not wear a niqab (face veil) or gloves while in ihram.</span></li>
-<li><svg class="ic" viewBox="0 0 24 24" style="color: #0B3B34"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span>Say the Talbiyah quietly.</span></li>
+<li><svg class="ic" style="color: #0B3B34" viewbox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span>Wear your normal loose, modest clothes, in any colour you like. There is no special ihram garment for women.</span></li>
+<li><svg class="ic" viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M5.6 5.6l12.8 12.8"></path></svg><span>Please don’t wear a niqab (face veil) or gloves while you are in ihram.</span></li>
+<li><svg class="ic" style="color: #0B3B34" viewbox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span>Say the Talbiyah in a soft, quiet voice.</span></li>
 </ul>
-<div class="card differ"><svg class="ic" viewBox="0 0 24 24"><path d="M12 4v16M8 20h8M5 7h14M5 7l-3 6h6zM19 7l-3 6h6z"></path></svg><div class="t"><b>Covering the face near men</b>Many scholars allow lowering a cloth from the head over the face when non-mahram men are near. Follow your scholar.</div></div>
+<div class="card differ"><svg class="ic" viewbox="0 0 24 24"><path d="M12 4v16M8 20h8M5 7h14M5 7l-3 6h6zM19 7l-3 6h6z"></path></svg><div class="t"><b>Covering the face near men</b>Many scholars allow you to lower a cloth from your head over your face when non-mahram men are near. Follow your scholar.</div></div>
 <p class="src">No niqab or gloves: Sahih al-Bukhari 1838. The report of women lowering a cloth (Sunan Abi Dawud 1833) is graded weak by al-Albani; scholars rely on other reports.</p>
 </div>
 </section>
-
 <section class="sec">
 <div class="stepref"><div class="h"><span>5</span>Tawaf &amp; <span>7</span>Sa‘i</div>
 <ul class="avoidlist">
-<li><svg class="ic" viewBox="0 0 24 24" style="color: #0B3B34"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span>Keep both shoulders covered. The right-shoulder uncovering is for men only.</span></li>
-<li><svg class="ic" viewBox="0 0 24 24" style="color: #0B3B34"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span>Walk at a normal pace. No brisk walking in Tawaf, no jogging between the green lights.</span></li>
-<li><svg class="ic" viewBox="0 0 24 24" style="color: #0B3B34"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span>You don’t need to reach the Black Stone. Pointing is enough. In crowds, the outer edges and upper floors are calmer.</span></li>
+<li><svg class="ic" style="color: #0B3B34" viewbox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span>Keep both shoulders covered. Uncovering the right shoulder is for men only.</span></li>
+<li><svg class="ic" style="color: #0B3B34" viewbox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span>Walk at your normal pace. For you, there is no brisk walking in Tawaf and no jogging between the green lights.</span></li>
+<li><svg class="ic" style="color: #0B3B34" viewbox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span>You don’t need to reach the Black Stone; pointing is enough. In crowds, the outer edges and upper floors are calmer.</span></li>
 </ul>
 </div>
+<p class="src">No brisk walking or shoulder uncovering for women: scholarly consensus reported by Ibn al-Mundhir (al-Ijma‘)</p>
 </section>
-
 <section class="sec">
 <div class="stepref"><div class="h"><span>8</span>Cutting hair</div>
-<p>Gather your hair and cut about a fingertip’s length (≈2 cm) from the ends, in private. Women do not shave.</p>
+<p>Gather your hair and, in private, cut about a fingertip’s length (≈2 cm) from the ends. That’s all. Women do not shave.</p>
 <p class="src">Sunan Abi Dawud 1984</p>
 </div>
 </section>
-
 <section class="sec" style="background: #FFFDFA">
-<div class="q"><span class="num"><svg class="ic" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 11v5.5M12 7.8v.2"></path></svg></span>If your period starts</div>
-<p class="lead">Don’t worry. Your Umrah is not lost. Here is what to do.</p>
+<div class="q"><span class="num"><svg class="ic" viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 11v5.5M12 7.8v.2"></path></svg></span>If your period starts</div>
+<p class="lead">Please don’t worry. Your Umrah is not lost. This happens to many women, and here is what to do.</p>
 <div class="flow">
-<div><b class="k">A</b><span><b>Before ihram?</b> You can still enter ihram at the Meeqat. Take a bath for cleanliness, make the intention and say the Talbiyah.</span></div>
-<div><b class="k">B</b><span><b>Before Tawaf?</b> Stay in ihram. Do everything except Tawaf. When your period ends, take a full bath (ghusl), then do Tawaf, Sa‘i and cut your hair.</span></div>
-<div><b class="k">C</b><span><b>After Tawaf, before Sa‘i?</b> Continue. You can do Sa‘i and cut your hair.</span></div>
-<div><b class="k">D</b><span><b>Your flight leaves before it ends?</b> Scholars give different answers. Speak to a scholar before you travel if you can.</span></div>
+<div><b class="k">A</b><span><b>Before ihram?</b> You can still enter ihram at the Meeqat. Take a bath for cleanliness, make the intention and say the Talbiyah, just like everyone else.</span></div>
+<div><b class="k">B</b><span><b>Before Tawaf?</b> Stay in ihram and be patient. Do everything except Tawaf. When your period ends, take a full bath (ghusl), then do Tawaf, Sa‘i and cut your hair.</span></div>
+<div><b class="k">C</b><span><b>After Tawaf, before Sa‘i?</b> Carry on as normal. You can do Sa‘i and cut your hair.</span></div>
+<div><b class="k">D</b><span><b>Your flight leaves before it ends?</b> Scholars give different answers. If you can, speak to a scholar before you travel.</span></div>
 </div>
 <p class="src">“Do everything a pilgrim does, except Tawaf of the House, until you are clean.” Sahih al-Bukhari 305. Ihram after childbirth bleeding: Sahih Muslim 1209.</p>
-<div class="card differ"><svg class="ic" viewBox="0 0 24 24"><path d="M12 4v16M8 20h8M5 7h14M5 7l-3 6h6zM19 7l-3 6h6z"></path></svg><div class="t"><b>Staying inside the Masjid during a period</b>Most scholars say don’t stay in the Masjid; some allow it. Follow your scholar.</div></div>
-<div class="card remember"><svg class="ic" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 11v5.5M12 7.8v.2"></path></svg><div class="t"><b>Medicine to delay a period</b>Many scholars permit it if it is safe for you. Ask your doctor first.</div></div>
+<div class="card differ"><svg class="ic" viewbox="0 0 24 24"><path d="M12 4v16M8 20h8M5 7h14M5 7l-3 6h6zM19 7l-3 6h6z"></path></svg><div class="t"><b>Staying inside the Masjid during a period</b>Most scholars say not to stay in the Masjid; some allow it. Follow your scholar.</div></div>
+<div class="card remember"><svg class="ic" viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 11v5.5M12 7.8v.2"></path></svg><div class="t"><b>Medicine to delay a period</b>Many scholars permit it if it is safe for you. Please ask your doctor first.</div></div>
 </section>
-
 <section class="sec" style="border-bottom: none">
-<div class="q"><span class="num"><svg class="ic" viewBox="0 0 24 24"><path d="M3 13l18-7-5 14-3.5-5.5z"></path></svg></span>Travelling</div>
-<div class="card differ"><svg class="ic" viewBox="0 0 24 24"><path d="M12 4v16M8 20h8M5 7h14M5 7l-3 6h6zM19 7l-3 6h6z"></path></svg><div class="t"><b>Travelling without a mahram</b><b>Saudi rules:</b> since October 2022 the Ministry of Hajj and Umrah no longer requires women to have a mahram for Umrah. <b>Religious ruling:</b> scholars differ. Ask your scholar.</div></div>
-<a class="btn secondary" href="step5.html" style="justify-content: space-between">Back to Step 5 · Tawaf <svg class="ic" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+<div class="q"><span class="num"><svg class="ic" viewbox="0 0 24 24"><path d="M3 13l18-7-5 14-3.5-5.5z"></path></svg></span>Travelling</div>
+<div class="card differ"><svg class="ic" viewbox="0 0 24 24"><path d="M12 4v16M8 20h8M5 7h14M5 7l-3 6h6zM19 7l-3 6h6z"></path></svg><div class="t"><b>Travelling without a mahram</b><b>Saudi rules:</b> since October 2022 the Ministry of Hajj and Umrah no longer requires women to have a mahram for Umrah. <b>Religious ruling:</b> scholars differ. Ask your scholar.</div></div>
+<a class="btn secondary" href="step5.html" style="justify-content: space-between">Back to Step 5 · Tawaf <svg class="ic" viewbox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
 </section>
-
 </div>
 <script src="assets/app.js" defer></script>
 <script src="assets/narrator.js" defer></script>

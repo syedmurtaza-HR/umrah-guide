@@ -1,5 +1,5 @@
 /* Shahid (Umrah Guide) service worker: caches every page so the guide works fully offline. */
-const VERSION = '74876a5b6d';
+const VERSION = 'c5377447fc';
 const CACHE = 'umrah-guide-' + VERSION;
 const PRECACHE = [
   "./",
@@ -30,6 +30,8 @@ const PRECACHE = [
   "assets/fonts/noto-nastaliq-urdu-arabic-700-normal.woff2",
   "assets/narration.json",
   "assets/narrator.js",
+  "assets/profile.css",
+  "assets/trip-data.json",
   "assets/umrah.css",
   "assets/urdu.css",
   "before-ur.html",
@@ -40,6 +42,8 @@ const PRECACHE = [
   "complete.html",
   "duas-ur.html",
   "duas.html",
+  "families-ur.html",
+  "families.html",
   "glossary-ur.html",
   "glossary.html",
   "icons/apple-touch-icon.png",
@@ -62,6 +66,8 @@ const PRECACHE = [
   "mistakes.html",
   "mydua-ur.html",
   "mydua.html",
+  "pakistan-ur.html",
+  "pakistan.html",
   "print-ur.html",
   "print.html",
   "quick-ur.html",
@@ -86,6 +92,8 @@ const PRECACHE = [
   "step7.html",
   "step8-ur.html",
   "step8.html",
+  "trip-ur.html",
+  "trip.html",
   "women-ur.html",
   "women.html"
 ];

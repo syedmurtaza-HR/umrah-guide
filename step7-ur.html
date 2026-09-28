@@ -18,7 +18,8 @@
 <link href="assets/fonts.css" rel="stylesheet"/>
 <link href="assets/umrah.css" rel="stylesheet"/>
 <link href="assets/app.css" rel="stylesheet"/>
-<script>try{var s=JSON.parse(localStorage.getItem('ug:textsize'));if(s)document.documentElement.style.zoom=[1,1.15,1.3][s];var g=JSON.parse(localStorage.getItem('ug:lang')),d=document.documentElement,f=location.pathname.split('/').pop()||'index.html',m=f.match(/^([a-z0-9]+?)(-ur)?\.html$/);if(m&&g&&(g==='ur')!==(d.lang==='ur')&&m[1]!=='404')location.replace(m[1]+(g==='ur'?'-ur':'')+'.html'+location.search+location.hash);}catch(e){}</script>
+<link href="assets/profile.css" rel="stylesheet"/>
+<script>try{var s=JSON.parse(localStorage.getItem('ug:textsize'));if(s)document.documentElement.style.zoom=[1,1.15,1.3][s];var g=JSON.parse(localStorage.getItem('ug:lang')),d=document.documentElement,f=location.pathname.split('/').pop()||'index.html',m=f.match(/^([a-z0-9]+?)(-ur)?\.html$/);if(m&&g&&(g==='ur')!==(d.lang==='ur')&&m[1]!=='404')location.replace(m[1]+(g==='ur'?'-ur':'')+'.html'+location.search+location.hash);var w=JSON.parse(localStorage.getItem('ug:who')||'[]'),sa=JSON.parse(localStorage.getItem('ug:showall')||'false');if(w&&w.length&&!sa){var c=['pf-on'],h=function(x){return w.indexOf(x)>-1},gg=h('man')||h('woman')||h('couple');if(!gg||h('man')||h('couple')||h('elderly'))c.push('pf-men');if(!gg||h('woman')||h('couple')||h('elderly'))c.push('pf-women');['couple','elderly','babies','kids'].forEach(function(t){if(h(t))c.push('pf-'+t)});d.className+=' '+c.join(' ');}var fr=JSON.parse(localStorage.getItem('ug:from')||'null');if(fr)d.className+=' from-set from-'+fr;}catch(e){}</script>
 <style>
  .dg text{font-family:'Atkinson Hyperlegible',sans-serif}
 .laps{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:5px}
@@ -39,7 +40,7 @@
 <div class="hero" style="display: flex; flex-direction: column; gap: 8px">
 <div class="eyebrow">مرحلہ 07 · لازمی</div>
 <div style="display: flex; align-items: baseline; justify-content: space-between"><h1 class="h1">سعی</h1><span class="ar-title" lang="ar">السعي</span></div>
-<p class="lead"><b>صفا</b> اور <b>مروہ</b> کی پہاڑیوں کے درمیان 7 بار چلیں۔ صفا سے شروع کریں، مروہ پر ختم کریں۔ کل تقریباً 3 کلومیٹر۔</p>
+<p class="lead">آئیے اب <b>صفا</b> اور <b>مروہ</b> کی پہاڑیوں کے درمیان 7 بار چلیں۔ صفا سے شروع کریں، مروہ پر ختم کریں۔ کل تقریباً 3 کلومیٹر ہے، اپنی رفتار سے چلیں۔</p>
 </div>
 <section class="sec">
 <div class="q"><span class="num"><svg class="ic" viewbox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0119 9.5C19 14.8 12 21 12 21z"></path><circle cx="12" cy="9.5" r="2.5"></circle></svg></span>میں کہاں ہوں؟</div>
@@ -70,23 +71,24 @@
 <section class="sec">
 <div class="q"><span class="num"><svg class="ic" viewbox="0 0 24 24"><path d="M9 6h11M9 12h11M9 18h11M4 6l1 1 2-2M4 12l1 1 2-2M4 18l1 1 2-2"></path></svg></span>اب میں کیا کروں؟</div>
 <ol class="steps">
-<li><span class="n">1</span><div class="t"><b>صفا پر جائیں۔ قریب پہنچ کر آیت پڑھیں (صرف پہلی بار)۔</b><span class="tag sunnah"><svg class="ic" viewbox="0 0 24 24"><path d="M12 3.5l2.6 5.3 5.8.8-4.2 4.1 1 5.8L12 16.8l-5.2 2.7 1-5.8-4.2-4.1 5.8-.8z"></path></svg>سنت</span></div></li>
-<li><span class="n">2</span><div class="t"><b>صفا پر کعبہ کی طرف رخ کریں اور ہاتھ اٹھائیں۔</b><p>تین بار “اللہ اکبر” اور نیچے دیا گیا ذکر پڑھیں، پھر اپنی دعا کریں۔ تین بار دہرائیں۔</p><span class="tag sunnah"><svg class="ic" viewbox="0 0 24 24"><path d="M12 3.5l2.6 5.3 5.8.8-4.2 4.1 1 5.8L12 16.8l-5.2 2.7 1-5.8-4.2-4.1 5.8-.8z"></path></svg>سنت</span></div></li>
-<li><span class="n">3</span><div class="t"><b>مروہ تک چلیں۔ یہ چکر 1 ہے۔</b><span class="tag must"><svg class="ic" viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M8 12.5l2.7 2.7L16.5 9"></path></svg>ضروری: 7 چکر، پہلے صفا</span></div></li>
+<li><span class="n">1</span><div class="t"><b>صفا کی طرف جائیں۔ قریب پہنچیں تو آیت پڑھیں (صرف پہلی بار)۔</b><span class="tag sunnah"><svg class="ic" viewbox="0 0 24 24"><path d="M12 3.5l2.6 5.3 5.8.8-4.2 4.1 1 5.8L12 16.8l-5.2 2.7 1-5.8-4.2-4.1 5.8-.8z"></path></svg>سنت</span></div></li>
+<li><span class="n">2</span><div class="t"><b>صفا پر پہنچ کر کعبہ کی طرف رخ کریں اور ہاتھ اٹھائیں۔</b><p>تین بار “اللہ اکبر” اور نیچے دیا گیا ذکر پڑھیں، پھر اپنی دعا کریں۔ یہ تین بار کریں۔</p><span class="tag sunnah"><svg class="ic" viewbox="0 0 24 24"><path d="M12 3.5l2.6 5.3 5.8.8-4.2 4.1 1 5.8L12 16.8l-5.2 2.7 1-5.8-4.2-4.1 5.8-.8z"></path></svg>سنت</span></div></li>
+<li><span class="n">3</span><div class="t"><b>اب مروہ تک چلیں۔ یہ پہلا چکر ہے۔</b><span class="tag must"><svg class="ic" viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M8 12.5l2.7 2.7L16.5 9"></path></svg>ضروری: 7 چکر، پہلے صفا</span></div></li>
 <li><span class="n">4</span><div class="t"><b>مرد: سبز روشنیوں کے درمیان ہلکا دوڑیں۔</b><p>خواتین پورا راستہ عام رفتار سے چلیں۔</p><span class="tag sunnah"><svg class="ic" viewbox="0 0 24 24"><path d="M12 3.5l2.6 5.3 5.8.8-4.2 4.1 1 5.8L12 16.8l-5.2 2.7 1-5.8-4.2-4.1 5.8-.8z"></path></svg>سنت</span></div></li>
-<li><span class="n">5</span><div class="t"><b>مروہ پر کعبہ کی طرف رخ کریں اور وہی کریں جو صفا پر کیا۔</b><p>(آیت نہیں۔) پھر صفا واپس چلیں: چکر 2۔</p></div></li>
-<li><span class="n">6</span><div class="t"><b>چکر 7 مروہ پر ختم ہوتا ہے۔ سعی مکمل۔</b></div></li>
+<li><span class="n">5</span><div class="t"><b>مروہ پر پہنچ کر کعبہ کی طرف رخ کریں اور وہی کریں جو صفا پر کیا تھا۔</b><p>(آیت نہیں۔) پھر صفا واپس چلیں: یہ دوسرا چکر ہے۔</p></div></li>
+<li><span class="n">6</span><div class="t"><b>ساتواں چکر مروہ پر ختم ہوتا ہے۔ آپ کی سعی مکمل ہو گئی۔</b></div></li>
 </ol>
+<p class="src">سعی کے تمام مراحل: صحیح مسلم 1218 · صفا اور مروہ: قرآن 2:158</p>
 </section>
 <section class="sec" style="background: #FFFDFA">
 <div class="q"><span class="num"><svg class="ic" viewbox="0 0 24 24"><path d="M3 12h18M7 8l-4 4 4 4M17 8l4 4-4 4"></path></svg></span>چکر ٹریکر</div>
 <div aria-live="polite" class="counter" data-counter="sai">
 <div class="c-active" style="display: flex; flex-direction: column; gap: 10px"><span style="font: 700 14px var(--body); letter-spacing: .1em; opacity: .85">آپ اس چکر پر ہیں</span><span class="big">چکر <span data-c="current">1</span> از 7</span>
 <div class="dir"><span data-c="from">صفا</span><svg class="ic lg flip" viewbox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg><span data-c="to">مروہ</span></div></div>
-<div class="c-done" hidden="" style="display: flex; flex-direction: column; gap: 4px"><span style="font: 700 14px var(--body); letter-spacing: .1em; opacity: .85">الحمدللہ</span><span class="big">سعی مکمل</span><span>آپ کو مروہ پر ہونا چاہیے۔</span></div>
+<div class="c-done" hidden="" style="display: flex; flex-direction: column; gap: 4px"><span style="font: 700 14px var(--body); letter-spacing: .1em; opacity: .85">الحمدللہ</span><span class="big">سعی مکمل</span><span>اب آپ کو مروہ پر ہونا چاہیے۔</span></div>
 <div class="laps"><span data-n="1">1<small>ص←م</small></span><span data-n="2">2<small>م←ص</small></span><span data-n="3">3<small>ص←م</small></span><span data-n="4">4<small>م←ص</small></span><span data-n="5">5<small>ص←م</small></span><span data-n="6">6<small>م←ص</small></span><span data-n="7">7<small>ص←م</small></span></div>
 <div style="display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 10px">
-<button class="plus" data-act="add" type="button">میں پہاڑی تک پہنچ گیا +1</button>
+<button class="plus" data-act="add" type="button">ایک پھیرا مکمل +1</button>
 <button aria-label="آخری چکر واپس لیں" class="undo" data-act="undo" style="padding: 0 16px" type="button">واپس لیں</button>
 </div>
 </div>
@@ -97,7 +99,7 @@
 <div class="top"><span class="when">صفا کے قریب پہنچتے ہوئے، صرف پہلے چکر میں</span><button aria-label="آواز چلائیں" class="audio"><svg class="ic" viewbox="0 0 24 24"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z"></path><path d="M15.5 9a4 4 0 010 6"></path></svg></button></div>
 <div class="ar" lang="ar">إِنَّ الصَّفَا وَالْمَرْوَةَ مِنْ شَعَائِرِ اللَّهِ ۝ أَبْدَأُ بِمَا بَدَأَ اللَّهُ بِهِ</div>
 <div class="tr">Inna-ṣ-Ṣafā wa-l-Marwata min sha‘ā’iri-llāh. Abda’u bimā bada’a-llāhu bih.</div>
-<div class="mean"><b>مطلب:</b> بے شک صفا اور مروہ اللہ کی نشانیوں میں سے ہیں۔ میں وہیں سے شروع کرتا ہوں جہاں سے اللہ نے شروع کیا۔</div>
+<div class="mean"><b>مطلب:</b> بے شک صفا اور مروہ اللہ کی نشانیوں میں سے ہیں۔ میں وہیں سے شروع کرتا/کرتی ہوں جہاں سے اللہ نے شروع کیا۔</div>
 <div class="src">قرآن 2:158 · صحیح مسلم 1218</div>
 </div>
 <div class="dua">
@@ -108,20 +110,23 @@
 <div class="src">صحیح مسلم 1218 · 3 بار پڑھیں، درمیان میں اپنی دعا کے ساتھ</div>
 </div>
 <div class="dua"><div class="top"><span class="when">پہاڑیوں کے درمیان (صحابہ سے منقول)</span><button aria-label="آواز چلائیں" class="audio"><svg class="ic" viewbox="0 0 24 24"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z"></path><path d="M15.5 9a4 4 0 010 6"></path></svg></button></div><div class="ar" lang="ar">رَبِّ اغْفِرْ وَارْحَمْ، إِنَّكَ أَنْتَ الْأَعَزُّ الْأَكْرَمُ</div><div class="tr">Rabbi-ghfir warḥam, innaka anta-l-a‘azzu-l-akram.</div><div class="mean"><b>مطلب:</b> اے میرے رب، بخش دے اور رحم فرما۔ بے شک تو سب سے زیادہ عزت والا، سب سے زیادہ کرم والا ہے۔</div><div class="src">صحابہ سے منقول، نبی کریم ﷺ سے نہیں · مصنف ابن ابی شیبہ؛ بیہقی 5/95</div></div>
-<div class="card help"><svg class="ic" viewbox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><div class="t"><b>چلتے ہوئے: اپنے الفاظ میں</b>پہاڑیوں کے درمیان کوئی مقررہ دعا ضروری نہیں۔ دعا، ذکر یا قرآن کی تلاوت کریں۔ <a href="duas-ur.html">ذکر کے لیے خیالات</a></div></div>
+<div class="card help"><svg class="ic" viewbox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><div class="t"><b>چلتے ہوئے: اپنے الفاظ میں</b>پہاڑیوں کے درمیان کوئی مقررہ دعا ضروری نہیں۔ دعا، ذکر یا قرآن کی تلاوت کریں، جو دل میں ہو۔ <a href="duas-ur.html">ذکر کے لیے خیالات</a></div></div>
 </section>
 <section class="sec">
 <div class="q"><span class="num"><svg class="ic" viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 11v5.5M12 7.8v.2"></path></svg></span>یاد رکھیں</div>
-<div class="card remember"><svg class="ic" viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 11v5.5M12 7.8v.2"></path></svg><div class="t"><b>آپ آرام کر سکتے ہیں اور پانی پی سکتے ہیں</b>ضرورت ہو تو چکروں کے درمیان بیٹھ جائیں۔ سعی کے لیے وضو مستحب ہے، لیکن اکثر علماء کے نزدیک ضروری نہیں۔</div></div>
-<div class="card remember"><svg class="ic" viewbox="0 0 24 24"><circle cx="10" cy="4.5" r="1.8"></circle><path d="M10 7.5v6h6l2.5 5.5M10 10.5h5"></path><path d="M7.5 11.5a5 5 0 106.5 6.3"></path></svg><div class="t"><b>وہیل چیئر؟</b>وہیل چیئر پر سعی درست ہے۔ وہیل چیئر کے راستے اور اوپر کی منزلیں موجود ہیں۔ <a href="care-ur.html">دیکھ بھال کی رہنمائی</a></div></div>
+<div class="card remember"><svg class="ic" viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 11v5.5M12 7.8v.2"></path></svg><div class="t"><b>آرام کرنے اور پانی پینے کی اجازت ہے</b>ضرورت ہو تو چکروں کے درمیان بیٹھ جائیں، اس میں کوئی حرج نہیں۔ سعی کے لیے وضو مستحب ہے، لیکن اکثر علماء کے نزدیک ضروری نہیں۔</div></div>
+<div class="card remember"><svg class="ic" viewbox="0 0 24 24"><circle cx="10" cy="4.5" r="1.8"></circle><path d="M10 7.5v6h6l2.5 5.5M10 10.5h5"></path><path d="M7.5 11.5a5 5 0 106.5 6.3"></path></svg><div class="t"><b>وہیل چیئر؟</b>کوئی مسئلہ نہیں۔ وہیل چیئر پر سعی درست ہے۔ وہیل چیئر کے راستے اور اوپر کی منزلیں موجود ہیں۔ <a href="care-ur.html">دیکھ بھال کی رہنمائی</a></div></div>
+<div class="card help" data-for="babies kids"><svg class="ic" viewbox="0 0 24 24"><circle cx="8" cy="8" r="3"></circle><circle cx="17" cy="10" r="2.3"></circle><path d="M2.5 20c0-3.3 2.4-6 5.5-6s5.5 2.7 5.5 6M13.5 20c.2-2.6 1.7-4.5 3.5-4.5s3.3 1.9 3.5 4.5"></path></svg><div class="t"><b>بچے یا شیر خوار کے ساتھ ہیں؟</b>مسعیٰ میں پرام کی اجازت ہے (شاہ فہد توسیع سے داخل ہوں)۔ <a href="families-ur.html">خاندان کی رہنمائی</a></div></div>
+<p class="src">بغیر وضو سعی: اکثر علماء، صحیح بخاری 305 کی بنیاد پر · سواری: صحیح بخاری 1607</p>
 </section>
 <section class="sec" style="border-bottom: none">
 <div class="q" style="color: #8C2B23"><span class="num" style="background: #8C2B23"><svg class="ic" viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M5.6 5.6l12.8 12.8"></path></svg></span>یہ غلطیاں نہ کریں</div>
 <ul class="avoidlist">
-<li><svg class="ic" viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M5.6 5.6l12.8 12.8"></path></svg><span><b>مروہ سے شروع کرنا۔</b> وہ پہلا چکر شمار نہیں ہوتا۔</span></li>
+<li><svg class="ic" viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M5.6 5.6l12.8 12.8"></path></svg><span><b>مروہ سے شروع کرنا۔</b> وہ پہلا چکر شمار نہیں ہوتا۔ ہمیشہ صفا سے شروع کریں۔</span></li>
 <li><svg class="ic" viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M5.6 5.6l12.8 12.8"></path></svg><span><b>جانے اور آنے کو ایک چکر گننا۔</b> صفا ← مروہ ایک؛ مروہ ← صفا اگلا۔</span></li>
 <li><svg class="ic" viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M5.6 5.6l12.8 12.8"></path></svg><span><b>پورا راستہ دوڑنا۔</b> ہلکا دوڑنا صرف مردوں کے لیے ہے، صرف سبز روشنیوں کے درمیان۔</span></li>
 </ul>
+<p class="src">صحیح مسلم 1218</p>
 </section>
 <div class="nextbar"><a class="back" href="step6-ur.html"><svg class="ic flip" viewbox="0 0 24 24"><path d="M19 12H5M11 6l-6 6 6 6"></path></svg>واپس</a> <a class="next" href="step8-ur.html"><span><small>اگلا · مرحلہ 8</small><strong>بال منڈوائیں یا کٹوائیں</strong></span><svg class="ic flip" viewbox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a></div>
 </div>

@@ -17,8 +17,19 @@
 <link rel="stylesheet" href="assets/fonts.css">
 <link rel="stylesheet" href="assets/umrah.css">
 <link rel="stylesheet" href="assets/app.css">
-<script>try{var s=JSON.parse(localStorage.getItem('ug:textsize'));if(s)document.documentElement.style.zoom=[1,1.15,1.3][s];var g=JSON.parse(localStorage.getItem('ug:lang')),d=document.documentElement,f=location.pathname.split('/').pop()||'index.html',m=f.match(/^([a-z0-9]+?)(-ur)?\.html$/);if(m&&g&&(g==='ur')!==(d.lang==='ur')&&m[1]!=='404')location.replace(m[1]+(g==='ur'?'-ur':'')+'.html'+location.search+location.hash);}catch(e){}</script>
+<link rel="stylesheet" href="assets/profile.css">
+<script>try{var s=JSON.parse(localStorage.getItem('ug:textsize'));if(s)document.documentElement.style.zoom=[1,1.15,1.3][s];var g=JSON.parse(localStorage.getItem('ug:lang')),d=document.documentElement,f=location.pathname.split('/').pop()||'index.html',m=f.match(/^([a-z0-9]+?)(-ur)?\.html$/);if(m&&g&&(g==='ur')!==(d.lang==='ur')&&m[1]!=='404')location.replace(m[1]+(g==='ur'?'-ur':'')+'.html'+location.search+location.hash);var w=JSON.parse(localStorage.getItem('ug:who')||'[]'),sa=JSON.parse(localStorage.getItem('ug:showall')||'false');if(w&&w.length&&!sa){var c=['pf-on'],h=function(x){return w.indexOf(x)>-1},gg=h('man')||h('woman')||h('couple');if(!gg||h('man')||h('couple')||h('elderly'))c.push('pf-men');if(!gg||h('woman')||h('couple')||h('elderly'))c.push('pf-women');['couple','elderly','babies','kids'].forEach(function(t){if(h(t))c.push('pf-'+t)});d.className+=' '+c.join(' ');}var fr=JSON.parse(localStorage.getItem('ug:from')||'null');if(fr)d.className+=' from-set from-'+fr;}catch(e){}</script>
 <style>
+.pf-card{display:flex;flex-direction:column;gap:8px;padding:16px;border-radius:16px;background:var(--surface);border:1px solid var(--line);box-shadow:0 10px 24px -18px rgba(23,33,31,.28)}
+.pf-h{font:600 22px/1.15 var(--luxe);color:var(--teal)}
+.pf-list{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px;font-size:17px;line-height:1.45}
+.pf-prompt{display:flex;flex-direction:column;gap:10px}
+.pf-now{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px;font-size:17px}
+.linkbtn{background:none;border:none;padding:4px 2px;color:var(--teal);font:700 16px var(--body);text-decoration:underline;cursor:pointer}
+.tripcard{display:flex;align-items:center;gap:12px;padding:14px 16px;border-radius:16px;background:linear-gradient(180deg,#FFFDFA,var(--gold-tint));border:1px solid var(--gold-line);text-decoration:none;color:var(--ink)}
+.tripcard>.ic{color:var(--gold);width:28px;height:28px}
+.tripcard>span{flex:1;display:flex;flex-direction:column;gap:2px;font-size:16px;line-height:1.4}
+.tripcard b{font:600 22px/1.1 var(--luxe);color:var(--teal)}
 .tiles{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
 .tile{display:flex;flex-direction:column;gap:10px;padding:16px;min-height:112px;border-radius:16px;background:var(--surface);border:1.5px solid var(--line);text-decoration:none;color:var(--ink);font:700 17px/1.3 var(--body)}
 .tile .ic{color:var(--teal);width:30px;height:30px}
@@ -34,29 +45,25 @@
 </head>
 <body data-page="home">
 <div class="phone root">
-
 <div class="topbar">
-<a class="iconbtn" href="menu.html" aria-label="Open menu"><svg class="ic" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></a>
-<div style="display: flex; align-items: center; gap: 8px"><svg xmlns="http://www.w3.org/2000/svg" viewBox="13 0 22 48" style="width: 17px; height: 36px; flex-shrink: 0" aria-hidden="true"><g fill="#7A5B22"><path d="M25.2 1.6a2.6 2.6 0 1 0 0 5a2.05 2.05 0 1 1 0-5Z"/><rect x="23.4" y="6.4" width="1.2" height="2.6"/><path d="M24 8.6C21.6 10.6 20.6 12.4 21 14.6H27C27.4 12.4 26.4 10.6 24 8.6Z"/><rect x="19.6" y="14.6" width="8.8" height="2" rx=".5"/><rect x="21.4" y="16.6" width="5.2" height="8.6"/><rect x="19" y="25.2" width="10" height="2" rx=".5"/><path d="M21 27.2H27L27.8 41.4H20.2Z"/><rect x="17" y="41.4" width="14" height="2.8" rx=".7"/></g><g fill="#FFFDFA"><rect x="23.25" y="18.8" width="1.5" height="3.6" rx=".75"/><rect x="23.25" y="29.6" width="1.5" height="3.2" rx=".75"/><path d="M22.7 38.4V35.4a1.3 1.3 0 0 1 2.6 0V38.4Z"/></g></svg><span style="display: flex; flex-direction: column; line-height: 1.1"><strong style="font: 700 23px/1 var(--luxe); letter-spacing: .22em">SHAHID</strong><small style="font: 400 13px var(--body); color: var(--muted)">Witness the Journey</small></span></div>
-<div style="display: flex; gap: 6px"><button class="iconbtn" type="button" aria-label="Text size" data-action="textsize">Aa</button><button class="iconbtn" type="button" aria-label="Read in Urdu" data-action="lang" lang="ur">اردو</button></div>
+<a aria-label="Open menu" class="iconbtn" href="menu.html"><svg class="ic" viewbox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></a>
+<div style="display: flex; align-items: center; gap: 8px"><svg aria-hidden="true" style="width: 17px; height: 36px; flex-shrink: 0" viewbox="13 0 22 48" xmlns="http://www.w3.org/2000/svg"><g fill="#7A5B22"><path d="M25.2 1.6a2.6 2.6 0 1 0 0 5a2.05 2.05 0 1 1 0-5Z"></path><rect height="2.6" width="1.2" x="23.4" y="6.4"></rect><path d="M24 8.6C21.6 10.6 20.6 12.4 21 14.6H27C27.4 12.4 26.4 10.6 24 8.6Z"></path><rect height="2" rx=".5" width="8.8" x="19.6" y="14.6"></rect><rect height="8.6" width="5.2" x="21.4" y="16.6"></rect><rect height="2" rx=".5" width="10" x="19" y="25.2"></rect><path d="M21 27.2H27L27.8 41.4H20.2Z"></path><rect height="2.8" rx=".7" width="14" x="17" y="41.4"></rect></g><g fill="#FFFDFA"><rect height="3.6" rx=".75" width="1.5" x="23.25" y="18.8"></rect><rect height="3.2" rx=".75" width="1.5" x="23.25" y="29.6"></rect><path d="M22.7 38.4V35.4a1.3 1.3 0 0 1 2.6 0V38.4Z"></path></g></svg><span style="display: flex; flex-direction: column; line-height: 1.1"><strong style="font: 700 23px/1 var(--luxe); letter-spacing: .22em">SHAHID</strong><small style="font: 400 13px var(--body); color: var(--muted)">Witness the Journey</small></span></div>
+<div style="display: flex; gap: 6px"><button aria-label="Text size" class="iconbtn" data-action="textsize" type="button">Aa</button><button aria-label="Read in Urdu" class="iconbtn" data-action="lang" lang="ur" type="button">اردو</button></div>
 </div>
-
 <div class="hero" style="background: linear-gradient(168deg, #0E4239 0%, #0A342D 55%, #072620 100%); color: #FFFDFA; border-bottom: 1px solid #BF9E5E; display: flex; flex-direction: column; gap: 16px; padding: 28px 20px 24px">
-<svg class="pattern-bg" aria-hidden="true"><defs><pattern id="ph" width="56" height="56" patternUnits="userSpaceOnUse"><g fill="none" stroke="#BF9E5E" stroke-width="1"><rect x="16" y="16" width="24" height="24"></rect><rect x="16" y="16" width="24" height="24" transform="rotate(45 28 28)"></rect></g></pattern></defs><rect width="100%" height="100%" fill="url(#ph)" opacity=".16"></rect></svg>
+<svg aria-hidden="true" class="pattern-bg"><defs><pattern height="56" id="ph" patternunits="userSpaceOnUse" width="56"><g fill="none" stroke="#BF9E5E" stroke-width="1"><rect height="24" width="24" x="16" y="16"></rect><rect height="24" transform="rotate(45 28 28)" width="24" x="16" y="16"></rect></g></pattern></defs><rect fill="url(#ph)" height="100%" opacity=".16" width="100%"></rect></svg>
 <div style="position: relative; display: flex; flex-direction: column; gap: 10px">
-<div style="font: 400 24px var(--arabic); color: #DCC392" lang="ar">السَّلَامُ عَلَيْكُمْ</div>
-<h1 style="font: 600 44px/1.02 var(--luxe); letter-spacing: .005em">Your Umrah, one step at a time.</h1>
+<div lang="ar" style="font: 400 24px var(--arabic); color: #DCC392">السَّلَامُ عَلَيْكُمْ</div>
+<h1 style="font: 600 44px/1.02 var(--luxe); letter-spacing: .005em">Your Umrah, one step at a time. I’ll walk with you.</h1>
 <p style="font-size: 18px; color: #E1EBE7">Free. No sign-up. Works offline.</p>
 </div>
-<a class="btn" href="journey.html" style="position: relative; background: linear-gradient(180deg, #E6D2A6, #D2B67E); color: #0C1614; border-color: #E6D2A6; justify-content: space-between; min-height: 64px; font-size: 21px; box-shadow: 0 10px 24px -12px rgba(0,0,0,.5)">Start Umrah <svg class="ic" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
-<a class="btn" id="continue" hidden href="step1.html" style="position: relative; background: transparent; color: #FFFDFA; border-color: rgba(255,253,248,.6); justify-content: space-between; font-size: 17px"><span style="display: flex; flex-direction: column; align-items: flex-start; line-height: 1.25"><small style="font-size: 13px; letter-spacing: .08em; opacity: .85">CONTINUE WHERE YOU LEFT OFF</small><span data-c="label">Step 1 · Before Umrah</span></span><svg class="ic" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+<a class="btn" href="journey.html" style="position: relative; background: linear-gradient(180deg, #E6D2A6, #D2B67E); color: #0C1614; border-color: #E6D2A6; justify-content: space-between; min-height: 64px; font-size: 21px; box-shadow: 0 10px 24px -12px rgba(0,0,0,.5)">Start Umrah <svg class="ic" viewbox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+<a class="btn" hidden="" href="step1.html" id="continue" style="position: relative; background: transparent; color: #FFFDFA; border-color: rgba(255,253,248,.6); justify-content: space-between; font-size: 17px"><span style="display: flex; flex-direction: column; align-items: flex-start; line-height: 1.25"><small style="font-size: 13px; letter-spacing: .08em; opacity: .85">CONTINUE WHERE YOU LEFT OFF</small><span data-c="label">Step 1 · Before Umrah</span></span><svg class="ic" viewbox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
 </div>
-
-<div class="install" id="install" hidden><span><b>Install the guide</b><br>Use it offline, like an app.</span><button type="button" id="install-btn">Install</button></div>
-
+<div class="install" hidden="" id="install"><span><b>Install the guide</b><br/>Keep it with you like an app, even offline.</span><button id="install-btn" type="button">Install</button></div>
 <section class="sec">
-<div class="q"><span class="num"><svg class="ic" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0119 9.5C19 14.8 12 21 12 21z"></path><circle cx="12" cy="9.5" r="2.5"></circle></svg></span>Where are you now?</div>
-<p class="small muted">Tap one. We take you straight to what you need to do.</p>
+<div class="q"><span class="num"><svg class="ic" viewbox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0119 9.5C19 14.8 12 21 12 21z"></path><circle cx="12" cy="9.5" r="2.5"></circle></svg></span>Where are you now?</div>
+<p class="small muted">Tap where you are, and I’ll take you straight to what you need to do.</p>
 <div class="where-grid">
 <a href="step1.html"><b>1</b>At home, preparing</a>
 <a href="step2.html"><b>2</b>Near the Meeqat</a>
@@ -66,51 +73,52 @@
 <a href="step7.html"><b>7</b>Doing Sa‘i</a>
 </div>
 </section>
-
+<section class="sec" id="journey">
+<div class="q"><span class="num"><svg class="ic" viewbox="0 0 24 24"><circle cx="8" cy="8" r="3"></circle><circle cx="17" cy="10" r="2.3"></circle><path d="M2.5 20c0-3.3 2.4-6 5.5-6s5.5 2.7 5.5 6M13.5 20c.2-2.6 1.7-4.5 3.5-4.5s3.3 1.9 3.5 4.5"></path></svg></span>Your journey</div>
+<a class="tripcard" href="trip.html"><svg class="ic" viewbox="0 0 24 24"><rect height="15" rx="2" width="17" x="3.5" y="5"></rect><path d="M3.5 10h17M8 3v4M16 3v4"></path></svg><span><b>Your trip</b><span data-trip="homecard">Tell me when you’re going and where from, and I’ll tell you what to expect.</span></span><svg class="ic" viewbox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+<div class="pf-prompt"><p class="small muted">Who’s coming with you? Tell me, and I’ll keep this guide to what matters for you.</p><button class="btn primary" data-action="profile" style="justify-content: space-between" type="button">Let’s set it up <svg class="ic" viewbox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></button></div>
+</section>
 <section class="sec">
-<div class="q"><span class="num"><svg class="ic" viewBox="0 0 24 24"><path d="M9 6h11M9 12h11M9 18h11M4 6l1 1 2-2M4 12l1 1 2-2M4 18l1 1 2-2"></path></svg></span>Umrah at a glance</div>
-<p class="lead">Umrah has <b>4 essential acts</b>, always in this order:</p>
+<div class="q"><span class="num"><svg class="ic" viewbox="0 0 24 24"><path d="M9 6h11M9 12h11M9 18h11M4 6l1 1 2-2M4 12l1 1 2-2M4 18l1 1 2-2"></path></svg></span>Umrah at a glance</div>
+<p class="lead">Umrah has just <b>4 essential acts</b>, always in this order:</p>
 <div class="acts">
-<div><svg class="ic" viewBox="0 0 24 24"><path d="M5 3.5h14v17H5zM5 3.5l14 11"></path></svg>Ihram<small>Enter the state</small></div>
-<div><svg class="ic" viewBox="0 0 24 24"><path d="M20 12a8 8 0 11-2.3-5.6"></path><path d="M20 4v4h-4"></path><rect x="9.5" y="9.5" width="5" height="5"></rect></svg>Tawaf<small>7 rounds</small></div>
-<div><svg class="ic" viewBox="0 0 24 24"><path d="M3 12h18M7 8l-4 4 4 4M17 8l4 4-4 4"></path></svg>Sa‘i<small>7 laps</small></div>
-<div><svg class="ic" viewBox="0 0 24 24"><circle cx="6" cy="7" r="2.5"></circle><circle cx="6" cy="17" r="2.5"></circle><path d="M8.2 8.3L20 17M8.2 15.7L20 7"></path></svg>Hair<small>Shave or cut</small></div>
+<div><svg class="ic" viewbox="0 0 24 24"><path d="M5 3.5h14v17H5zM5 3.5l14 11"></path></svg>Ihram<small>Enter the state</small></div>
+<div><svg class="ic" viewbox="0 0 24 24"><path d="M20 12a8 8 0 11-2.3-5.6"></path><path d="M20 4v4h-4"></path><rect height="5" width="5" x="9.5" y="9.5"></rect></svg>Tawaf<small>7 rounds</small></div>
+<div><svg class="ic" viewbox="0 0 24 24"><path d="M3 12h18M7 8l-4 4 4 4M17 8l4 4-4 4"></path></svg>Sa‘i<small>7 laps</small></div>
+<div><svg class="ic" viewbox="0 0 24 24"><circle cx="6" cy="7" r="2.5"></circle><circle cx="6" cy="17" r="2.5"></circle><path d="M8.2 8.3L20 17M8.2 15.7L20 7"></path></svg>Hair<small>Shave or cut</small></div>
 </div>
-<p class="small muted">Most pilgrims finish in a few hours, depending on crowds. You may rest between acts.</p>
+<p class="small muted">Most pilgrims finish in a few hours, depending on crowds. You can rest between acts, so take your time.</p>
 <a class="btn secondary" href="journey.html">See the full journey map</a>
 </section>
-
 <section class="sec">
-<div class="q"><span class="num"><svg class="ic" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 11v5.5M12 7.8v.2"></path></svg></span>Start here</div>
+<div class="q"><span class="num"><svg class="ic" viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 11v5.5M12 7.8v.2"></path></svg></span>Start here</div>
 <div class="faq" style="display: flex; flex-direction: column">
-<a href="#what">What is Umrah? <svg class="ic" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"></path></svg></a>
-<a href="#who">Who can perform Umrah? <svg class="ic" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"></path></svg></a>
-<a href="step1.html">What should I prepare? <svg class="ic" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"></path></svg></a>
-<a href="step1.html">Essential checklist <svg class="ic" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"></path></svg></a>
-<a href="before.html">Before you go: countdown planner <svg class="ic" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"></path></svg></a>
-<a href="glossary.html">Glossary of words <svg class="ic" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"></path></svg></a>
+<a href="#what">What is Umrah? <svg class="ic" viewbox="0 0 24 24"><path d="M9 6l6 6-6 6"></path></svg></a>
+<a href="#who">Who can perform Umrah? <svg class="ic" viewbox="0 0 24 24"><path d="M9 6l6 6-6 6"></path></svg></a>
+<a href="step1.html">What should I prepare? <svg class="ic" viewbox="0 0 24 24"><path d="M9 6l6 6-6 6"></path></svg></a>
+<a href="step1.html">Essential checklist <svg class="ic" viewbox="0 0 24 24"><path d="M9 6l6 6-6 6"></path></svg></a>
+<a href="before.html">Before you go: countdown planner <svg class="ic" viewbox="0 0 24 24"><path d="M9 6l6 6-6 6"></path></svg></a> <a href="pakistan.html">Travelling from Pakistan <svg class="ic" viewbox="0 0 24 24"><path d="M9 6l6 6-6 6"></path></svg></a>
+<a href="glossary.html">Glossary of words <svg class="ic" viewbox="0 0 24 24"><path d="M9 6l6 6-6 6"></path></svg></a>
 </div>
-<div id="what" class="card help"><svg class="ic" viewBox="0 0 24 24"><path d="M12 3l8 4v10l-8 4-8-4V7z"></path><path d="M4 7l8 4 8-4M12 11v10"></path></svg><div class="t"><b>What is Umrah?</b>A short pilgrimage to Makkah that can be done at almost any time of year. It is sometimes called the “lesser pilgrimage”, to tell it apart from Hajj.</div></div>
-<div id="who" class="card help"><svg class="ic" viewBox="0 0 24 24"><path d="M2.5 20c0-3.3 2.4-6 5.5-6s5.5 2.7 5.5 6"></path><circle cx="8" cy="8" r="3"></circle><circle cx="17" cy="10" r="2.3"></circle><path d="M13.5 20c.2-2.6 1.7-4.5 3.5-4.5s3.3 1.9 3.5 4.5"></path></svg><div class="t"><b>Who can perform it?</b>Any Muslim: men, women, children, elderly and disabled pilgrims. A wheelchair or help from others is fine.</div></div>
-<div class="card differ"><svg class="ic" viewBox="0 0 24 24"><path d="M12 4v16M8 20h8M5 7h14M5 7l-3 6h6zM19 7l-3 6h6z"></path></svg><div class="t"><b>Is it obligatory?</b>Scholars differ. Some say once in a lifetime for those able; others say it is a strongly recommended Sunnah.</div></div>
+<div class="card help" id="what"><svg class="ic" viewbox="0 0 24 24"><path d="M12 3l8 4v10l-8 4-8-4V7z"></path><path d="M4 7l8 4 8-4M12 11v10"></path></svg><div class="t"><b>What is Umrah?</b>A short pilgrimage to Makkah that you can do at almost any time of year. It is sometimes called the “lesser pilgrimage”, to tell it apart from Hajj.</div></div>
+<div class="card help" id="who"><svg class="ic" viewbox="0 0 24 24"><path d="M2.5 20c0-3.3 2.4-6 5.5-6s5.5 2.7 5.5 6"></path><circle cx="8" cy="8" r="3"></circle><circle cx="17" cy="10" r="2.3"></circle><path d="M13.5 20c.2-2.6 1.7-4.5 3.5-4.5s3.3 1.9 3.5 4.5"></path></svg><div class="t"><b>Who can perform it?</b>Any Muslim: men, women, children, elderly and disabled pilgrims. Using a wheelchair or getting help from others is completely fine.</div></div>
+<div class="card differ"><svg class="ic" viewbox="0 0 24 24"><path d="M12 4v16M8 20h8M5 7h14M5 7l-3 6h6zM19 7l-3 6h6z"></path></svg><div class="t"><b>Is it obligatory?</b>Scholars differ. Some say once in a lifetime for those able; others say it is a strongly recommended Sunnah.</div></div>
 </section>
-
 <section class="sec" style="border-bottom: none">
-<div class="q"><span class="num"><svg class="ic" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><circle cx="12" cy="12" r="3.5"></circle></svg></span>Help &amp; guidance</div>
+<div class="q"><span class="num"><svg class="ic" viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><circle cx="12" cy="12" r="3.5"></circle></svg></span>Help &amp; guidance</div>
 <div class="tiles">
-<a class="tile" href="duas.html"><svg class="ic" viewBox="0 0 24 24"><path d="M4 5.5A2 2 0 016 4h13v14H6a2 2 0 00-2 2zM4 5.5V20M19 18v2H6"></path></svg>Duas &amp; Dhikr</a>
-<a class="tile" href="mydua.html"><svg class="ic" viewBox="0 0 24 24"><path d="M9 6h11M9 12h11M9 18h11M4 6l1 1 2-2M4 12l1 1 2-2M4 18l1 1 2-2"></path></svg>My dua list</a>
-<a class="tile" href="women.html"><svg class="ic" viewBox="0 0 24 24"><circle cx="12" cy="7" r="3.5"></circle><path d="M5 21c0-4 3-7 7-7s7 3 7 7"></path></svg>Women’s guidance</a>
-<a class="tile" href="care.html"><svg class="ic" viewBox="0 0 24 24"><circle cx="10" cy="4.5" r="1.8"></circle><path d="M10 7.5v6h6l2.5 5.5M10 10.5h5"></path><path d="M7.5 11.5a5 5 0 106.5 6.3"></path></svg>Elderly, disabled &amp; families</a>
-<a class="tile" href="mistakes.html"><svg class="ic" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M9.5 9.5a2.5 2.5 0 114 2c-1 .7-1.5 1.2-1.5 2.5M12 17v.2"></path></svg>Questions &amp; mistakes</a>
-<a class="tile" href="madinah.html"><svg class="ic" viewBox="0 0 24 24"><path d="M5 21V10a7 7 0 0114 0v11M3 21h18M9 21v-6a3 3 0 016 0v6"></path></svg>Visiting Madinah</a>
-<a class="tile" href="quick.html"><svg class="ic" viewBox="0 0 24 24"><path d="M13 2L4 14h7l-1 8 9-12h-7z"></path></svg>Quick reference</a>
-<a class="tile" href="quick.html"><svg class="ic" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><circle cx="12" cy="12" r="3.5"></circle><path d="M5.6 5.6l4 4M14.4 14.4l4 4M18.4 5.6l-4 4M9.6 14.4l-4 4"></path></svg>Lost? My info card</a>
+<a class="tile" href="duas.html"><svg class="ic" viewbox="0 0 24 24"><path d="M4 5.5A2 2 0 016 4h13v14H6a2 2 0 00-2 2zM4 5.5V20M19 18v2H6"></path></svg>Duas &amp; Dhikr</a>
+<a class="tile" href="mydua.html"><svg class="ic" viewbox="0 0 24 24"><path d="M9 6h11M9 12h11M9 18h11M4 6l1 1 2-2M4 12l1 1 2-2M4 18l1 1 2-2"></path></svg>My dua list</a>
+<a class="tile" data-for="women" href="women.html"><svg class="ic" viewbox="0 0 24 24"><circle cx="12" cy="7" r="3.5"></circle><path d="M5 21c0-4 3-7 7-7s7 3 7 7"></path></svg>Women’s guidance</a>
+<a class="tile" href="care.html"><svg class="ic" viewbox="0 0 24 24"><circle cx="10" cy="4.5" r="1.8"></circle><path d="M10 7.5v6h6l2.5 5.5M10 10.5h5"></path><path d="M7.5 11.5a5 5 0 106.5 6.3"></path></svg>Elderly &amp; disabled</a>
+<a class="tile" href="mistakes.html"><svg class="ic" viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M9.5 9.5a2.5 2.5 0 114 2c-1 .7-1.5 1.2-1.5 2.5M12 17v.2"></path></svg>Questions &amp; mistakes</a>
+<a class="tile" href="madinah.html"><svg class="ic" viewbox="0 0 24 24"><path d="M5 21V10a7 7 0 0114 0v11M3 21h18M9 21v-6a3 3 0 016 0v6"></path></svg>Visiting Madinah</a>
+<a class="tile" data-for="babies kids" href="families.html"><svg class="ic" viewbox="0 0 24 24"><circle cx="8" cy="8" r="3"></circle><circle cx="17" cy="10" r="2.3"></circle><path d="M2.5 20c0-3.3 2.4-6 5.5-6s5.5 2.7 5.5 6M13.5 20c.2-2.6 1.7-4.5 3.5-4.5s3.3 1.9 3.5 4.5"></path></svg>Families &amp; children</a>
+<a class="tile" href="quick.html"><svg class="ic" viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><circle cx="12" cy="12" r="3.5"></circle><path d="M5.6 5.6l4 4M14.4 14.4l4 4M18.4 5.6l-4 4M9.6 14.4l-4 4"></path></svg>Quick reference &amp; My info</a>
 </div>
 <p class="small muted" style="text-align: center; padding-top: 10px">Content reviewed by [REVIEWING SCHOLAR / INSTITUTION]. <a href="sources.html">Sources &amp; notes</a></p>
 <p class="small muted" style="text-align: center; font-size: 13px; letter-spacing: .04em; opacity: .85; padding-top: 4px">Developed by Syed G. Murtaza</p>
 </section>
-
 </div>
 <script src="assets/app.js" defer></script>
 <script src="assets/narrator.js" defer></script>

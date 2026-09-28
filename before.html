@@ -17,7 +17,8 @@
 <link rel="stylesheet" href="assets/fonts.css">
 <link rel="stylesheet" href="assets/umrah.css">
 <link rel="stylesheet" href="assets/app.css">
-<script>try{var s=JSON.parse(localStorage.getItem('ug:textsize'));if(s)document.documentElement.style.zoom=[1,1.15,1.3][s];var g=JSON.parse(localStorage.getItem('ug:lang')),d=document.documentElement,f=location.pathname.split('/').pop()||'index.html',m=f.match(/^([a-z0-9]+?)(-ur)?\.html$/);if(m&&g&&(g==='ur')!==(d.lang==='ur')&&m[1]!=='404')location.replace(m[1]+(g==='ur'?'-ur':'')+'.html'+location.search+location.hash);}catch(e){}</script>
+<link rel="stylesheet" href="assets/profile.css">
+<script>try{var s=JSON.parse(localStorage.getItem('ug:textsize'));if(s)document.documentElement.style.zoom=[1,1.15,1.3][s];var g=JSON.parse(localStorage.getItem('ug:lang')),d=document.documentElement,f=location.pathname.split('/').pop()||'index.html',m=f.match(/^([a-z0-9]+?)(-ur)?\.html$/);if(m&&g&&(g==='ur')!==(d.lang==='ur')&&m[1]!=='404')location.replace(m[1]+(g==='ur'?'-ur':'')+'.html'+location.search+location.hash);var w=JSON.parse(localStorage.getItem('ug:who')||'[]'),sa=JSON.parse(localStorage.getItem('ug:showall')||'false');if(w&&w.length&&!sa){var c=['pf-on'],h=function(x){return w.indexOf(x)>-1},gg=h('man')||h('woman')||h('couple');if(!gg||h('man')||h('couple')||h('elderly'))c.push('pf-men');if(!gg||h('woman')||h('couple')||h('elderly'))c.push('pf-women');['couple','elderly','babies','kids'].forEach(function(t){if(h(t))c.push('pf-'+t)});d.className+=' '+c.join(' ');}var fr=JSON.parse(localStorage.getItem('ug:from')||'null');if(fr)d.className+=' from-set from-'+fr;}catch(e){}</script>
 <style>
 .when{display:flex;align-items:center;gap:12px}
 .when .wk{display:flex;flex-direction:column;align-items:center;justify-content:center;width:64px;height:64px;border-radius:16px;background:var(--teal);color:#fff;flex-shrink:0;line-height:1}
@@ -32,111 +33,101 @@
 </head>
 <body data-page="before">
 <div class="phone root">
-
 <div class="topbar">
-<a class="iconbtn" href="menu.html" aria-label="Open menu"><svg class="ic" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></a>
+<a aria-label="Open menu" class="iconbtn" href="menu.html"><svg class="ic" viewbox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></a>
 <div class="where"><small>STEP 1 · PLANNER</small><strong>Before you go</strong></div>
-<a class="iconbtn" href="index.html" aria-label="Home"><svg class="ic" viewBox="0 0 24 24"><path d="M4 11l8-7 8 7v9h-5v-6H9v6H4z"></path></svg></a>
+<a aria-label="Home" class="iconbtn" href="index.html"><svg class="ic" viewbox="0 0 24 24"><path d="M4 11l8-7 8 7v9h-5v-6H9v6H4z"></path></svg></a>
 </div>
-
 <div class="hero" style="display: flex; flex-direction: column; gap: 10px">
 <div class="eyebrow">Countdown planner</div>
 <h1 class="h1">Before you go</h1>
-<p class="lead">A simple countdown so nothing is left to the last minute. Tick as you go; your ticks are saved on this phone.</p>
+<p class="lead">A simple countdown, so nothing is left to the last minute. Tick things off as you go; your ticks stay saved on this phone.</p>
 </div>
-
 <section class="sec">
 <div class="when"><span class="wk"><b>8</b><small>WEEKS</small></span><h2>Eight weeks before</h2></div>
 <ul class="checklist">
-<li><label><input type="checkbox"><span>Choose your dates and how you will book: an approved Umrah agent, or directly through Nusuk.</span></label></li>
-<li><label><input type="checkbox"><span>Check your passport is valid for at least 6 months from your travel date.</span></label></li>
-<li><label><input type="checkbox"><span>Decide your visa: Umrah visa, or a Saudi visit or tourist visa.</span></label></li>
-<li><label><input type="checkbox"><span>Book the meningitis (ACYW) vaccine now. It must be given at least 10 days before you arrive.</span></label></li>
-<li><label><input type="checkbox"><span>Elderly, pregnant, or living with a long-term condition? See your doctor about the trip, the heat and the walking.</span></label></li>
-<li><label><input type="checkbox"><span>Start walking every day. Umrah means several kilometres on foot; Sa‘i alone is about 3 km.</span></label></li>
+<li><label><input type="checkbox"/><span>First, choose your dates and how you will book: through an approved Umrah agent, or directly on Nusuk.</span></label></li>
+<li><label><input type="checkbox"/><span>Check that your passport is valid for at least 6 months from your travel date.</span></label></li>
+<li><label><input type="checkbox"/><span>Decide on your visa: an Umrah visa, or a Saudi visit or tourist visa.</span></label></li>
+<li><label><input type="checkbox"/><span>Book your meningitis (ACYW) vaccine now. It must be given at least 10 days before you arrive, so don't leave it late.</span></label></li>
+<li data-from="pk"><label><input type="checkbox"/><span>Flying from Pakistan? You will also need the polio vaccine (at least 4 weeks before) and the NADRA-linked vaccine card. See <a href="pakistan.html">Travelling from Pakistan</a>.</span></label></li>
+<li><label><input type="checkbox"/><span>Elderly, pregnant, or living with a long-term condition? Please talk to your doctor about the trip, the heat and the walking.</span></label></li>
+<li><label><input type="checkbox"/><span>Start walking every day. Umrah means several kilometres on foot; Sa‘i alone is about 3 km. A little practice now will help a lot.</span></label></li>
 </ul>
 </section>
-
 <section class="sec">
 <div class="when"><span class="wk"><b>4</b><small>WEEKS</small></span><h2>Four weeks before</h2></div>
 <ul class="checklist">
-<li><label><input type="checkbox"><span>Create your <b>Nusuk</b> account (see the steps below).</span></label></li>
-<li><label><input type="checkbox"><span>Hotel booked in a licensed hotel and recorded in <b>Nusuk Masar</b> (needed for the Umrah visa).</span></label></li>
-<li><label><input type="checkbox"><span>Airport transfers booked. Going to Madinah? Book the Haramain train through official Saudi Arabia Railways channels.</span></label></li>
-<li><label><input type="checkbox"><span>Learn the 4 essential acts and practise the Talbiyah out loud.</span></label></li>
-<li><label><input type="checkbox"><span>Women: read the Women’s guidance. Families: read Care &amp; access.</span></label></li>
+<li><label><input type="checkbox"/><span>Create your <b>Nusuk</b> account. I'll walk you through it below.</span></label></li>
+<li><label><input type="checkbox"/><span>Book a licensed hotel and make sure it is recorded in <b>Nusuk Masar</b> (needed for the Umrah visa).</span></label></li>
+<li><label><input type="checkbox"/><span>Book your airport transfers. Going to Madinah? Book the Haramain train through official Saudi Arabia Railways channels.</span></label></li>
+<li><label><input type="checkbox"/><span>Learn the 4 essential acts, and practise the Talbiyah out loud. It will soon feel natural.</span></label></li>
+<li><label><input type="checkbox"/><span>Women: please read the Women’s guidance. Families: read Families &amp; children.</span></label></li>
 </ul>
 </section>
-
 <section class="sec">
 <div class="when"><span class="wk"><b>1</b><small>WEEK</small></span><h2>One week before</h2></div>
 <ul class="checklist">
-<li><label><input type="checkbox"><span>Pack using the list in Step 1. Men: ihram in your hand luggage.</span></label></li>
-<li><label><input type="checkbox"><span>Medicines in original packs, with prescriptions, in your hand luggage.</span></label></li>
-<li><label><input type="checkbox"><span>Money: some Saudi riyals in cash, and a bank card that works abroad. Tell your bank you are travelling.</span></label></li>
-<li><label><input type="checkbox"><span>Phone: set up roaming, or plan to buy a Saudi SIM or eSIM on arrival (you will need your passport).</span></label></li>
-<li><label><input type="checkbox"><span>Install this guide on your phone and open every page once, so it works offline.</span></label></li>
-<li><label><input type="checkbox"><span>Fill in <b>My info</b> and print the quick card.</span></label></li>
-<li><label><input type="checkbox"><span>Start <b>My dua list</b>: ask family and friends what they would like you to pray for.</span></label></li>
+<li><label><input type="checkbox"/><span>Pack using the list in Step 1. Men: keep your ihram in your hand luggage.</span></label></li>
+<li><label><input type="checkbox"/><span>Keep your medicines in their original packs, with prescriptions, in your hand luggage.</span></label></li>
+<li><label><input type="checkbox"/><span>Money: take some Saudi riyals in cash, and a bank card that works abroad. Let your bank know you are travelling.</span></label></li>
+<li><label><input type="checkbox"/><span>Phone: set up roaming, or plan to buy a Saudi SIM or eSIM when you arrive (you will need your passport).</span></label></li>
+<li><label><input type="checkbox"/><span>Install this guide on your phone and open every page once, so I'm with you even offline.</span></label></li>
+<li><label><input type="checkbox"/><span>Fill in <b>My info</b>, then print your quick card.</span></label></li>
+<li><label><input type="checkbox"/><span>Start <b>My dua list</b>: ask your family and friends what they would like you to pray for.</span></label></li>
 </ul>
 </section>
-
 <section class="sec">
 <div class="when"><span class="wk"><b>1</b><small>DAY</small></span><h2>The day you travel</h2></div>
 <ul class="checklist">
-<li><label><input type="checkbox"><span>Trim nails, remove unwanted hair, and take a bath (ghusl).</span></label></li>
-<li><label><input type="checkbox"><span>Plan where you will enter ihram. Flying? You must be in ihram before the plane passes the Meeqat, so many men put on the ihram at home or at the airport.</span></label></li>
-<li><label><input type="checkbox"><span>Passport, visa, Nusuk permit and tickets in one pouch you keep on you.</span></label></li>
-<li><label><input type="checkbox"><span>Say the dua for leaving home and the travel dua (in Duas &amp; Dhikr).</span></label></li>
+<li><label><input type="checkbox"/><span>Trim your nails, remove unwanted hair, and take a bath (ghusl).</span></label></li>
+<li><label><input type="checkbox"/><span>Plan where you will enter ihram. Flying? You must be in ihram before the plane passes the Meeqat, so many men put on the ihram at home or at the airport.</span></label></li>
+<li><label><input type="checkbox"/><span>Keep your passport, visa, Nusuk permit and tickets together in one pouch, on you.</span></label></li>
+<li><label><input type="checkbox"/><span>As you set off, say the dua for leaving home and the travel dua (in Duas &amp; Dhikr).</span></label></li>
 </ul>
 </section>
-
 <section class="sec">
-<div class="q"><span class="num"><svg class="ic" viewBox="0 0 24 24"><rect x="6" y="2.5" width="12" height="19" rx="2.5"></rect><path d="M10.5 18.5h3"></path></svg></span>Nusuk, step by step</div>
+<div class="q"><span class="num"><svg class="ic" viewbox="0 0 24 24"><rect height="19" rx="2.5" width="12" x="6" y="2.5"></rect><path d="M10.5 18.5h3"></path></svg></span>Nusuk, step by step</div>
 <ol class="steps">
-<li><span class="n">1</span><div class="t"><b>Download Nusuk only from the official app store.</b><p>It is the official platform of the Ministry of Hajj and Umrah. Avoid look-alike apps and websites.</p></div></li>
-<li><span class="n">2</span><div class="t"><b>Create your account.</b><p>You will need your passport and visa details.</p></div></li>
-<li><span class="n">3</span><div class="t"><b>Book your Umrah permit.</b><p>Choose the date and time. You cannot enter for Umrah before your permit time.</p></div></li>
-<li><span class="n">4</span><div class="t"><b>Visiting Madinah? Book a Rawdah permit.</b><p>It is free. Men and women have separate times.</p></div></li>
-<li><span class="n">5</span><div class="t"><b>Keep your permits easy to show.</b><p>Take a screenshot in case you have no signal.</p></div></li>
+<li><span class="n">1</span><div class="t"><b>Download Nusuk only from your official app store.</b><p>It is the official platform of the Ministry of Hajj and Umrah. Please stay away from look-alike apps and websites.</p></div></li>
+<li><span class="n">2</span><div class="t"><b>Create your account.</b><p>Keep your passport and visa details handy.</p></div></li>
+<li><span class="n">3</span><div class="t"><b>Book your Umrah permit.</b><p>Choose your date and time. You cannot enter for Umrah before your permit time, so plan around it.</p></div></li>
+<li><span class="n">4</span><div class="t"><b>Visiting Madinah? Book your Rawdah permit too.</b><p>It is free. Men and women have separate times.</p></div></li>
+<li><span class="n">5</span><div class="t"><b>Keep your permits ready to show.</b><p>Take a screenshot, just in case you have no signal.</p></div></li>
 </ol>
 </section>
-
 <section class="sec">
-<div class="q"><span class="num"><svg class="ic" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path></svg></span>Health in the heat</div>
+<div class="q"><span class="num"><svg class="ic" viewbox="0 0 24 24"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path></svg></span>Health in the heat</div>
 <ul class="tips">
-<li><svg class="ic" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span><b>Drink often</b>, before you feel thirsty. Zamzam is available all around the Masjid.</span></li>
-<li><svg class="ic" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span><b>Use an umbrella</b> in the sun (allowed in ihram) and go at cooler times.</span></li>
-<li><svg class="ic" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span><b>Feet:</b> wear sandals you have walked in before. Carry plasters for blisters.</span></li>
-<li><svg class="ic" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span><b>Chafing (men in ihram):</b> use an unscented anti-chafe cream or petroleum jelly.</span></li>
-<li><svg class="ic" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span><b>Diabetes:</b> carry snacks and your glucose kit; long walks can lower your sugar.</span></li>
+<li><svg class="ic" viewbox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span><b>Drink often</b>, before you feel thirsty. You'll find Zamzam all around the Masjid.</span></li>
+<li><svg class="ic" viewbox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span><b>Use an umbrella</b> in the sun (allowed in ihram), and try to go at cooler times.</span></li>
+<li><svg class="ic" viewbox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span><b>Feet:</b> wear sandals you have already walked in. Carry plasters, just in case of blisters.</span></li>
+<li><svg class="ic" viewbox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span><b>Chafing (men in ihram):</b> use an unscented anti-chafe cream or petroleum jelly. It really helps.</span></li>
+<li><svg class="ic" viewbox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span><b>Diabetes:</b> keep snacks and your glucose kit with you; long walks can lower your sugar.</span></li>
 </ul>
-<div class="card avoid"><svg class="ic" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v6M12 16.5v.2"></path></svg><div class="t"><b>Signs of heat exhaustion</b>Dizziness, headache, nausea, heavy sweating or confusion. Stop, get into shade, drink water, and ask for help. In an emergency in Makkah, call 911.</div></div>
+<div class="card avoid"><svg class="ic" viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v6M12 16.5v.2"></path></svg><div class="t"><b>Signs of heat exhaustion</b>Dizziness, headache, nausea, heavy sweating or confusion. Stop, get into the shade, drink water, and ask for help. Don't push on. In an emergency in Makkah, call 911.</div></div>
 </section>
-
 <section class="sec">
-<div class="q"><span class="num"><svg class="ic" viewBox="0 0 24 24"><path d="M9 6h11M9 12h11M9 18h11M4 6l1 1 2-2M4 12l1 1 2-2M4 18l1 1 2-2"></path></svg></span>Practical tips</div>
+<div class="q"><span class="num"><svg class="ic" viewbox="0 0 24 24"><path d="M9 6h11M9 12h11M9 18h11M4 6l1 1 2-2M4 12l1 1 2-2M4 18l1 1 2-2"></path></svg></span>Practical tips</div>
 <ul class="tips">
-<li><svg class="ic" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span><b>Shoes:</b> carry them in a small bag instead of leaving them at the door. It saves a long search afterwards.</span></li>
-<li><svg class="ic" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span><b>Carry light:</b> phone, water, this guide, a little cash, your hotel card. Leave valuables at the hotel.</span></li>
-<li><svg class="ic" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span><b>Crowds</b> change with the season and prayer times. Ask your group leader when it is usually calmer.</span></li>
-<li><svg class="ic" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span><b>Charge up:</b> a power bank keeps your guide, counters and Nusuk permits working all day.</span></li>
+<li><svg class="ic" viewbox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span><b>Shoes:</b> carry them in a small bag instead of leaving them at the door. It saves you a long search later.</span></li>
+<li><svg class="ic" viewbox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span><b>Carry light:</b> your phone, water, this guide, a little cash and your hotel card. Leave valuables at the hotel.</span></li>
+<li><svg class="ic" viewbox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span><b>Crowds</b> change with the season and prayer times. Ask your group leader when it is usually calmer.</span></li>
+<li><svg class="ic" viewbox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span><b>Stay charged:</b> a power bank keeps this guide, your counters and your Nusuk permits working all day.</span></li>
 </ul>
 </section>
-
 <section class="sec" style="border-bottom: none">
-<div class="q" style="color: #8C2B23"><span class="num" style="background: #8C2B23"><svg class="ic" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M5.6 5.6l12.8 12.8"></path></svg></span>Avoid</div>
+<div class="q" style="color: #8C2B23"><span class="num" style="background: #8C2B23"><svg class="ic" viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M5.6 5.6l12.8 12.8"></path></svg></span>Avoid</div>
 <ul class="avoidlist">
-<li><svg class="ic" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M5.6 5.6l12.8 12.8"></path></svg><span>Unofficial visa, Nusuk or train websites that ask for payment.</span></li>
-<li><svg class="ic" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M5.6 5.6l12.8 12.8"></path></svg><span>Leaving the vaccine to the last week. It must be at least 10 days before arrival.</span></li>
-<li><svg class="ic" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M5.6 5.6l12.8 12.8"></path></svg><span>Brand-new shoes on the day of Umrah.</span></li>
+<li><svg class="ic" viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M5.6 5.6l12.8 12.8"></path></svg><span>Unofficial visa, Nusuk or train websites that ask for payment.</span></li>
+<li><svg class="ic" viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M5.6 5.6l12.8 12.8"></path></svg><span>Leaving the vaccine to the last week. It must be at least 10 days before you arrive.</span></li>
+<li><svg class="ic" viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M5.6 5.6l12.8 12.8"></path></svg><span>Wearing brand-new shoes on the day of Umrah.</span></li>
 </ul>
 <p class="src">Checked September 2026: vaccine rules, Saudi Ministry of Health (Umrah 1447H); permits and Nusuk Masar, Ministry of Hajj and Umrah. Rules change each season; check again before booking.</p>
 </section>
-
 <div class="nextbar">
-<a class="back" href="step1.html"><svg class="ic" viewBox="0 0 24 24"><path d="M19 12H5M11 6l-6 6 6 6"></path></svg>Step 1</a>
-<a class="next" href="step2.html"><span><small>Next · Step 2</small><strong>Enter Ihram</strong></span><svg class="ic" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+<a class="back" href="step1.html"><svg class="ic" viewbox="0 0 24 24"><path d="M19 12H5M11 6l-6 6 6 6"></path></svg>Step 1</a>
+<a class="next" href="step2.html"><span><small>Next · Step 2</small><strong>Enter Ihram</strong></span><svg class="ic" viewbox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
 </div>
 </div>
 <script src="assets/app.js" defer></script>

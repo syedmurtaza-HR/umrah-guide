@@ -1,0 +1,128 @@
+{
+  "version": "2026-09-27",
+  "note": "Trip data for SHAHID. Months use calendar-month climate normals; events are dated. Designed to be reused as-is by a future native app.",
+  "climate": {
+    "source": {"en": "Average highs and lows 1991–2020: Makkah (NOAA, Jeddah Regional Climate Center), Madinah (WMO, Jeddah Regional Climate Center)", "ur": "اوسط زیادہ سے زیادہ اور کم سے کم درجہ حرارت 1991–2020: مکہ (NOAA، جدہ ریجنل کلائمیٹ سینٹر)، مدینہ (WMO، جدہ ریجنل کلائمیٹ سینٹر)"},
+    "months": {
+      "1":  {"mk": [31, 19], "md": [24, 12], "band": "mild"},
+      "2":  {"mk": [33, 20], "md": [27, 14], "band": "mild"},
+      "3":  {"mk": [35, 22], "md": [31, 17], "band": "warm"},
+      "4":  {"mk": [39, 25], "md": [36, 22], "band": "hot"},
+      "5":  {"mk": [42, 28], "md": [40, 26], "band": "veryhot"},
+      "6":  {"mk": [44, 29], "md": [43, 29], "band": "veryhot"},
+      "7":  {"mk": [43, 30], "md": [43, 30], "band": "veryhot"},
+      "8":  {"mk": [43, 30], "md": [44, 31], "band": "veryhot"},
+      "9":  {"mk": [43, 29], "md": [42, 29], "band": "veryhot"},
+      "10": {"mk": [40, 27], "md": [37, 24], "band": "hot"},
+      "11": {"mk": [36, 23], "md": [30, 18], "band": "warm"},
+      "12": {"mk": [33, 21], "md": [26, 14], "band": "mild"}
+    },
+    "bands": {
+      "mild": {
+        "title": {"en": "Mild", "ur": "معتدل"},
+        "tips": [
+          {"en": "Pleasant days in Makkah; cool nights in Madinah. Pack a warm layer, socks and a shawl.", "ur": "مکہ میں دن خوشگوار؛ مدینہ میں راتیں ٹھنڈی۔ ایک گرم کپڑا، موزے اور شال رکھیں۔"},
+          {"en": "Men in ihram may be cold at night in Madinah or on the road. Keep a blanket for the journey.", "ur": "احرام میں مردوں کو رات کے وقت مدینہ یا راستے میں ٹھنڈ لگ سکتی ہے۔ سفر کے لیے کمبل رکھیں۔"},
+          {"en": "The Masjid is air-conditioned and can feel cold, especially for babies and the elderly.", "ur": "مسجد میں اے سی ہے اور ٹھنڈ لگ سکتی ہے، خاص طور پر شیر خوار بچوں اور بزرگوں کو۔"}
+        ]
+      },
+      "warm": {
+        "title": {"en": "Warm", "ur": "گرم"},
+        "tips": [
+          {"en": "Warm days and comfortable nights. Light cotton clothes, a cap or umbrella, and one layer for the air-conditioning.", "ur": "دن گرم اور راتیں آرام دہ۔ ہلکے سوتی کپڑے، ٹوپی یا چھتری، اور اے سی کے لیے ایک کپڑا۔"},
+          {"en": "Do Tawaf and Sa‘i early morning or at night if you can.", "ur": "ہو سکے تو طواف اور سعی صبح سویرے یا رات کو کریں۔"}
+        ]
+      },
+      "hot": {
+        "title": {"en": "Hot", "ur": "بہت گرم"},
+        "tips": [
+          {"en": "Hot by day. Loose, light-coloured cotton, an umbrella, and water with you at all times.", "ur": "دن میں گرمی۔ ڈھیلے، ہلکے رنگ کے سوتی کپڑے، چھتری، اور ہر وقت پانی ساتھ رکھیں۔"},
+          {"en": "Plan Tawaf and Sa‘i after sunset or after Fajr. Avoid walking outside at midday.", "ur": "طواف اور سعی مغرب کے بعد یا فجر کے بعد رکھیں۔ دوپہر کو باہر چلنے سے بچیں۔"},
+          {"en": "Unscented sunscreen if you are in ihram.", "ur": "احرام میں ہوں تو بغیر خوشبو کی سن اسکرین۔"}
+        ]
+      },
+      "veryhot": {
+        "title": {"en": "Very hot", "ur": "شدید گرم"},
+        "tips": [
+          {"en": "Extreme heat, often above 40°C. Do Tawaf and Sa‘i only at night or after Fajr, and rest indoors at midday.", "ur": "شدید گرمی، اکثر 40°C سے زیادہ۔ طواف اور سعی صرف رات کو یا فجر کے بعد کریں، اور دوپہر کو اندر آرام کریں۔"},
+          {"en": "Drink before you feel thirsty, and add oral rehydration salts. Watch the elderly and children closely.", "ur": "پیاس لگنے سے پہلے پانی پیئیں، اور او آر ایس ملائیں۔ بزرگوں اور بچوں کا خاص خیال رکھیں۔"},
+          {"en": "Umbrella, loose cotton, and unscented sunscreen if you are in ihram.", "ur": "چھتری، ڈھیلے سوتی کپڑے، اور احرام میں ہوں تو بغیر خوشبو کی سن اسکرین۔"}
+        ]
+      }
+    }
+  },
+  "events": [
+    {"id": "winterbreak", "from": "2026-12-15", "to": "2027-01-10",
+     "en": "Winter holidays in many countries make this a busy time. Book hotels and Nusuk permits early.",
+     "ur": "بہت سے ممالک میں سردیوں کی چھٹیاں ہوتی ہیں، اس لیے رش زیادہ ہوتا ہے۔ ہوٹل اور نسک پرمٹ جلد بک کریں۔",
+     "src": {"en": "General travel pattern; check hotel availability", "ur": "عمومی سفری رجحان؛ ہوٹل کی دستیابی دیکھیں"}},
+    {"id": "ramadan", "from": "2027-02-08", "to": "2027-03-08",
+     "en": "Ramadan (expected 8 Feb to 8 Mar 2027). Umrah in Ramadan carries a great reward, but it is the busiest time of the year. Expect very large crowds, especially in the last ten nights, and higher prices.",
+     "ur": "رمضان (متوقع 8 فروری تا 8 مارچ 2027)۔ رمضان میں عمرے کا بہت بڑا اجر ہے، مگر یہ سال کا سب سے زیادہ رش والا وقت ہے۔ خاص طور پر آخری دس راتوں میں بہت زیادہ رش اور زیادہ قیمتوں کی توقع رکھیں۔",
+     "src": {"en": "“Umrah in Ramadan is equal to Hajj”: Sahih al-Bukhari 1782 · Dates: Umm al-Qura calendar (may differ by a day)", "ur": "“رمضان میں عمرہ حج کے برابر ہے”: صحیح بخاری 1782 · تاریخیں: ام القریٰ کیلنڈر (ایک دن کا فرق ہو سکتا ہے)"}},
+    {"id": "visaend", "from": "2027-03-01", "to": "2027-04-07",
+     "en": "End of the Umrah season: the last day to issue Umrah visas is 9 March 2027, the last day to enter is 23 March, and Umrah visa holders must leave by 7 April 2027.",
+     "ur": "عمرہ سیزن کا اختتام: عمرہ ویزا جاری ہونے کی آخری تاریخ 9 مارچ 2027، داخلے کی آخری تاریخ 23 مارچ، اور عمرہ ویزا والوں کو 7 اپریل 2027 تک روانہ ہونا ہے۔",
+     "src": {"en": "Ministry of Hajj and Umrah, 1448 season calendar, reported by Gulf Business, May 2026", "ur": "وزارتِ حج و عمرہ، سیزن 1448 کا کیلنڈر، بحوالہ گلف بزنس، مئی 2026"}},
+    {"id": "hajjclose", "from": "2027-04-08", "to": "2027-05-21",
+     "en": "Hajj period: Umrah is normally closed from about early April until after Hajj (Hajj expected 14–16 May 2027). Umrah permits for residents are paused too. Plan your Umrah for another month.",
+     "ur": "حج کا دورانیہ: عام طور پر اپریل کے شروع سے حج کے بعد تک عمرہ بند رہتا ہے (حج متوقع 14–16 مئی 2027)۔ مقیم افراد کے عمرہ پرمٹ بھی رکے رہتے ہیں۔ عمرے کے لیے کوئی اور مہینہ منتخب کریں۔",
+     "src": {"en": "Pattern from 1446: permits paused 1 Dhul-Qa‘dah to 14 Dhul-Hijjah (Gulf News, Apr 2025); 1448 Hajj dates: Umm al-Qura calendar. Exact dates are announced each year.", "ur": "1446 کا طریقہ: پرمٹ یکم ذوالقعدہ سے 14 ذوالحجہ تک بند (گلف نیوز، اپریل 2025)؛ حج 1448 کی تاریخیں: ام القریٰ کیلنڈر۔ درست تاریخیں ہر سال اعلان ہوتی ہیں۔"}},
+    {"id": "reopen", "from": "2027-05-22", "to": "2027-06-30",
+     "en": "The new Umrah season usually opens a few weeks after Hajj (in 2026, Umrah visas restarted on 31 May). Check the Ministry’s announcement before you book.",
+     "ur": "نیا عمرہ سیزن عموماً حج کے چند ہفتے بعد کھلتا ہے (2026 میں عمرہ ویزے 31 مئی سے دوبارہ شروع ہوئے)۔ بکنگ سے پہلے وزارت کا اعلان دیکھیں۔",
+     "src": {"en": "Ministry of Hajj and Umrah, reported by Gulf Business, May 2026", "ur": "وزارتِ حج و عمرہ، بحوالہ گلف بزنس، مئی 2026"}}
+  ],
+  "countries": {
+    "pk": {
+      "name": {"en": "Pakistan", "ur": "پاکستان"},
+      "link": "pakistan.html",
+      "items": [
+        {"en": "Polio vaccine at least 4 weeks before you fly (certificate no older than 6 months), and the meningitis vaccine.", "ur": "روانگی سے کم از کم 4 ہفتے پہلے پولیو ویکسین (سرٹیفکیٹ 6 ماہ سے پرانا نہ ہو)، اور گردن توڑ بخار کی ویکسین۔"},
+        {"en": "Since 14 September 2026: a NADRA-linked digital vaccine card from an authorised centre, or you may not be allowed to board.", "ur": "14 ستمبر 2026 سے: کسی مجاز مرکز سے نادرا سے منسلک ڈیجیٹل ویکسین کارڈ، ورنہ سوار ہونے سے روکا جا سکتا ہے۔"},
+        {"en": "Your flight crosses the Meeqat before Jeddah. Men: wear the ihram sheets before boarding.", "ur": "آپ کی پرواز جدہ سے پہلے میقات سے گزرتی ہے۔ مرد: سوار ہونے سے پہلے احرام کی چادریں پہن لیں۔"}
+      ],
+      "src": {"en": "Dawn (Feb 2025, Sept 2026) · Saudi Ministry of Health · IslamWeb fatwa 268105", "ur": "ڈان (فروری 2025، ستمبر 2026) · سعودی وزارتِ صحت · IslamWeb فتویٰ 268105"}
+    },
+    "ae": {
+      "name": {"en": "United Arab Emirates", "ur": "متحدہ عرب امارات"},
+      "items": [
+        {"en": "UAE residents can apply for the Saudi e-visa for Umrah, whatever their profession. Your residence permit must be valid for at least 3 months and your passport for 6 months. Parents, spouse and children travelling with you can apply too. Health insurance is required.", "ur": "امارات میں مقیم افراد کسی بھی پیشے سے ہوں، عمرہ کے لیے سعودی ای ویزا لے سکتے ہیں۔ اقامہ کم از کم 3 ماہ اور پاسپورٹ 6 ماہ کے لیے کارآمد ہو۔ ساتھ سفر کرنے والے والدین، شریکِ حیات اور بچے بھی درخواست دے سکتے ہیں۔ ہیلتھ انشورنس ضروری ہے۔"},
+        {"en": "Flying: be in ihram before the plane passes the Meeqat; the crew usually announces it.", "ur": "ہوائی سفر: جہاز کے میقات سے گزرنے سے پہلے احرام میں ہوں؛ عملہ عموماً اعلان کرتا ہے۔"},
+        {"en": "Driving through Riyadh and Ta’if: the Meeqat is Qarn al-Manazil (As-Sayl al-Kabir). Enter ihram there.", "ur": "ریاض اور طائف کے راستے گاڑی سے: میقات قرن المنازل (السیل الکبیر) ہے۔ وہیں احرام باندھیں۔"},
+        {"en": "Meningitis vaccine for everyone aged 1 and over. The polio certificate rule is for passengers flying from Pakistan; if you fly from the UAE, check with your airline.", "ur": "1 سال اور زیادہ عمر کے ہر فرد کے لیے گردن توڑ بخار کی ویکسین۔ پولیو سرٹیفکیٹ کا قاعدہ پاکستان سے پرواز کرنے والوں کے لیے ہے؛ امارات سے پرواز کریں تو اپنی ایئرلائن سے معلوم کریں۔"}
+      ],
+      "src": {"en": "GCC resident e-visa: Fragomen summary of the Saudi rule, Mar 2023 · Qarn al-Manazil: Sahih al-Bukhari 1524 · Vaccines: Saudi Ministry of Health; Dawn, Feb 2025", "ur": "خلیجی ممالک کے مقیم افراد کا ای ویزا: سعودی قاعدے کا Fragomen خلاصہ، مارچ 2023 · قرن المنازل: صحیح بخاری 1524 · ویکسین: سعودی وزارتِ صحت؛ ڈان، فروری 2025"}
+    },
+    "sa": {
+      "name": {"en": "Living in Saudi Arabia", "ur": "سعودی عرب میں مقیم"},
+      "items": [
+        {"en": "No visa needed. Book your Umrah permit in the Nusuk app before you go to Makkah.", "ur": "ویزا کی ضرورت نہیں۔ مکہ جانے سے پہلے نسک ایپ میں عمرہ پرمٹ بک کریں۔"},
+        {"en": "Permits for residents are paused around Hajj, from about 1 Dhul-Qa‘dah until after Hajj.", "ur": "حج کے دنوں میں، تقریباً یکم ذوالقعدہ سے حج کے بعد تک، مقیم افراد کے پرمٹ بند رہتے ہیں۔"},
+        {"en": "Coming from Riyadh or the east by road: enter ihram at Qarn al-Manazil (As-Sayl al-Kabir). From Madinah: Dhul-Hulayfah.", "ur": "ریاض یا مشرق سے سڑک کے راستے: قرن المنازل (السیل الکبیر) پر احرام باندھیں۔ مدینہ سے: ذوالحلیفہ۔"},
+        {"en": "Living in Jeddah or anywhere inside the Meeqat: enter ihram from where you are. Living in Makkah: go outside the Haram boundary, such as Masjid ‘A’ishah at Tan‘im.", "ur": "جدہ یا میقات کے اندر کہیں رہتے ہیں: جہاں ہیں وہیں سے احرام باندھیں۔ مکہ میں رہتے ہیں: حرم کی حد سے باہر جائیں، جیسے تنعیم میں مسجدِ عائشہ۔"}
+      ],
+      "src": {"en": "Permits: Nusuk; pause around Hajj: Gulf News, Apr 2025 · Meeqat and those living inside it: Sahih al-Bukhari 1524", "ur": "پرمٹ: نسک؛ حج کے دنوں میں بندش: گلف نیوز، اپریل 2025 · میقات اور اس کے اندر رہنے والے: صحیح بخاری 1524"}
+    },
+    "gb": {
+      "name": {"en": "United Kingdom", "ur": "برطانیہ"},
+      "items": [
+        {"en": "Visa: an Umrah visa through an approved agent, or the Saudi tourist e-visa (choose the “with Umrah” option).", "ur": "ویزا: کسی منظور شدہ ایجنٹ کے ذریعے عمرہ ویزا، یا سعودی سیاحتی ای ویزا (“عمرہ کے ساتھ” کا آپشن منتخب کریں)۔"},
+        {"en": "Meningitis ACYW vaccine at least 10 days before you arrive; travel clinics and many pharmacies offer it.", "ur": "آمد سے کم از کم 10 دن پہلے گردن توڑ بخار ACYW کی ویکسین؛ ٹریول کلینک اور بہت سی فارمیسیاں لگاتی ہیں۔"},
+        {"en": "Your flight crosses the Meeqat before Jeddah. Men: put on ihram before boarding or at your transit airport.", "ur": "آپ کی پرواز جدہ سے پہلے میقات سے گزرتی ہے۔ مرد: سوار ہونے سے پہلے یا ٹرانزٹ ایئرپورٹ پر احرام پہن لیں۔"},
+        {"en": "The Council of British Hajjis (CBHUK) publishes UK-specific Umrah advice.", "ur": "کونسل آف برٹش حجاج (CBHUK) برطانیہ کے لیے عمرہ رہنمائی شائع کرتی ہے۔"}
+      ],
+      "src": {"en": "Visa options: Council of British Hajjis visa chart, 2023 · Vaccine: Saudi Ministry of Health", "ur": "ویزا کے آپشن: کونسل آف برٹش حجاج ویزا چارٹ، 2023 · ویکسین: سعودی وزارتِ صحت"}
+    },
+    "other": {
+      "name": {"en": "Another country", "ur": "کوئی اور ملک"},
+      "items": [
+        {"en": "Check which visa you can use for Umrah in the Nusuk app or with an approved Umrah agent.", "ur": "نسک ایپ میں یا کسی منظور شدہ عمرہ ایجنٹ سے معلوم کریں کہ عمرہ کے لیے کون سا ویزا استعمال ہو سکتا ہے۔"},
+        {"en": "Meningitis vaccine for everyone aged 1 and over. Polio or yellow fever proof only if your country is on the Saudi list.", "ur": "1 سال اور زیادہ عمر کے ہر فرد کے لیے گردن توڑ بخار کی ویکسین۔ پولیو یا زرد بخار کا ثبوت صرف اگر آپ کا ملک سعودی فہرست میں ہو۔"},
+        {"en": "Flying in: be in ihram before the plane passes the Meeqat.", "ur": "ہوائی سفر: جہاز کے میقات سے گزرنے سے پہلے احرام میں ہوں۔"},
+        {"en": "Save your embassy’s phone number in Saudi Arabia before you travel.", "ur": "سفر سے پہلے سعودی عرب میں اپنے سفارت خانے کا فون نمبر محفوظ کر لیں۔"}
+      ],
+      "src": {"en": "Saudi Ministry of Health · Ministry of Hajj and Umrah FAQ · Sahih al-Bukhari 1524", "ur": "سعودی وزارتِ صحت · وزارتِ حج و عمرہ FAQ · صحیح بخاری 1524"}
+    }
+  }
+}

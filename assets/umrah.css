@@ -148,7 +148,7 @@ ul.plain{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px}
 .q::after{content:"";flex:1;min-width:24px;height:1px;background:linear-gradient(90deg,var(--gold-line),rgba(191,158,94,0))}
 .q .num{background:var(--teal);color:var(--champagne);box-shadow:0 0 0 2px var(--surface),0 0 0 3px var(--gold-line)}
 .card,.steps>li{border-width:1px;box-shadow:0 1px 2px rgba(23,33,31,.04),0 10px 24px -18px rgba(23,33,31,.28)}
-.steps>li>.n{border:1.5px solid var(--gold-line);color:var(--teal);font:700 22px var(--luxe)}
+.steps>li>.n{border:1.5px solid var(--gold-line);color:var(--teal);font:700 18px var(--body)}
 .btn{border-radius:12px;letter-spacing:.01em}
 .btn.primary{background:linear-gradient(180deg,#104A41,#0B3B34);border-color:#0B3B34;box-shadow:inset 0 1px 0 rgba(220,195,146,.28),0 8px 18px -12px rgba(7,38,32,.7)}
 .btn.primary:hover{background:#072620}

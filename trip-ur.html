@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="ur">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"/>
+<title>میرا سفر · شاہد</title>
+<meta content="Shahid: Witness the Journey. A free, simple, step-by-step Umrah guide that works offline." name="description"/>
+<meta content="#0B3B34" name="theme-color"/>
+<meta content="yes" name="apple-mobile-web-app-capable"/>
+<meta content="yes" name="mobile-web-app-capable"/>
+<meta content="default" name="apple-mobile-web-app-status-bar-style"/>
+<meta content="Shahid" name="apple-mobile-web-app-title"/>
+<link href="manifest.json" rel="manifest"/>
+<link href="icons/favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="icons/icon-32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="icons/apple-touch-icon.png" rel="apple-touch-icon"/>
+<link href="assets/fonts.css" rel="stylesheet"/>
+<link href="assets/umrah.css" rel="stylesheet"/>
+<link href="assets/app.css" rel="stylesheet"/>
+<link href="assets/profile.css" rel="stylesheet"/>
+<script>try{var s=JSON.parse(localStorage.getItem('ug:textsize'));if(s)document.documentElement.style.zoom=[1,1.15,1.3][s];var g=JSON.parse(localStorage.getItem('ug:lang')),d=document.documentElement,f=location.pathname.split('/').pop()||'index.html',m=f.match(/^([a-z0-9]+?)(-ur)?\.html$/);if(m&&g&&(g==='ur')!==(d.lang==='ur')&&m[1]!=='404')location.replace(m[1]+(g==='ur'?'-ur':'')+'.html'+location.search+location.hash);var w=JSON.parse(localStorage.getItem('ug:who')||'[]'),sa=JSON.parse(localStorage.getItem('ug:showall')||'false');if(w&&w.length&&!sa){var c=['pf-on'],h=function(x){return w.indexOf(x)>-1},gg=h('man')||h('woman')||h('couple');if(!gg||h('man')||h('couple')||h('elderly'))c.push('pf-men');if(!gg||h('woman')||h('couple')||h('elderly'))c.push('pf-women');['couple','elderly','babies','kids'].forEach(function(t){if(h(t))c.push('pf-'+t)});d.className+=' '+c.join(' ');}var fr=JSON.parse(localStorage.getItem('ug:from')||'null');if(fr)d.className+=' from-set from-'+fr;}catch(e){}</script>
+<style>
+.gh{display:flex;align-items:center;gap:12px;font:600 28px/1.1 var(--luxe)}
+.gh .ic{width:34px;height:34px;color:var(--teal)}
+.tripsum{display:flex;flex-direction:column;gap:10px;padding:16px;border-radius:16px;background:var(--surface);border:1px solid var(--line)}
+.tripsum .row{display:flex;align-items:center;gap:10px;font-size:17px}
+.tripsum .row .ic{color:var(--teal)}
+.tripsum .row b{flex:1}
+.linkbtn{background:none;border:none;padding:4px 2px;color:var(--teal);font:700 16px var(--body);text-decoration:underline;cursor:pointer}
+.temps{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.temps div{padding:14px;border-radius:14px;background:var(--surface);border:1px solid var(--line);display:flex;flex-direction:column;gap:2px}
+.temps b{font:600 30px/1 var(--luxe);color:var(--teal)}
+.pf-card{display:flex;flex-direction:column;gap:8px;padding:16px;border-radius:16px;background:var(--surface);border:1px solid var(--line);box-shadow:0 10px 24px -18px rgba(23,33,31,.28)}
+.pf-h{font:600 22px/1.15 var(--luxe);color:var(--teal)}
+.pf-list{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px;font-size:17px;line-height:1.45}
+.wx{width:100%;border-collapse:collapse;font-size:16px;background:var(--surface);border:1px solid var(--line)}
+.wx th,.wx td{padding:9px 10px;text-align:start;border-bottom:1px solid var(--line);vertical-align:top}
+.wx th{font:700 13px var(--body);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);background:var(--sand)}
+.wx td b{display:block}
+.wx tr.now td{background:var(--gold-tint)}
+</style>
+<link href="assets/urdu.css" rel="stylesheet"/></head>
+<body data-lang="ur" data-page="trip">
+<div class="phone root">
+<div class="topbar">
+<a aria-label="مینو کھولیں" class="iconbtn" href="menu-ur.html"><svg class="ic" viewbox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></a>
+<div class="where"><small>صرف آپ کے لیے</small><strong>آپ کا سفر</strong></div>
+<a aria-label="ہوم" class="iconbtn" href="index-ur.html"><svg class="ic" viewbox="0 0 24 24"><path d="M4 11l8-7 8 7v9h-5v-6H9v6H4z"></path></svg></a>
+</div>
+<div class="hero" style="display: flex; flex-direction: column; gap: 12px">
+<div class="eyebrow">آپ کا سفر</div>
+<h1 class="h1">یہ ہے جس کی توقع رکھیں</h1>
+<p class="lead">آپ کا سفر کب اور کہاں سے ہے، اس کے مطابق ہم نے موسم، رش اور آپ پر لاگو ہونے والے قواعد یہاں جمع کر دیے ہیں۔</p>
+</div>
+<section class="sec" id="summary" style="background: #FFFDFA">
+<div class="tripsum">
+<div class="row"><svg class="ic" viewbox="0 0 24 24"><rect height="15" rx="2" width="17" x="3.5" y="5"></rect><path d="M3.5 10h17M8 3v4M16 3v4"></path></svg><span class="small muted">جانے کا وقت</span><b data-trip="when">آپ نے ابھی نہیں بتایا</b><button class="linkbtn" data-action="when" type="button">بدلیں</button></div>
+<div class="row"><svg class="ic" viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3c2.5 2.5 3.7 5.5 3.7 9s-1.2 6.5-3.7 9c-2.5-2.5-3.7-5.5-3.7-9S9.5 5.5 12 3z"></path></svg><span class="small muted">کہاں سے</span><b data-trip="from">آپ نے ابھی نہیں بتایا</b><button class="linkbtn" data-action="from" type="button">بدلیں</button></div>
+</div>
+</section>
+<section class="sec" id="group">
+<div class="gh"><svg class="ic" viewbox="0 0 24 24"><circle cx="8" cy="8" r="3"></circle><circle cx="17" cy="10" r="2.3"></circle><path d="M2.5 20c0-3.3 2.4-6 5.5-6s5.5 2.7 5.5 6M13.5 20c.2-2.6 1.7-4.5 3.5-4.5s3.3 1.9 3.5 4.5"></path></svg>صرف آپ کے لیے</div>
+<div class="pf-card" data-for="men"><div class="pf-h">مردوں کے لیے</div><ul class="pf-list"><li>احرام کی دو سفید، بغیر سلی چادریں؛ سر کھلا۔</li><li>دایاں کندھا صرف طواف کے دوران کھلا۔</li><li>پہلے 3 چکروں میں تیز قدم، اور سبز روشنیوں کے درمیان ہلکا دوڑنا۔</li><li>سر منڈوائیں، یا پورے سر سے بال چھوٹے کروائیں۔</li></ul><p class="src">صحیح بخاری 1542 · صحیح مسلم 1218 · صحیح بخاری 1727 · <a href="quick-ur.html">فوری حوالہ</a></p></div>
+<div class="pf-card" data-for="women"><div class="pf-h">خواتین کے لیے</div><ul class="pf-list"><li>آپ کا عام ڈھیلا، باپردہ لباس؛ نقاب یا دستانے نہیں۔</li><li>تلبیہ آہستہ پڑھیں؛ عام رفتار سے چلیں۔</li><li>بالوں کے سروں سے تقریباً انگلی کے پور کے برابر کاٹیں۔</li><li>اگر ماہواری شروع ہو جائے تو آپ کا عمرہ ضائع نہیں ہوا۔</li></ul><p class="src">صحیح بخاری 1838 · صحیح بخاری 305 · سنن ابی داؤد 1984 · <a href="women-ur.html">خواتین کے لیے رہنمائی</a></p></div>
+<div class="pf-card" data-for="couple"><div class="pf-h">میاں بیوی کے لیے</div><ul class="pf-list"><li>جب تک دونوں کا عمرہ مکمل نہ ہو جائے، یعنی بال کٹوانے کے بعد تک، میاں بیوی کا تعلق جائز نہیں۔</li><li>بچھڑ جانے کی صورت کے لیے ملاقات کی جگہ طے کریں، جیسے حجرِ اسود کی لائن۔</li><li>شوہر پردے میں بیوی کے بال کاٹ سکتا ہے۔</li></ul><p class="src">قرآن 2:197 · <a href="step8-ur.html">مرحلہ 8</a></p></div>
+<div class="pf-card" data-for="elderly"><div class="pf-h">بزرگ والدین کے ساتھ</div><ul class="pf-list"><li>احرام باندھتے وقت شرط لگائیں، کہ اگر بیماری روک دے۔</li><li>وہیل چیئر یا گاڑی میں طواف اور سعی بالکل درست ہے۔</li><li>رات دیر گئے یا فجر کے بعد جائیں، اور ہر عمل کے درمیان آرام کریں۔</li><li>نسک میں ان کا ریاض الجنہ پرمٹ بھی بک کریں۔</li></ul><p class="src">صحیح بخاری 5089 · صحیح مسلم 1207 · صحیح بخاری 1607 · <a href="care-ur.html">دیکھ بھال اور رسائی</a></p></div>
+<div class="pf-card" data-for="babies"><div class="pf-h">شیر خوار یا چھوٹے بچوں کے ساتھ</div><ul class="pf-list"><li>شیر خوار بچہ احرام کے بغیر بھی ساتھ آ سکتا ہے۔</li><li>طواف سے بالکل پہلے صاف ڈائپر پہنائیں۔</li><li>کعبہ کے گرد زمینی منزل پر پرام کی اجازت نہیں؛ کیریئر ساتھ رکھیں۔</li><li>بڑے دروازوں کے پاس لگی مشینوں سے شناختی رِسٹ بینڈ پرنٹ کریں۔</li></ul><p class="src">سنن ابی داؤد 4403 · حرمین شریفین کی جنرل اتھارٹی (2024) · سعودی پریس ایجنسی (2024) · <a href="families-ur.html">خاندان کی رہنمائی</a></p></div>
+<div class="pf-card" data-for="kids"><div class="pf-h">بڑے بچوں کے ساتھ</div><ul class="pf-list"><li>بچے کا عمرہ درست ہے، اور آپ کو بھی اجر ملتا ہے۔</li><li>سمجھدار بچے خود نیت کریں؛ آپ مدد کریں۔</li><li>ملاقات کا دروازہ طے کریں اور ہر بچے کو شناختی بینڈ پہنائیں۔</li></ul><p class="src">صحیح مسلم 1336 · <a href="families-ur.html">خاندان کی رہنمائی</a></p></div>
+</section>
+<section class="sec" id="month">
+<div class="gh"><svg class="ic" viewbox="0 0 24 24"><circle cx="12" cy="12" r="4"></circle><path d="M12 2.5v2.5M12 19v2.5M2.5 12H5M19 12h2.5M5.3 5.3l1.8 1.8M16.9 16.9l1.8 1.8M5.3 18.7l1.8-1.8M16.9 7.1l1.8-1.8"></path></svg><span data-trip="monthtitle">آپ کا مہینہ</span></div>
+<div data-trip="monthbody"><p class="small muted">ہمیں بتائیں آپ کا سفر کب ہے، ہم بتائیں گے کہ موسم کیسا ہوگا، کیا ساتھ رکھنا ہے، اور کیا اس وقت رش ہوتا ہے۔</p></div>
+</section>
+<section class="sec" id="country">
+<div class="gh"><svg class="ic" viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3c2.5 2.5 3.7 5.5 3.7 9s-1.2 6.5-3.7 9c-2.5-2.5-3.7-5.5-3.7-9S9.5 5.5 12 3z"></path></svg><span data-trip="countrytitle">آپ کا راستہ</span></div>
+<div data-trip="countrybody"><p class="small muted">ہمیں بتائیں آپ کا سفر کہاں سے ہے، ہم ویزا، ویکسین اور احرام کہاں باندھنا ہے، یہ سب بتائیں گے۔</p></div>
+</section>
+<section class="sec" id="year" style="border-bottom: none">
+<div class="gh"><svg class="ic" viewbox="0 0 24 24"><rect height="15" rx="2" width="17" x="3.5" y="5"></rect><path d="M3.5 10h17M8 3v4M16 3v4"></path></svg>مہینہ وار موسم</div>
+<table class="wx">
+<thead><tr><th>مہینہ</th><th>مکہ (دن / رات)</th><th>مدینہ (دن / رات)</th></tr></thead>
+<tbody>
+<tr data-m="1"><td><b>جنوری</b>معتدل</td><td>31° / 19°</td><td>24° / 12°</td></tr>
+<tr data-m="2"><td><b>فروری</b>معتدل</td><td>33° / 20°</td><td>27° / 14°</td></tr>
+<tr data-m="3"><td><b>مارچ</b>گرم</td><td>35° / 22°</td><td>31° / 17°</td></tr>
+<tr data-m="4"><td><b>اپریل</b>بہت گرم</td><td>39° / 25°</td><td>36° / 22°</td></tr>
+<tr data-m="5"><td><b>مئی</b>شدید گرم</td><td>42° / 28°</td><td>40° / 26°</td></tr>
+<tr data-m="6"><td><b>جون</b>شدید گرم</td><td>44° / 29°</td><td>43° / 29°</td></tr>
+<tr data-m="7"><td><b>جولائی</b>شدید گرم</td><td>43° / 30°</td><td>43° / 30°</td></tr>
+<tr data-m="8"><td><b>اگست</b>شدید گرم</td><td>43° / 30°</td><td>44° / 31°</td></tr>
+<tr data-m="9"><td><b>ستمبر</b>شدید گرم</td><td>43° / 29°</td><td>42° / 29°</td></tr>
+<tr data-m="10"><td><b>اکتوبر</b>بہت گرم</td><td>40° / 27°</td><td>37° / 24°</td></tr>
+<tr data-m="11"><td><b>نومبر</b>گرم</td><td>36° / 23°</td><td>30° / 18°</td></tr>
+<tr data-m="12"><td><b>دسمبر</b>معتدل</td><td>33° / 21°</td><td>26° / 14°</td></tr>
+</tbody>
+</table>
+<p class="src">اوسط زیادہ سے زیادہ اور کم سے کم درجہ حرارت 1991–2020، °C، تقریبی: مکہ (NOAA، جدہ ریجنل کلائمیٹ سینٹر)، مدینہ (WMO، جدہ ریجنل کلائمیٹ سینٹر)</p>
+</section>
+</div>
+<script defer="" src="assets/app.js"></script>
+<script defer="" src="assets/narrator.js"></script>
+</body>
+</html>
